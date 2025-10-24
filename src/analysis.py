@@ -122,7 +122,7 @@ class DiabloAnalyzer:
         weather_pivot = weather_stats.pivot_table(
             index='year',
             columns='location',
-            values=['windspeed_10m_mean', 'windspeed_10m_max', 'wind_gusts_10m_max', 'temperature_2m_mean']
+            values=['windspeed_10m_mean', 'windspeed_10m_max', 'wind_gusts_10m_max', 'temperature_2m_mean', 'winddirection_10m_mean']
         )
 
         # Flatten column names

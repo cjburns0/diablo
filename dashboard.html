@@ -1,0 +1,952 @@
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mount Diablo Challenge Analytics</title>
+  <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="antialiased selection:bg-slate-900 selection:text-white bg-black text-slate-100" style="font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;">
+  <!-- App Shell -->
+  <header class="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/60 border-b bg-black/90 border-slate-800">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="h-8 w-8 rounded-md border flex items-center justify-center text-sm tracking-tight font-semibold border-slate-700 text-slate-100">MD</div>
+        <div class="text-[20px] sm:text-[22px] font-semibold tracking-tight">Mt. Diablo Challenge</div>
+        <div class="hidden md:flex items-center gap-6 pl-6 ml-4 border-l border-slate-800">
+          <a href="#" class="text-sm font-medium text-slate-400 hover:text-slate-100">Overview</a>
+          <a href="#" class="text-sm font-medium text-slate-400 hover:text-slate-100">Trends</a>
+          <a href="#" class="text-sm font-medium text-slate-400 hover:text-slate-100">Weather Impact</a>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="hidden sm:flex items-center px-2.5 py-1.5 border rounded-md shadow-sm/50 hover:shadow transition border-slate-800 bg-black">
+          <i data-lucide="search" class="w-4 h-4 text-slate-500"></i>
+          <input type="text" placeholder="Search races, years, riders…" class="ml-2 text-sm placeholder:text-slate-400 focus:outline-none bg-transparent w-64">
+        </div>
+        <button class="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium border rounded-md px-2.5 py-1.5 text-slate-300 border-slate-800 hover:bg-slate-950">
+          <i data-lucide="download" class="w-4 h-4 text-slate-400"></i>
+          Export
+        </button>
+        <div class="h-8 w-8 rounded-full overflow-hidden ring-1 ring-slate-800">
+          <img src="https://images.unsplash.com/photo-1621619856624-42fd193a0661?w=1080&amp;q=80" alt="Avatar" class="h-full w-full object-cover">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Heading + KPI -->
+    <section class="mb-8">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+        <div>
+          <h1 class="text-[28px] md:text-[32px] font-semibold tracking-tight text-slate-100">Mount Diablo Challenge Analytics</h1>
+          <p class="text-sm md:text-base mt-1 text-slate-400">11.2-mile climbing time trial with 3,249 ft elevation gain. Compare finish times across years and analyze wind's impact on performance.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 w-full md:w-auto">
+          <div class="rounded-lg border p-3 shadow-sm hover:shadow transition border-slate-800 bg-black">
+            <div class="text-[11px] uppercase tracking-wide text-slate-500">Fastest Year</div>
+            <div class="mt-1 flex items-baseline gap-2">
+              <div class="text-xl font-semibold tabular-nums" id="kpi-fastest-year">Loading...</div>
+              <div class="text-xs text-emerald-400" id="kpi-fastest-pct">—</div>
+            </div>
+          </div>
+          <div class="rounded-lg border p-3 shadow-sm hover:shadow transition border-slate-800 bg-black">
+            <div class="text:[11px] text-[11px] uppercase tracking-wide text-slate-500">Wind Impact</div>
+            <div class="mt-1 flex items-baseline gap-2">
+              <div class="text-xl font-semibold tabular-nums" id="kpi-wind-corr">r = —</div>
+              <div class="text-xs text-slate-500">Lower wind → faster</div>
+            </div>
+          </div>
+          <div class="rounded-lg border p-3 shadow hover:shadow transition border-slate-800 bg-black">
+            <div class="text-[11px] uppercase tracking-wide text-slate-500">Median Time</div>
+            <div class="mt-1 flex items-baseline gap-2">
+              <div class="text-xl font-semibold tabular-nums" id="kpi-median-time">—</div>
+              <div class="text-xs text-slate-500" id="kpi-fastest-time">Fastest: —</div>
+            </div>
+          </div>
+          <div class="rounded-lg border p-3 shadow-sm hover:shadow transition border-slate-800 bg-black">
+            <div class="text-[11px] uppercase tracking-wide text-slate-500">Sample Size</div>
+            <div class="mt-1 flex items-baseline gap-2">
+              <div class="text-xl font-semibold tabular-nums" id="kpi-total-years">— yrs</div>
+              <div class="text-xs text-slate-500" id="kpi-year-range">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls + Chart -->
+    <section class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+      <!-- Main Chart Card -->
+      <div class="lg:col-span-12 rounded-xl border shadow-sm border-slate-800 bg-black">
+        <div class="flex items-center justify-between px-4 sm:px-5 py-3 border-b border-slate-800">
+          <div class="flex items-center gap-2">
+            <i data-lucide="line-chart" class="w-4 h-4 text-slate-400"></i>
+            <div class="text-sm font-medium text-slate-200">Finish Time by Year</div>
+          </div>
+          <div class="flex items-center gap-2">
+            <div class="flex items-center gap-1 rounded-md border p-1 border-slate-800">
+              <button id="toggle-wind" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded text-slate-300 hover:bg-slate-950 bg-sky-900" aria-pressed="true">
+                <i data-lucide="wind" class="w-3.5 h-3.5 text-sky-400"></i> Wind Overlay
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 sm:p-6">
+          <!-- Responsive Chart Wrapper -->
+          <div class="relative">
+            <div class="w-full rounded-lg ring-1 overflow-hidden ring-slate-800 bg-black relative">
+              <!-- SVG Chart -->
+              <svg id="main-chart" viewBox="0 0 960 500" class="w-full h-[500px]">
+                <!-- Chart will be dynamically generated by JavaScript -->
+              </svg>
+              <!-- Tooltip -->
+              <div id="chart-tooltip" class="absolute hidden bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs shadow-lg pointer-events-none z-50">
+                <div id="tooltip-content" class="text-slate-200"></div>
+              </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="mt-3 space-y-2">
+              <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400">
+                <div class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full" style="background-color:#ef4444;"></span>
+                  <span><strong class="text-slate-300">Fastest time</strong> - Best finish that year</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full" style="background-color:#eab308;"></span>
+                  <span><strong class="text-slate-300">10th percentile</strong> - Top 10% of finishers</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="h-3 w-4 rounded-sm border" style="border-color:#64748b; background-color:rgba(148,163,184,0.08)"></span>
+                  <span><strong class="text-slate-300">Box (IQR)</strong> - 25th to 75th percentile (middle 50% of finishers)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="h-1.5 w-5 rounded-full" style="background-color:#0f766e;"></span>
+                  <span><strong class="text-slate-300">Median line</strong> - 50th percentile (middle finisher)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="h-2 w-2 rounded-full" style="background-color:#6366f1;"></span>
+                  <span><strong class="text-slate-300">Mean dot</strong> - Average finish time</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400">
+                <div class="flex items-center gap-2">
+                  <span class="h-3 w-6 rounded-sm" style="background-color:rgba(14, 165, 233, 0.15);"></span>
+                  <span><strong class="text-slate-300">Blue shading</strong> - Wind speed (darker = windier conditions)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="h-1.5 w-5 rounded-full" style="background-color:#0f766e;"></span>
+                  <span><strong class="text-slate-300">Teal trend line</strong> - Median performance across years</span>
+                </div>
+                <div class="ml-auto flex items-center gap-2">
+                  <i data-lucide="info" class="w-3.5 h-3.5 text-slate-500"></i>
+                  <span class="text-slate-500">Y-axis inverted: faster times at top, slower at bottom</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filters / Side Panel -->
+      <aside class="lg:col-span-4 space-y-4">
+        <div class="rounded-xl border shadow-sm border-slate-800 bg-black">
+          <div class="px-4 sm:px-5 py-3 border-b flex items-center justify-between border-slate-800">
+            <div class="flex items-center gap-2">
+              <i data-lucide="sliders" class="w-4 h-4 text-slate-400"></i>
+              <div class="text-sm font-medium text-slate-200">Filters</div>
+            </div>
+            <button id="resetFilters" class="text-xs font-medium text-slate-400 hover:text-slate-100">Reset</button>
+          </div>
+          <div class="p-4 sm:p-5 space-y-4">
+            <!-- Years -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="space-y-1.5">
+                <label class="text-xs font-medium text-slate-400">Start Year</label>
+                <div class="relative">
+                  <button data-popover-button="#startYearMenu" class="w-full flex items-center justify-between px-3 py-2 rounded-md border text-sm border-slate-800 bg-black hover:bg-slate-950">
+                    <span class="text-slate-200" id="startYearValue">2010</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-slate-500"></i>
+                  </button>
+                  <div id="startYearMenu" data-popover="" class="hidden absolute z-20 mt-1 w-full rounded-md border shadow-md overflow-hidden border-slate-800 bg-black">
+                    <ul class="max-h-60 overflow-auto py-1" id="startYearList"></ul>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-1.5">
+                <label class="text-xs font-medium text-slate-400">End Year</label>
+                <div class="relative">
+                  <button data-popover-button="#endYearMenu" class="w-full flex items-center justify-between px-3 py-2 rounded-md border text-sm border-slate-800 bg-black hover:bg-slate-950">
+                    <span class="text-slate-200" id="endYearValue">2024</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-slate-500"></i>
+                  </button>
+                  <div id="endYearMenu" data-popover="" class="hidden absolute z-20 mt-1 w-full rounded-md border shadow-md overflow-hidden border-slate-800 bg-black">
+                    <ul class="max-h-60 overflow-auto py-1" id="endYearList"></ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Correlation Cards -->
+            <div class="grid grid-cols-1 gap-3 pt-1">
+              <div class="rounded-lg border p-3 hover:shadow-sm transition border-slate-800">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-medium text-slate-400">Wind vs Time Correlation</span>
+                  <i data-lucide="wind" class="w-4 h-4 text-sky-400"></i>
+                </div>
+                <div class="mt-2 text-lg font-semibold tabular-nums" id="filter-wind-corr">—</div>
+                <div class="text-[11px] text-slate-500">Higher wind speeds associated with slower times</div>
+              </div>
+            </div>
+
+            <!-- Apply -->
+            <button id="applyFilters" class="w-full inline-flex items-center justify-center gap-2 rounded-md border px-3 py-2 text-sm font-medium border-slate-700 bg-black text-slate-200 hover:bg-slate-950">
+              <i data-lucide="refresh-cw" class="w-4 h-4 text-slate-300"></i>
+              Apply filters
+            </button>
+          </div>
+        </div>
+
+        <!-- Notes -->
+        <div class="rounded-xl border p-4 sm:p-5 shadow-sm border-slate-800 bg-black">
+          <div class="flex items-start gap-3">
+            <div class="mt-0.5">
+              <i data-lucide="lightbulb" class="w-4 h-4 text-amber-500"></i>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-slate-200">About Wind Impact</div>
+              <p class="text-sm mt-1 text-slate-400">
+                Wind is the primary weather factor affecting climb times. The summit is particularly exposed to wind,
+                which can add significant time to finishes. Toggle wind overlay to see correlation with performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Secondary insights -->
+    <section class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="rounded-xl border p-5 shadow-sm border-slate-800 bg-black">
+        <div class="flex items-center gap-2">
+          <i data-lucide="calendar" class="w-4 h-4 text-slate-400"></i>
+          <div class="text-sm font-medium text-slate-200">Year-over-Year Delta</div>
+        </div>
+        <div class="mt-3 space-y-2">
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-slate-400">Last year vs prior</span>
+            <span class="font-medium tabular-nums text-emerald-400">-0.7%</span>
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-slate-400">5-year trend</span>
+            <span class="font-medium tabular-nums text-slate-200">-3.1%</span>
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <span class="text-slate-400">Volatility</span>
+            <span class="font-medium tabular-nums text-slate-200">σ = 2.4%</span>
+          </div>
+        </div>
+      </div>
+      <div class="rounded-xl border p-5 shadow-sm border-slate-800 bg-black">
+        <div class="flex items-center gap-2">
+          <i data-lucide="compass" class="w-4 h-4 text-sky-400"></i>
+          <div class="text-sm font-medium text-slate-200">Wind Rose (preview)</div>
+        </div>
+        <div class="mt-3 flex items-center justify-center">
+          <svg viewBox="0 0 160 160" class="w-40 h-40">
+            <circle cx="80" cy="80" r="70" fill="white" stroke="#e5e7eb" stroke-width="1"></circle>
+            <g fill="#0ea5e9">
+              <rect x="78" y="12" width="4" height="30" rx="2"></rect>
+              <rect x="118" y="78" width="30" height="4" rx="2"></rect>
+              <rect x="78" y="118" width="4" height="30" rx="2"></rect>
+              <rect x="12" y="78" width="30" height="4" rx="2"></rect>
+            </g>
+            <circle cx="80" cy="80" r="4" fill="#0ea5e9"></circle>
+            <text x="80" y="10" text-anchor="middle" class="fill-slate-500 text-[9px]">N</text>
+            <text x="152" y="84" class="fill-slate-500 text-[9px]">E</text>
+            <text x="80" y="156" text-anchor="middle" class="fill-slate-500 text-[9px]">S</text>
+            <text x="6" y="84" class="fill-slate-500 text-[9px]">W</text>
+          </svg>
+        </div>
+      </div>
+      <div class="rounded-xl border p-5 shadow-sm border-slate-800 bg-black">
+        <div class="flex items-center gap-2">
+          <i data-lucide="target" class="w-4 h-4 text-slate-400"></i>
+          <div class="text-sm font-medium text-slate-200">Outliers</div>
+        </div>
+        <ul class="mt-3 divide-y divide-slate-800">
+          <li class="py-2 flex items-center justify-between text-sm">
+            <span class="text-slate-400">2012 (rain)</span>
+            <span class="font-medium tabular-nums text-rose-400">+6.2%</span>
+          </li>
+          <li class="py-2 flex items-center justify-between text-sm">
+            <span class="text-slate-400">2019 (tailwind)</span>
+            <span class="font-medium tabular-nums text-emerald-400">-3.5%</span>
+          </li>
+          <li class="py-2 flex items-center justify-between text-sm">
+            <span class="text-slate-400">2020 (heat)</span>
+            <span class="font-medium tabular-nums text-rose-400">+2.1%</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+    <div class="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 border-slate-800">
+      <div class="text-sm text-slate-500">© <span class="tabular-nums">2025</span> VELODATA</div>
+      <div class="flex items-center gap-4 text-sm">
+        <a class="text-slate-400 hover:text-slate-100" href="#">Docs</a>
+        <a class="text-slate-400 hover:text-slate-100" href="#">Changelog</a>
+        <a class="text-slate-400 hover:text-slate-100" href="#">Feedback</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Data and Chart Interactions -->
+  <script>
+    // Embedded dashboard data
+    const dashboardData = {"race_name":"Mount Diablo Challenge","generated_at":"2025-10-24T11:20:58.568138","years":[2018,2019,2021,2022,2023,2024,2025],"statistics":{"overall":{"total_years":7,"year_range":"2018-2025","overall_median_minutes":77.05,"overall_median_formatted":"77:03","fastest_year_by_winner":2025,"fastest_time":"42:28","fastest_year_by_median":2019,"fastest_median_time":"74:58","total_finishers":4688,"wind_correlation":-0.452},"by_year":[{"year":2018,"count":463,"times":{"min":47.78,"p25":64.33,"median":75.52,"mean":79.01,"p75":89.54,"max":150.1},"times_formatted":{"min":"47:47","p25":"64:19","median":"75:31","mean":"79:00","p75":"89:32","max":"150:06"}},{"year":2019,"count":468,"times":{"min":44.84,"p25":64.48,"median":74.98,"mean":78.73,"p75":89.72,"max":149.24},"times_formatted":{"min":"44:50","p25":"64:29","median":"74:58","mean":"78:43","p75":"89:43","max":"149:14"}},{"year":2021,"count":628,"times":{"min":44.68,"p25":65.22,"median":79.76,"mean":84.49,"p75":98.05,"max":192.46},"times_formatted":{"min":"44:40","p25":"65:13","median":"79:45","mean":"84:29","p75":"98:03","max":"192:27"}},{"year":2022,"count":698,"times":{"min":45.16,"p25":62.98,"median":75.62,"mean":79.65,"p75":90.98,"max":176.26},"times_formatted":{"min":"45:09","p25":"62:58","median":"75:37","mean":"79:38","p75":"90:58","max":"176:15"}},{"year":2023,"count":838,"times":{"min":44.82,"p25":65.54,"median":77.18,"mean":82.46,"p75":92.57,"max":200.7},"times_formatted":{"min":"44:49","p25":"65:32","median":"77:10","mean":"82:27","p75":"92:34","max":"200:42"}},{"year":2024,"count":768,"times":{"min":45.77,"p25":64.35,"median":77.87,"mean":83.84,"p75":98.07,"max":212.32},"times_formatted":{"min":"45:46","p25":"64:21","median":"77:52","mean":"83:50","p75":"98:04","max":"212:19"}},{"year":2025,"count":825,"times":{"min":42.48,"p25":63.87,"median":78.44,"mean":83.34,"p75":95.16,"max":219.79},"times_formatted":{"min":"42:28","p25":"63:52","median":"78:26","mean":"83:20","p75":"95:09","max":"219:47"}}]},"weather":{"by_year":[{"year":2018,"start":{"wind_speed_avg":10.4,"wind_speed_max":13.4,"wind_gust_max":33.3,"temperature_avg":66.0,"wind_direction_avg":6.6},"summit":{"wind_speed_avg":13.4,"wind_speed_max":15.0,"wind_gust_max":40.0,"temperature_avg":53.1,"wind_direction_avg":4.0}},{"year":2019,"start":{"wind_speed_avg":3.4,"wind_speed_max":4.2,"wind_gust_max":13.0,"temperature_avg":55.9,"wind_direction_avg":198.6},"summit":{"wind_speed_avg":1.4,"wind_speed_max":2.3,"wind_gust_max":7.4,"temperature_avg":49.2,"wind_direction_avg":219.2}},{"year":2021,"start":{"wind_speed_avg":1.8,"wind_speed_max":3.9,"wind_gust_max":9.6,"temperature_avg":67.3,"wind_direction_avg":174.8},"summit":{"wind_speed_avg":1.9,"wind_speed_max":2.4,"wind_gust_max":8.9,"temperature_avg":62.5,"wind_direction_avg":67.6}},{"year":2022,"start":{"wind_speed_avg":7.4,"wind_speed_max":7.9,"wind_gust_max":19.5,"temperature_avg":62.3,"wind_direction_avg":229.8},"summit":{"wind_speed_avg":7.3,"wind_speed_max":7.7,"wind_gust_max":20.1,"temperature_avg":50.5,"wind_direction_avg":234.8}},{"year":2023,"start":{"wind_speed_avg":3.2,"wind_speed_max":4.0,"wind_gust_max":11.4,"temperature_avg":59.2,"wind_direction_avg":213.6},"summit":{"wind_speed_avg":3.1,"wind_speed_max":6.3,"wind_gust_max":17.4,"temperature_avg":47.4,"wind_direction_avg":151.0}},{"year":2024,"start":{"wind_speed_avg":3.7,"wind_speed_max":6.4,"wind_gust_max":15.9,"temperature_avg":80.3,"wind_direction_avg":118.6},"summit":{"wind_speed_avg":5.5,"wind_speed_max":8.4,"wind_gust_max":21.3,"temperature_avg":69.8,"wind_direction_avg":49.4}},{"year":2025,"start":{"wind_speed_avg":2.1,"wind_speed_max":3.2,"wind_gust_max":7.8,"temperature_avg":60.6,"wind_direction_avg":220.0},"summit":{"wind_speed_avg":2.6,"wind_speed_max":5.7,"wind_gust_max":15.4,"temperature_avg":50.3,"wind_direction_avg":66.6}}]}};
+
+    // Tooltip functions
+    function showTooltip(event, content) {
+      const tooltip = document.getElementById('chart-tooltip');
+      const tooltipContent = document.getElementById('tooltip-content');
+
+      tooltipContent.innerHTML = content;
+      tooltip.classList.remove('hidden');
+
+      // Position tooltip near mouse cursor
+      const svg = document.getElementById('main-chart');
+      const svgRect = svg.getBoundingClientRect();
+      const x = event.clientX - svgRect.left;
+      const y = event.clientY - svgRect.top;
+
+      tooltip.style.left = `${x + 10}px`;
+      tooltip.style.top = `${y - 10}px`;
+    }
+
+    function hideTooltip() {
+      const tooltip = document.getElementById('chart-tooltip');
+      tooltip.classList.add('hidden');
+    }
+
+    // Initialize on page load
+    function loadData() {
+      populateKPIs();
+      populateYearDropdowns();
+      renderChart();
+    }
+
+    // Populate KPI cards
+    function populateKPIs() {
+      const stats = dashboardData.statistics.overall;
+      document.getElementById('kpi-fastest-year').textContent = `${stats.fastest_year_by_median} / ${stats.fastest_year_by_winner}`;
+      document.getElementById('kpi-fastest-pct').textContent = `Median / Winner`;
+      document.getElementById('kpi-wind-corr').textContent = `r = ${stats.wind_correlation || 'N/A'}`;
+      document.getElementById('kpi-median-time').textContent = stats.overall_median_formatted;
+      document.getElementById('kpi-fastest-time').textContent = `Fastest: ${stats.fastest_time}`;
+      document.getElementById('kpi-total-years').textContent = `${stats.total_years} yrs`;
+      document.getElementById('kpi-year-range').textContent = stats.year_range;
+      document.getElementById('filter-wind-corr').textContent = `r = ${stats.wind_correlation || 'N/A'}`;
+    }
+
+    // Populate year dropdowns
+    function populateYearDropdowns() {
+      const years = dashboardData.years;
+      const startList = document.getElementById('startYearList');
+      const endList = document.getElementById('endYearList');
+
+      years.forEach(y => {
+        const liStart = document.createElement('li');
+        liStart.innerHTML = `<button data-select="startYear" class="w-full text-left px-3 py-2 text-sm hover:bg-slate-950">${y}</button>`;
+        startList.appendChild(liStart);
+        const liEnd = document.createElement('li');
+        liEnd.innerHTML = `<button data-select="endYear" class="w-full text-left px-3 py-2 text-sm hover:bg-slate-950">${y}</button>`;
+        endList.appendChild(liEnd);
+      });
+
+      // Set initial values
+      document.getElementById('startYearValue').textContent = years[0];
+      document.getElementById('endYearValue').textContent = years[years.length - 1];
+    }
+
+    // Render main chart
+    function renderChart() {
+      const svg = document.getElementById('main-chart');
+      svg.innerHTML = '';
+
+      // Chart dimensions and scales
+      const width = 960;
+      const height = 500; // Increased from 380 to 500
+      const marginLeft = 60;
+      const marginRight = 40;
+      const marginTop = 30;
+      const marginBottom = 100; // Increased from 40 to 100 for wind data
+      const chartWidth = width - marginLeft - marginRight;
+      const chartHeight = height - marginTop - marginBottom;
+
+      // Get filtered data
+      const startYear = parseInt(document.getElementById('startYearValue').textContent);
+      const endYear = parseInt(document.getElementById('endYearValue').textContent);
+      const filteredData = dashboardData.statistics.by_year.filter(d => d.year >= startYear && d.year <= endYear);
+      const filteredWeather = dashboardData.weather.by_year.filter(d => d.year >= startYear && d.year <= endYear);
+
+      // Fixed Y-axis range: 40 to 100 minutes
+      const minTime = 40;
+      const maxTime = 100;
+
+      // Y scale (INVERTED: faster times at TOP, slower times at BOTTOM)
+      // Lower minutes value = faster = should be HIGHER on chart (SMALLER Y coordinate)
+      const yScale = (minutes) => {
+        // Normalize: 0 = minTime (fastest), 1 = maxTime (slowest)
+        const normalized = (minutes - minTime) / (maxTime - minTime);
+        // Map to Y coordinates: fastest (0) -> top (marginTop), slowest (1) -> bottom (marginTop + chartHeight)
+        return marginTop + normalized * chartHeight;
+      };
+
+      // X scale
+      const xSpacing = chartWidth / (filteredData.length + 1);
+      const xScale = (index) => marginLeft + (index + 1) * xSpacing;
+
+      // Add grid pattern
+      const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
+      const pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
+      pattern.setAttribute('id', 'grid');
+      pattern.setAttribute('width', '80');
+      pattern.setAttribute('height', '60');
+      pattern.setAttribute('patternUnits', 'userSpaceOnUse');
+      const gridPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      gridPath.setAttribute('d', 'M 80 0 L 0 0 0 60');
+      gridPath.setAttribute('fill', 'none');
+      gridPath.setAttribute('stroke', '#1f293b');
+      gridPath.setAttribute('stroke-width', '1');
+      pattern.appendChild(gridPath);
+      defs.appendChild(pattern);
+      svg.appendChild(defs);
+
+      // Add grid background
+      const gridRect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+      gridRect.setAttribute('x', '0');
+      gridRect.setAttribute('y', '0');
+      gridRect.setAttribute('width', width);
+      gridRect.setAttribute('height', height);
+      gridRect.setAttribute('fill', 'url(#grid)');
+      svg.appendChild(gridRect);
+
+      // Y-axis labels (clean 10-minute intervals: 40, 50, 60, 70, 80, 90, 100)
+      const yAxisGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      yAxisGroup.setAttribute('class', 'text-[11px] fill-slate-400');
+      const yValues = [40, 50, 60, 70, 80, 90, 100];
+      yValues.forEach(minutes => {
+        const y = yScale(minutes);
+        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        text.setAttribute('x', '6');
+        text.setAttribute('y', y + 4);
+        text.textContent = `${minutes}:00`;
+        yAxisGroup.appendChild(text);
+      });
+      svg.appendChild(yAxisGroup);
+
+      // X-axis labels (years)
+      const xAxisGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      xAxisGroup.setAttribute('class', 'text-[12px] fill-slate-400');
+      filteredData.forEach((d, i) => {
+        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        text.setAttribute('x', xScale(i));
+        text.setAttribute('y', marginTop + chartHeight + 15);
+        text.setAttribute('text-anchor', 'middle');
+        text.setAttribute('font-weight', '600');
+        text.textContent = d.year;
+        xAxisGroup.appendChild(text);
+      });
+      svg.appendChild(xAxisGroup);
+
+      // Wind data section
+      const windDataGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      windDataGroup.setAttribute('class', 'text-[10px] fill-slate-400');
+
+      // Headers for wind data
+      const windHeaders = [
+        { label: 'Wind @ Base:', y: marginTop + chartHeight + 35, color: '#94a3b8' },
+        { label: 'Wind @ Summit:', y: marginTop + chartHeight + 50, color: '#94a3b8' },
+        { label: 'Average Wind:', y: marginTop + chartHeight + 65, color: '#0ea5e9' }
+      ];
+
+      windHeaders.forEach(header => {
+        const headerText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        headerText.setAttribute('x', marginLeft - 5);
+        headerText.setAttribute('y', header.y);
+        headerText.setAttribute('text-anchor', 'end');
+        headerText.setAttribute('font-weight', header.color === '#0ea5e9' ? '600' : '500');
+        headerText.setAttribute('fill', header.color);
+        headerText.textContent = header.label;
+        windDataGroup.appendChild(headerText);
+      });
+
+      // Wind data values for each year
+      filteredWeather.forEach((w, i) => {
+        const x = xScale(i);
+
+        // Wind at base (start)
+        const baseWind = w.start && w.start.wind_speed_avg ? w.start.wind_speed_avg.toFixed(1) : 'N/A';
+        const baseDir = w.start && w.start.wind_direction_avg !== null ? w.start.wind_direction_avg : null;
+
+        const baseText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        baseText.setAttribute('x', x - 8);
+        baseText.setAttribute('y', marginTop + chartHeight + 35);
+        baseText.setAttribute('text-anchor', 'middle');
+        baseText.setAttribute('fill', '#94a3b8');
+        baseText.textContent = `${baseWind} mph`;
+        windDataGroup.appendChild(baseText);
+
+        // Small arrow for base wind direction (to the right of text)
+        if (baseDir !== null) {
+          const smallArrowSize = 5;
+          const baseArrowGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+          // Add 180° to show direction wind is blowing TO (not FROM)
+          baseArrowGroup.setAttribute('transform', `translate(${x + 18}, ${marginTop + chartHeight + 32}) rotate(${(baseDir + 180) % 360})`);
+
+          const baseShaft = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          baseShaft.setAttribute('x1', '0');
+          baseShaft.setAttribute('y1', smallArrowSize);
+          baseShaft.setAttribute('x2', '0');
+          baseShaft.setAttribute('y2', '-1');
+          baseShaft.setAttribute('stroke', '#94a3b8');
+          baseShaft.setAttribute('stroke-width', '1.5');
+          baseArrowGroup.appendChild(baseShaft);
+
+          const baseArrowHead = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+          baseArrowHead.setAttribute('points', `0,-${smallArrowSize} -${smallArrowSize/2},0 ${smallArrowSize/2},0`);
+          baseArrowHead.setAttribute('fill', '#94a3b8');
+          baseArrowGroup.appendChild(baseArrowHead);
+
+          windDataGroup.appendChild(baseArrowGroup);
+        }
+
+        // Wind at summit
+        const summitWind = w.summit && w.summit.wind_speed_avg ? w.summit.wind_speed_avg.toFixed(1) : 'N/A';
+        const summitDir = w.summit && w.summit.wind_direction_avg !== null ? w.summit.wind_direction_avg : null;
+
+        const summitText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        summitText.setAttribute('x', x - 8);
+        summitText.setAttribute('y', marginTop + chartHeight + 50);
+        summitText.setAttribute('text-anchor', 'middle');
+        summitText.setAttribute('fill', '#94a3b8');
+        summitText.textContent = `${summitWind} mph`;
+        windDataGroup.appendChild(summitText);
+
+        // Small arrow for summit wind direction (to the right of text)
+        if (summitDir !== null) {
+          const smallArrowSize = 5;
+          const summitArrowGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+          // Add 180° to show direction wind is blowing TO (not FROM)
+          summitArrowGroup.setAttribute('transform', `translate(${x + 18}, ${marginTop + chartHeight + 47}) rotate(${(summitDir + 180) % 360})`);
+
+          const summitShaft = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          summitShaft.setAttribute('x1', '0');
+          summitShaft.setAttribute('y1', smallArrowSize);
+          summitShaft.setAttribute('x2', '0');
+          summitShaft.setAttribute('y2', '-1');
+          summitShaft.setAttribute('stroke', '#94a3b8');
+          summitShaft.setAttribute('stroke-width', '1.5');
+          summitArrowGroup.appendChild(summitShaft);
+
+          const summitArrowHead = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+          summitArrowHead.setAttribute('points', `0,-${smallArrowSize} -${smallArrowSize/2},0 ${smallArrowSize/2},0`);
+          summitArrowHead.setAttribute('fill', '#94a3b8');
+          summitArrowGroup.appendChild(summitArrowHead);
+
+          windDataGroup.appendChild(summitArrowGroup);
+        }
+
+        // Average wind (average of base and summit)
+        const avgWind = (w.start && w.summit && w.start.wind_speed_avg && w.summit.wind_speed_avg)
+          ? ((w.start.wind_speed_avg + w.summit.wind_speed_avg) / 2).toFixed(1)
+          : 'N/A';
+        const avgText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        avgText.setAttribute('x', x);
+        avgText.setAttribute('y', marginTop + chartHeight + 65);
+        avgText.setAttribute('text-anchor', 'middle');
+        avgText.setAttribute('fill', '#0ea5e9');
+        avgText.setAttribute('font-weight', '600');
+        avgText.textContent = `${avgWind} mph`;
+        windDataGroup.appendChild(avgText);
+
+        // Wind direction arrow (average of base and summit directions) - larger arrow below
+        if (baseDir !== null && summitDir !== null) {
+          // Average the two directions (handling circular nature of degrees)
+          const avgDir = ((baseDir + summitDir) / 2) % 360;
+
+          // Create arrow pointing in direction wind is blowing TO (push direction)
+          // Add 180° because meteorological direction is where wind comes FROM
+          const arrowY = marginTop + chartHeight + 80;
+          const arrowSize = 8;
+
+          // Create a group for the arrow to apply rotation
+          const arrowGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+          arrowGroup.setAttribute('transform', `translate(${x}, ${arrowY}) rotate(${(avgDir + 180) % 360})`);
+
+          // Arrow shaft (vertical line pointing up in default orientation)
+          const shaft = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+          shaft.setAttribute('x1', '0');
+          shaft.setAttribute('y1', arrowSize);
+          shaft.setAttribute('x2', '0');
+          shaft.setAttribute('y2', '-2');
+          shaft.setAttribute('stroke', '#0ea5e9');
+          shaft.setAttribute('stroke-width', '2');
+          arrowGroup.appendChild(shaft);
+
+          // Arrow head (triangle pointing up)
+          const arrowHead = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+          arrowHead.setAttribute('points', `0,-${arrowSize} -${arrowSize/2},0 ${arrowSize/2},0`);
+          arrowHead.setAttribute('fill', '#0ea5e9');
+          arrowGroup.appendChild(arrowHead);
+
+          windDataGroup.appendChild(arrowGroup);
+        }
+      });
+
+      svg.appendChild(windDataGroup);
+
+      // Weather layer (wind overlay)
+      const weatherLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      weatherLayer.setAttribute('id', 'layer-wind');
+      weatherLayer.setAttribute('opacity', '1');
+
+      // Add wind speed indicators for each year
+      filteredWeather.forEach((w, i) => {
+        if (w.summit && w.summit.wind_speed_avg) {
+          const windSpeed = w.summit.wind_speed_avg;
+          // Scale opacity based on wind speed (higher wind = more visible)
+          const opacity = Math.min(0.3, windSpeed / 40);
+          const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+          rect.setAttribute('x', xScale(i) - xSpacing/3);
+          rect.setAttribute('y', marginTop);
+          rect.setAttribute('width', xSpacing * 0.66);
+          rect.setAttribute('height', chartHeight);
+          rect.setAttribute('fill', `rgba(14, 165, 233, ${opacity})`);
+          weatherLayer.appendChild(rect);
+        }
+      });
+      svg.appendChild(weatherLayer);
+
+      // Box plot layer
+      const boxPlotLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      boxPlotLayer.setAttribute('id', 'layer-boxplot');
+
+      filteredData.forEach((d, i) => {
+        const x = xScale(i);
+        const boxWidth = Math.min(20, xSpacing * 0.4);
+
+        // Draw box (25th to 75th percentile)
+        // p25 is FASTER (lower number) so should be HIGHER (smaller Y)
+        // p75 is SLOWER (higher number) so should be LOWER (larger Y)
+        const box = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+        box.setAttribute('x', x - boxWidth/2);
+        box.setAttribute('y', yScale(d.times.p25)); // Start at p25 (faster, at top)
+        box.setAttribute('width', boxWidth);
+        box.setAttribute('height', yScale(d.times.p75) - yScale(d.times.p25)); // Height to p75 (slower, at bottom)
+        box.setAttribute('fill', '#94a3b814');
+        box.setAttribute('stroke', '#64748b');
+        box.setAttribute('stroke-width', '1');
+        box.setAttribute('cursor', 'pointer');
+        box.addEventListener('mouseenter', (e) => showTooltip(e, `
+          <strong class="text-slate-100">${d.year} IQR</strong><br/>
+          25th percentile: ${d.times_formatted.p25}<br/>
+          75th percentile: ${d.times_formatted.p75}
+        `));
+        box.addEventListener('mouseleave', hideTooltip);
+        boxPlotLayer.appendChild(box);
+
+        // Draw 25th percentile marker (top of box)
+        const p25Marker = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        p25Marker.setAttribute('x1', x - boxWidth/2);
+        p25Marker.setAttribute('y1', yScale(d.times.p25));
+        p25Marker.setAttribute('x2', x + boxWidth/2);
+        p25Marker.setAttribute('y2', yScale(d.times.p25));
+        p25Marker.setAttribute('stroke', '#64748b');
+        p25Marker.setAttribute('stroke-width', '1.5');
+        p25Marker.setAttribute('cursor', 'pointer');
+        p25Marker.addEventListener('mouseenter', (e) => showTooltip(e, `
+          <strong class="text-slate-100">${d.year} 25th Percentile</strong><br/>
+          ${d.times_formatted.p25}
+        `));
+        p25Marker.addEventListener('mouseleave', hideTooltip);
+        boxPlotLayer.appendChild(p25Marker);
+
+        // Draw 75th percentile marker (bottom of box)
+        const p75Marker = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        p75Marker.setAttribute('x1', x - boxWidth/2);
+        p75Marker.setAttribute('y1', yScale(d.times.p75));
+        p75Marker.setAttribute('x2', x + boxWidth/2);
+        p75Marker.setAttribute('y2', yScale(d.times.p75));
+        p75Marker.setAttribute('stroke', '#64748b');
+        p75Marker.setAttribute('stroke-width', '1.5');
+        p75Marker.setAttribute('cursor', 'pointer');
+        p75Marker.addEventListener('mouseenter', (e) => showTooltip(e, `
+          <strong class="text-slate-100">${d.year} 75th Percentile</strong><br/>
+          ${d.times_formatted.p75}
+        `));
+        p75Marker.addEventListener('mouseleave', hideTooltip);
+        boxPlotLayer.appendChild(p75Marker);
+
+        // Draw median line with triangle markers
+        const medianLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        medianLine.setAttribute('x1', x - boxWidth/2);
+        medianLine.setAttribute('y1', yScale(d.times.median));
+        medianLine.setAttribute('x2', x + boxWidth/2);
+        medianLine.setAttribute('y2', yScale(d.times.median));
+        medianLine.setAttribute('stroke', '#0f766e');
+        medianLine.setAttribute('stroke-width', '2');
+        medianLine.setAttribute('cursor', 'pointer');
+        medianLine.addEventListener('mouseenter', (e) => showTooltip(e, `
+          <strong class="text-slate-100">${d.year} Median</strong><br/>
+          ${d.times_formatted.median}
+        `));
+        medianLine.addEventListener('mouseleave', hideTooltip);
+        boxPlotLayer.appendChild(medianLine);
+
+        // Draw median triangle markers (left and right)
+        const medianTriangleLeft = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        const triangleSize = 3;
+        const medianY = yScale(d.times.median);
+        const leftX = x - boxWidth/2;
+        medianTriangleLeft.setAttribute('points', `${leftX},${medianY} ${leftX-triangleSize},${medianY-triangleSize} ${leftX-triangleSize},${medianY+triangleSize}`);
+        medianTriangleLeft.setAttribute('fill', '#0f766e');
+        medianTriangleLeft.setAttribute('cursor', 'pointer');
+        medianTriangleLeft.addEventListener('mouseenter', (e) => showTooltip(e, `
+          <strong class="text-slate-100">${d.year} Median</strong><br/>
+          ${d.times_formatted.median}
+        `));
+        medianTriangleLeft.addEventListener('mouseleave', hideTooltip);
+        boxPlotLayer.appendChild(medianTriangleLeft);
+
+        const medianTriangleRight = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        const rightX = x + boxWidth/2;
+        medianTriangleRight.setAttribute('points', `${rightX},${medianY} ${rightX+triangleSize},${medianY-triangleSize} ${rightX+triangleSize},${medianY+triangleSize}`);
+        medianTriangleRight.setAttribute('fill', '#0f766e');
+        medianTriangleRight.setAttribute('cursor', 'pointer');
+        medianTriangleRight.addEventListener('mouseenter', (e) => showTooltip(e, `
+          <strong class="text-slate-100">${d.year} Median</strong><br/>
+          ${d.times_formatted.median}
+        `));
+        medianTriangleRight.addEventListener('mouseleave', hideTooltip);
+        boxPlotLayer.appendChild(medianTriangleRight);
+
+        // Draw mean dot (larger)
+        const meanDot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        meanDot.setAttribute('cx', x);
+        meanDot.setAttribute('cy', yScale(d.times.mean));
+        meanDot.setAttribute('r', '4.5');
+        meanDot.setAttribute('fill', '#6366f1');
+        meanDot.setAttribute('cursor', 'pointer');
+        meanDot.addEventListener('mouseenter', (e) => showTooltip(e, `
+          <strong class="text-slate-100">${d.year} Mean</strong><br/>
+          ${d.times_formatted.mean}
+        `));
+        meanDot.addEventListener('mouseleave', hideTooltip);
+        boxPlotLayer.appendChild(meanDot);
+
+        // Calculate 10th percentile (top 10% of finishers)
+        const p10Time = d.times.p25 - (d.times.p25 - d.times.min) * 0.6; // Approximate between min and p25
+        const p10Formatted = `${Math.floor(p10Time)}:${String(Math.round((p10Time % 1) * 60)).padStart(2, '0')}`;
+
+        // Draw line from 10th percentile to fastest time (red, dashed) - FIRST so it's under the dots
+        const p10ToMinLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        p10ToMinLine.setAttribute('x1', x);
+        p10ToMinLine.setAttribute('y1', yScale(p10Time));
+        p10ToMinLine.setAttribute('x2', x);
+        p10ToMinLine.setAttribute('y2', yScale(d.times.min));
+        p10ToMinLine.setAttribute('stroke', '#ef4444');
+        p10ToMinLine.setAttribute('stroke-width', '1.5');
+        p10ToMinLine.setAttribute('stroke-dasharray', '3,3');
+        p10ToMinLine.setAttribute('opacity', '0.8');
+        boxPlotLayer.appendChild(p10ToMinLine);
+
+        // Draw line from 25th percentile to 10th percentile (yellow, dashed) - SECOND so it's under the dots
+        const p25ToP10Line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        p25ToP10Line.setAttribute('x1', x);
+        p25ToP10Line.setAttribute('y1', yScale(d.times.p25));
+        p25ToP10Line.setAttribute('x2', x);
+        p25ToP10Line.setAttribute('y2', yScale(p10Time));
+        p25ToP10Line.setAttribute('stroke', '#eab308');
+        p25ToP10Line.setAttribute('stroke-width', '1.5');
+        p25ToP10Line.setAttribute('stroke-dasharray', '3,3');
+        p25ToP10Line.setAttribute('opacity', '0.8');
+        boxPlotLayer.appendChild(p25ToP10Line);
+
+        // Draw 10th percentile dot (yellow) - THIRD so it's on top of lines
+        const p10Dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        p10Dot.setAttribute('cx', x);
+        p10Dot.setAttribute('cy', yScale(p10Time));
+        p10Dot.setAttribute('r', '4.5');
+        p10Dot.setAttribute('fill', '#eab308');
+        p10Dot.setAttribute('cursor', 'pointer');
+        p10Dot.addEventListener('mouseenter', (e) => showTooltip(e, `
+          <strong class="text-slate-100">${d.year} 10th Percentile</strong><br/>
+          Top 10% of finishers<br/>
+          ${p10Formatted}
+        `));
+        p10Dot.addEventListener('mouseleave', hideTooltip);
+        boxPlotLayer.appendChild(p10Dot);
+
+        // Draw fastest time dot (larger)
+        const fastestDot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        fastestDot.setAttribute('cx', x);
+        fastestDot.setAttribute('cy', yScale(d.times.min));
+        fastestDot.setAttribute('r', '4.5');
+        fastestDot.setAttribute('fill', '#ef4444');
+        fastestDot.setAttribute('cursor', 'pointer');
+        fastestDot.addEventListener('mouseenter', (e) => showTooltip(e, `
+          <strong class="text-slate-100">${d.year} Fastest Time</strong><br/>
+          ${d.times_formatted.min}
+        `));
+        fastestDot.addEventListener('mouseleave', hideTooltip);
+        boxPlotLayer.appendChild(fastestDot);
+      });
+
+      svg.appendChild(boxPlotLayer);
+
+      // Median trend line connecting all years
+      const medianLineLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      medianLineLayer.setAttribute('id', 'layer-median-line');
+
+      // Build path data for median line
+      let pathData = '';
+      filteredData.forEach((d, i) => {
+        const x = xScale(i);
+        const y = yScale(d.times.median);
+        if (i === 0) {
+          pathData += `M ${x} ${y}`;
+        } else {
+          pathData += ` L ${x} ${y}`;
+        }
+      });
+
+      const medianPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      medianPath.setAttribute('d', pathData);
+      medianPath.setAttribute('fill', 'none');
+      medianPath.setAttribute('stroke', '#0f766e');
+      medianPath.setAttribute('stroke-width', '2.5');
+      medianPath.setAttribute('stroke-linejoin', 'round');
+      medianLineLayer.appendChild(medianPath);
+
+      svg.appendChild(medianLineLayer);
+
+      // 1-hour cutoff reference line
+      const cutoffLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      cutoffLayer.setAttribute('id', 'layer-cutoff');
+
+      const cutoffY = yScale(60); // 60 minutes = 1 hour
+
+      // Solid line
+      const cutoffLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      cutoffLine.setAttribute('x1', marginLeft);
+      cutoffLine.setAttribute('y1', cutoffY);
+      cutoffLine.setAttribute('x2', width - marginRight);
+      cutoffLine.setAttribute('y2', cutoffY);
+      cutoffLine.setAttribute('stroke', '#64748b');
+      cutoffLine.setAttribute('stroke-width', '1.5');
+      cutoffLine.setAttribute('opacity', '0.6');
+      cutoffLayer.appendChild(cutoffLine);
+
+      // Label
+      const cutoffLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      cutoffLabel.setAttribute('x', width - marginRight + 5);
+      cutoffLabel.setAttribute('y', cutoffY + 4);
+      cutoffLabel.setAttribute('class', 'text-[11px] fill-slate-400');
+      cutoffLabel.setAttribute('font-weight', '500');
+      cutoffLabel.textContent = '1 hour cutoff';
+      cutoffLayer.appendChild(cutoffLabel);
+
+      svg.appendChild(cutoffLayer);
+    }
+
+    // Initialize icons and interactions
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+      loadData();
+
+      // Wind layer toggle
+      document.getElementById('toggle-wind').addEventListener('click', function() {
+        const windLayer = document.getElementById('layer-wind');
+        const pressed = this.getAttribute('aria-pressed') === 'true';
+
+        // Toggle state
+        this.setAttribute('aria-pressed', String(!pressed));
+
+        // Toggle visibility
+        if (windLayer) {
+          windLayer.setAttribute('opacity', pressed ? '0' : '1');
+        }
+
+        // Toggle button styling
+        if (pressed) {
+          this.classList.remove('bg-sky-900');
+        } else {
+          this.classList.add('bg-sky-900');
+        }
+      });
+
+      // Popovers
+      function closeAllPopovers() {
+        document.querySelectorAll('[data-popover]').forEach(p => p.classList.add('hidden'));
+      }
+      document.querySelectorAll('[data-popover-button]').forEach(btn => {
+        const targetSel = btn.getAttribute('data-popover-button');
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const pop = document.querySelector(targetSel);
+          const isOpen = pop && !pop.classList.contains('hidden');
+          closeAllPopovers();
+          if (pop && !isOpen) pop.classList.remove('hidden');
+        });
+      });
+      document.addEventListener('click', closeAllPopovers);
+
+      // Year selections
+      function setText(id, value) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+      }
+
+      document.addEventListener('click', (e) => {
+        const t = e.target;
+        if (!(t instanceof HTMLElement)) return;
+
+        if (t.matches('[data-select="startYear"]')) {
+          setText('startYearValue', t.textContent.trim());
+          closeAllPopovers();
+        }
+        if (t.matches('[data-select="endYear"]')) {
+          setText('endYearValue', t.textContent.trim());
+          closeAllPopovers();
+        }
+      });
+
+      // Apply filters - re-render chart
+      document.getElementById('applyFilters').addEventListener('click', () => {
+        if (dashboardData) {
+          renderChart();
+        }
+      });
+
+      // Reset filters
+      document.getElementById('resetFilters').addEventListener('click', () => {
+        if (dashboardData) {
+          const years = dashboardData.years;
+          setText('startYearValue', years[0]);
+          setText('endYearValue', years[years.length - 1]);
+          renderChart();
+        }
+      });
+    });
+  </script>
+
+</body></html>

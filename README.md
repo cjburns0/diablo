@@ -40,7 +40,22 @@ This will:
 - Generate statistical analysis
 - Create publication-quality visualizations in `output/charts/`
 
-### 3. Explore Data Interactively
+### 3. View Interactive Dashboard
+
+Open the dashboard in your browser:
+
+```bash
+open dashboard.html
+```
+
+The interactive dashboard features:
+- **Box-and-whisker plots** showing time distribution (25th-75th percentile, median, mean)
+- **Inverted Y-axis** with fastest times at the top
+- **Wind overlay** showing correlation between wind speed and performance
+- **Dynamic filtering** by year range
+- **Real-time KPI cards** displaying key race statistics
+
+### 4. Explore Data in Jupyter
 
 ```bash
 jupyter notebook notebooks/
@@ -60,13 +75,15 @@ diablo/
 │   ├── weather.py          # Weather API integration
 │   ├── database.py         # SQLite operations
 │   └── analysis.py         # Statistical analysis
-├── notebooks/              # Jupyter notebooks
+├── notebooks/              # Jupyter notebooks for exploration
 ├── data/
-│   └── diablo_challenge.db # SQLite database
-├── output/
-│   └── charts/             # Generated visualizations
+│   ├── diablo_challenge.db # SQLite database
+│   └── dashboard_data.json # JSON data for dashboard
+├── dashboard.html          # Interactive web dashboard
+├── dashboard_data.py       # Dashboard data generator
 ├── config.py               # Configuration
 ├── main.py                 # Main pipeline script
+├── update_year.py          # Single-year update script
 └── requirements.txt        # Dependencies
 ```
 
@@ -87,10 +104,12 @@ diablo/
 - Demographic analysis (age, gender)
 
 ### Visualizations
-- Yearly time distribution (mean, median, percentiles)
-- Performance vs wind conditions
-- Weather comparison (start vs summit)
-- Custom multi-panel dashboards
+- **Interactive Dashboard** (`dashboard.html`): Real-time, filterable charts with wind overlays
+- Box-and-whisker plots showing time distribution per year
+- Inverted Y-axis design (faster times appear higher)
+- Wind speed correlation overlay (blue shading indicates wind intensity)
+- Dynamic year range filtering
+- KPI cards showing key statistics
 
 ## Command Line Options
 
