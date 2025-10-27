@@ -498,7 +498,8 @@
       const windHeaders = [
         { label: 'Wind @ Base:', y: marginTop + chartHeight + 35, color: '#94a3b8' },
         { label: 'Wind @ Summit:', y: marginTop + chartHeight + 50, color: '#94a3b8' },
-        { label: 'Average Wind:', y: marginTop + chartHeight + 65, color: '#0ea5e9' }
+        { label: 'Average Wind:', y: marginTop + chartHeight + 65, color: '#0ea5e9' },
+        { label: 'Total Riders:', y: marginTop + chartHeight + 95, color: '#10b981' }
       ];
 
       windHeaders.forEach(header => {
@@ -633,6 +634,17 @@
 
           windDataGroup.appendChild(arrowGroup);
         }
+
+        // Total riders count for this year
+        const riderCount = filteredData[i] ? filteredData[i].count : 'N/A';
+        const ridersText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        ridersText.setAttribute('x', x);
+        ridersText.setAttribute('y', marginTop + chartHeight + 95);
+        ridersText.setAttribute('text-anchor', 'middle');
+        ridersText.setAttribute('fill', '#10b981');
+        ridersText.setAttribute('font-weight', '600');
+        ridersText.textContent = riderCount;
+        windDataGroup.appendChild(ridersText);
       });
 
       svg.appendChild(windDataGroup);

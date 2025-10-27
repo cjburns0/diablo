@@ -16,6 +16,14 @@ This project provides complete data pipeline and analysis for the Mount Diablo C
 - **Database Storage**: SQLite database for efficient data management
 - **Statistical Analysis**: Year-over-year trends, distributions, and correlations
 - **Visualization**: Publication-quality charts and interactive dashboards
+- **Frontend Deployment**: Dashboard hosted on [Vercel](https://vercel.com) with automatic updates
+
+## Architecture
+
+- **Frontend**: Static HTML/JavaScript dashboard hosted on Vercel at [diablo-topaz.vercel.app](https://diablo-topaz.vercel.app)
+- **Data Pipeline**: Python scripts run locally to scrape race data and generate dashboard JSON
+- **Database**: SQLite database stored locally, updated manually after each race
+- **Deployment**: Dashboard data (`dashboard_data.json`) is committed to git and auto-deployed to Vercel
 
 ## Quick Start
 
@@ -40,12 +48,25 @@ This will:
 - Generate statistical analysis
 - Create publication-quality visualizations in `output/charts/`
 
-### 3. View Interactive Dashboard
+### 3. Update Dashboard Data
 
-Open the dashboard in your browser:
+Generate the JSON data file for the dashboard:
 
 ```bash
-open dashboard.html
+python3 dashboard_data.py
+```
+
+This creates `data/dashboard_data.json` which powers the frontend dashboard.
+
+### 4. View Interactive Dashboard
+
+**Live Dashboard**: https://diablo-topaz.vercel.app
+
+Or view locally:
+
+```bash
+python3 -m http.server 8080
+# Then open http://localhost:8080/dashboard.html
 ```
 
 The interactive dashboard features:
@@ -55,7 +76,7 @@ The interactive dashboard features:
 - **Dynamic filtering** by year range
 - **Real-time KPI cards** displaying key race statistics
 
-### 4. Explore Data in Jupyter
+### 5. Explore Data in Jupyter
 
 ```bash
 jupyter notebook notebooks/
@@ -144,6 +165,25 @@ python3 update_year.py 2026 --no-replace
 ```
 
 This is **much faster** than re-running the full pipeline and won't affect your existing historical data.
+
+### Deploy Updates to Vercel
+
+After updating the data locally, deploy to the live dashboard:
+
+```bash
+# 1. Update the data
+python3 update_year.py 2026  # or python3 main.py
+
+# 2. Regenerate dashboard JSON
+python3 dashboard_data.py
+
+# 3. Commit and push to trigger Vercel deployment
+git add data/dashboard_data.json
+git commit -m "Update race data for 2026"
+git push
+```
+
+Vercel will automatically redeploy the dashboard with the updated data within 30-60 seconds.
 
 ## Data Sources
 
