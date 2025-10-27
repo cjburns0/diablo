@@ -16,22 +16,26 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
         <img src="assets/logo.png" alt="Mt. Diablo Challenge Logo" class="h-10 w-10 rounded-md">
-        <div class="text-[20px] sm:text-[22px] font-semibold tracking-tight">Mt. Diablo Challenge</div>
+        <div class="text-[20px] sm:text-[22px] font-semibold tracking-tight whitespace-nowrap">Mt. Diablo Challenge</div>
+        <!-- Navigation links - commented out for future use
         <div class="hidden md:flex items-center gap-6 pl-6 ml-4 border-l border-slate-800">
-          <span class="text-sm font-bold text-red-900 opacity-50 cursor-not-allowed">Overview <span class="text-xs font-normal text-slate-500">(Coming Soon)</span></span>
-          <span class="text-sm font-bold text-red-900 opacity-50 cursor-not-allowed">Trends <span class="text-xs font-normal text-slate-500">(Coming Soon)</span></span>
-          <span class="text-sm font-bold text-red-900 opacity-50 cursor-not-allowed">Weather Impact <span class="text-xs font-normal text-slate-500">(Coming Soon)</span></span>
+          <a href="#overview" class="text-sm font-medium text-slate-400 hover:text-slate-100">Overview</a>
+          <a href="#trends" class="text-sm font-medium text-slate-400 hover:text-slate-100">Trends</a>
+          <a href="#weather" class="text-sm font-medium text-slate-400 hover:text-slate-100">Weather Impact</a>
         </div>
+        -->
       </div>
       <div class="flex items-center gap-3">
         <div class="hidden sm:flex items-center px-2.5 py-1.5 border rounded-md shadow-sm/50 border-slate-700 bg-slate-900 opacity-50 cursor-not-allowed">
           <i data-lucide="search" class="w-4 h-4 text-slate-500"></i>
-          <input type="text" placeholder="Search races, years, riders… (Coming Soon)" class="ml-2 text-sm placeholder:text-slate-500 focus:outline-none bg-transparent w-64 cursor-not-allowed" disabled>
+          <input type="text" placeholder="Search races, years, riders…" class="ml-2 text-sm placeholder:text-slate-500 focus:outline-none bg-transparent w-64 cursor-not-allowed" disabled>
         </div>
-        <button class="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium border rounded-md px-2.5 py-1.5 text-slate-500 border-slate-700 bg-slate-900 opacity-50 cursor-not-allowed" disabled>
-          <i data-lucide="download" class="w-4 h-4 text-slate-500"></i>
-          Export (Coming Soon)
+        <!-- Export button - commented out for future use
+        <button class="inline-flex items-center gap-1.5 text-sm font-medium border rounded-md px-2.5 py-1.5 text-slate-300 border-slate-800 hover:bg-slate-950">
+          <i data-lucide="download" class="w-4 h-4 text-slate-400"></i>
+          Export
         </button>
+        -->
       </div>
     </div>
   </header>
@@ -251,6 +255,7 @@
           </div>
         </div>
       </div>
+      <!-- Wind Rose - hidden for now
       <div class="rounded-xl border p-5 shadow-sm border-slate-800 bg-black">
         <div class="flex items-center gap-2">
           <i data-lucide="compass" class="w-4 h-4 text-sky-400"></i>
@@ -273,24 +278,14 @@
           </svg>
         </div>
       </div>
+      -->
       <div class="rounded-xl border p-5 shadow-sm border-slate-800 bg-black">
         <div class="flex items-center gap-2">
           <i data-lucide="target" class="w-4 h-4 text-slate-400"></i>
-          <div class="text-sm font-medium text-slate-200">Outliers</div>
+          <div class="text-sm font-medium text-slate-200">Performance Outliers</div>
         </div>
-        <ul class="mt-3 divide-y divide-slate-800">
-          <li class="py-2 flex items-center justify-between text-sm">
-            <span class="text-slate-400">2012 (rain)</span>
-            <span class="font-medium tabular-nums text-rose-400">+6.2%</span>
-          </li>
-          <li class="py-2 flex items-center justify-between text-sm">
-            <span class="text-slate-400">2019 (tailwind)</span>
-            <span class="font-medium tabular-nums text-emerald-400">-3.5%</span>
-          </li>
-          <li class="py-2 flex items-center justify-between text-sm">
-            <span class="text-slate-400">2020 (heat)</span>
-            <span class="font-medium tabular-nums text-rose-400">+2.1%</span>
-          </li>
+        <ul id="outliers-list" class="mt-3 divide-y divide-slate-800">
+          <!-- Populated by JavaScript -->
         </ul>
       </div>
     </section>
@@ -359,10 +354,57 @@
       tooltip.classList.add('hidden');
     }
 
+    // Populate outliers with real data
+    function populateOutliers() {
+      const stats = dashboardData.statistics.by_year;
+      const weather = dashboardData.weather.by_year;
+      const overallMedian = dashboardData.statistics.overall.overall_median_minutes;
+
+      // Calculate percent difference from overall median for each year
+      const yearData = stats.map((yearStats, idx) => {
+        const medianMinutes = yearStats.times.median;
+        const pctDiff = ((medianMinutes - overallMedian) / overallMedian) * 100;
+        const wind = weather[idx]?.summit?.wind_speed_avg || 0;
+
+        return {
+          year: yearStats.year,
+          pctDiff: pctDiff,
+          wind: wind,
+          windLabel: wind > 10 ? 'high wind' : wind < 3 ? 'calm' : 'moderate wind'
+        };
+      });
+
+      // Sort by absolute percent difference to find outliers
+      const sortedByDiff = [...yearData].sort((a, b) => Math.abs(b.pctDiff) - Math.abs(a.pctDiff));
+
+      // Take top 3 outliers
+      const topOutliers = sortedByDiff.slice(0, 3);
+
+      // Populate the list
+      const outliersList = document.getElementById('outliers-list');
+      outliersList.innerHTML = '';
+
+      topOutliers.forEach(outlier => {
+        const li = document.createElement('li');
+        li.className = 'py-2 flex items-center justify-between text-sm';
+
+        const pctSign = outlier.pctDiff >= 0 ? '+' : '';
+        const colorClass = outlier.pctDiff >= 0 ? 'text-rose-400' : 'text-emerald-400';
+
+        li.innerHTML = `
+          <span class="text-slate-400">${outlier.year} (${outlier.windLabel})</span>
+          <span class="font-medium tabular-nums ${colorClass}">${pctSign}${outlier.pctDiff.toFixed(1)}%</span>
+        `;
+
+        outliersList.appendChild(li);
+      });
+    }
+
     // Initialize on page load
     function loadData() {
       populateKPIs();
       populateYearDropdowns();
+      populateOutliers();
       renderChart();
     }
 
@@ -499,7 +541,7 @@
         { label: 'Wind @ Base:', y: marginTop + chartHeight + 35, color: '#94a3b8' },
         { label: 'Wind @ Summit:', y: marginTop + chartHeight + 50, color: '#94a3b8' },
         { label: 'Average Wind:', y: marginTop + chartHeight + 65, color: '#0ea5e9' },
-        { label: 'Total Riders:', y: marginTop + chartHeight + 95, color: '#10b981' }
+        { label: 'Total Riders:', y: marginTop + chartHeight + 110, color: '#10b981' }
       ];
 
       windHeaders.forEach(header => {
@@ -639,7 +681,7 @@
         const riderCount = filteredData[i] ? filteredData[i].count : 'N/A';
         const ridersText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
         ridersText.setAttribute('x', x);
-        ridersText.setAttribute('y', marginTop + chartHeight + 95);
+        ridersText.setAttribute('y', marginTop + chartHeight + 110);
         ridersText.setAttribute('text-anchor', 'middle');
         ridersText.setAttribute('fill', '#10b981');
         ridersText.setAttribute('font-weight', '600');
