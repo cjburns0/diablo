@@ -310,8 +310,32 @@
 
   <!-- Data and Chart Interactions -->
   <script>
-    // Embedded dashboard data
-    const dashboardData = {"race_name":"Mount Diablo Challenge","generated_at":"2025-10-24T11:20:58.568138","years":[2018,2019,2021,2022,2023,2024,2025],"statistics":{"overall":{"total_years":7,"year_range":"2018-2025","overall_median_minutes":77.05,"overall_median_formatted":"77:03","fastest_year_by_winner":2025,"fastest_time":"42:28","fastest_year_by_median":2019,"fastest_median_time":"74:58","total_finishers":4688,"wind_correlation":-0.452},"by_year":[{"year":2018,"count":463,"times":{"min":47.78,"p25":64.33,"median":75.52,"mean":79.01,"p75":89.54,"max":150.1},"times_formatted":{"min":"47:47","p25":"64:19","median":"75:31","mean":"79:00","p75":"89:32","max":"150:06"}},{"year":2019,"count":468,"times":{"min":44.84,"p25":64.48,"median":74.98,"mean":78.73,"p75":89.72,"max":149.24},"times_formatted":{"min":"44:50","p25":"64:29","median":"74:58","mean":"78:43","p75":"89:43","max":"149:14"}},{"year":2021,"count":628,"times":{"min":44.68,"p25":65.22,"median":79.76,"mean":84.49,"p75":98.05,"max":192.46},"times_formatted":{"min":"44:40","p25":"65:13","median":"79:45","mean":"84:29","p75":"98:03","max":"192:27"}},{"year":2022,"count":698,"times":{"min":45.16,"p25":62.98,"median":75.62,"mean":79.65,"p75":90.98,"max":176.26},"times_formatted":{"min":"45:09","p25":"62:58","median":"75:37","mean":"79:38","p75":"90:58","max":"176:15"}},{"year":2023,"count":838,"times":{"min":44.82,"p25":65.54,"median":77.18,"mean":82.46,"p75":92.57,"max":200.7},"times_formatted":{"min":"44:49","p25":"65:32","median":"77:10","mean":"82:27","p75":"92:34","max":"200:42"}},{"year":2024,"count":768,"times":{"min":45.77,"p25":64.35,"median":77.87,"mean":83.84,"p75":98.07,"max":212.32},"times_formatted":{"min":"45:46","p25":"64:21","median":"77:52","mean":"83:50","p75":"98:04","max":"212:19"}},{"year":2025,"count":825,"times":{"min":42.48,"p25":63.87,"median":78.44,"mean":83.34,"p75":95.16,"max":219.79},"times_formatted":{"min":"42:28","p25":"63:52","median":"78:26","mean":"83:20","p75":"95:09","max":"219:47"}}]},"weather":{"by_year":[{"year":2018,"start":{"wind_speed_avg":10.4,"wind_speed_max":13.4,"wind_gust_max":33.3,"temperature_avg":66.0,"wind_direction_avg":6.6},"summit":{"wind_speed_avg":13.4,"wind_speed_max":15.0,"wind_gust_max":40.0,"temperature_avg":53.1,"wind_direction_avg":4.0}},{"year":2019,"start":{"wind_speed_avg":3.4,"wind_speed_max":4.2,"wind_gust_max":13.0,"temperature_avg":55.9,"wind_direction_avg":198.6},"summit":{"wind_speed_avg":1.4,"wind_speed_max":2.3,"wind_gust_max":7.4,"temperature_avg":49.2,"wind_direction_avg":219.2}},{"year":2021,"start":{"wind_speed_avg":1.8,"wind_speed_max":3.9,"wind_gust_max":9.6,"temperature_avg":67.3,"wind_direction_avg":174.8},"summit":{"wind_speed_avg":1.9,"wind_speed_max":2.4,"wind_gust_max":8.9,"temperature_avg":62.5,"wind_direction_avg":67.6}},{"year":2022,"start":{"wind_speed_avg":7.4,"wind_speed_max":7.9,"wind_gust_max":19.5,"temperature_avg":62.3,"wind_direction_avg":229.8},"summit":{"wind_speed_avg":7.3,"wind_speed_max":7.7,"wind_gust_max":20.1,"temperature_avg":50.5,"wind_direction_avg":234.8}},{"year":2023,"start":{"wind_speed_avg":3.2,"wind_speed_max":4.0,"wind_gust_max":11.4,"temperature_avg":59.2,"wind_direction_avg":213.6},"summit":{"wind_speed_avg":3.1,"wind_speed_max":6.3,"wind_gust_max":17.4,"temperature_avg":47.4,"wind_direction_avg":151.0}},{"year":2024,"start":{"wind_speed_avg":3.7,"wind_speed_max":6.4,"wind_gust_max":15.9,"temperature_avg":80.3,"wind_direction_avg":118.6},"summit":{"wind_speed_avg":5.5,"wind_speed_max":8.4,"wind_gust_max":21.3,"temperature_avg":69.8,"wind_direction_avg":49.4}},{"year":2025,"start":{"wind_speed_avg":2.1,"wind_speed_max":3.2,"wind_gust_max":7.8,"temperature_avg":60.6,"wind_direction_avg":220.0},"summit":{"wind_speed_avg":2.6,"wind_speed_max":5.7,"wind_gust_max":15.4,"temperature_avg":50.3,"wind_direction_avg":66.6}}]}};
+    // Dashboard data (loaded from JSON)
+    let dashboardData = null;
+
+    // Fetch dashboard data from JSON file
+    async function fetchDashboardData() {
+      try {
+        const response = await fetch('data/dashboard_data.json');
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        dashboardData = await response.json();
+        console.log('Dashboard data loaded successfully');
+      } catch (error) {
+        console.error('Error loading dashboard data:', error);
+        // Show error message to user
+        document.body.innerHTML = `
+          <div style="display: flex; align-items: center; justify-content: center; height: 100vh; background: #000; color: #ef4444; font-family: Inter, sans-serif;">
+            <div style="text-align: center;">
+              <h1 style="font-size: 24px; margin-bottom: 16px;">Failed to Load Dashboard Data</h1>
+              <p style="color: #94a3b8;">Error: ${error.message}</p>
+              <p style="color: #64748b; margin-top: 8px;">Please ensure data/dashboard_data.json exists and is accessible.</p>
+            </div>
+          </div>
+        `;
+      }
+    }
 
     // Tooltip functions
     function showTooltip(event, content) {
@@ -869,9 +893,14 @@
     }
 
     // Initialize icons and interactions
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
       lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
-      loadData();
+
+      // Fetch data first, then load dashboard
+      await fetchDashboardData();
+      if (dashboardData) {
+        loadData();
+      }
 
       // Wind layer toggle
       document.getElementById('toggle-wind').addEventListener('click', function() {
