@@ -79,7 +79,15 @@
             </div>
           </div>
           <div class="rounded-lg border p-3 shadow-sm hover:shadow transition border-slate-800 bg-black">
-            <div class="text:[11px] text-[11px] uppercase tracking-wide text-slate-500">Wind Impact</div>
+            <div class="flex items-center gap-1.5 text-[11px] uppercase tracking-wide text-slate-500">
+              <span>Wind Impact</span>
+              <div class="relative group">
+                <i data-lucide="info" class="w-3 h-3 text-slate-500 cursor-help"></i>
+                <div class="absolute left-0 top-5 hidden group-hover:block w-56 bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs normal-case tracking-normal shadow-lg z-50">
+                  <div class="text-slate-200 font-normal">Correlation coefficient (r) shows the relationship between wind speed and finish times. Negative values mean higher wind is associated with slower times. r = -0.45 indicates 45% correlation strength.</div>
+                </div>
+              </div>
+            </div>
             <div class="mt-1 flex items-baseline gap-2">
               <div class="text-xl font-semibold tabular-nums" id="kpi-wind-corr">r = —</div>
               <div class="text-xs text-slate-500">Lower wind → faster</div>
@@ -117,6 +125,18 @@
               <button id="toggle-wind" class="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-medium rounded text-slate-300 hover:bg-slate-950 bg-sky-900" aria-pressed="true">
                 <i data-lucide="wind" class="w-3.5 h-3.5 text-sky-400"></i> Wind Overlay
               </button>
+              <div class="relative group px-1">
+                <i data-lucide="info" class="w-3.5 h-3.5 text-slate-500 cursor-help"></i>
+                <div class="absolute right-0 top-8 hidden group-hover:block w-72 bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-xs shadow-xl z-50">
+                  <div class="flex items-start gap-2">
+                    <i data-lucide="lightbulb" class="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5"></i>
+                    <div>
+                      <div class="font-medium text-slate-200 mb-1">About Wind Impact</div>
+                      <p class="text-slate-400">Wind is the primary weather factor affecting climb times. The summit is particularly exposed to wind, which can add significant time to finishes. Toggle overlay to see correlation with performance.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -135,40 +155,47 @@
             </div>
 
             <!-- Legend -->
-            <div class="mt-3 space-y-2">
-              <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400">
+            <div class="mt-4 space-y-3">
+              <!-- Legend Items -->
+              <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2.5 text-xs text-slate-400">
                 <div class="flex items-center gap-2">
-                  <span class="h-2 w-2 rounded-full" style="background-color:#ef4444;"></span>
+                  <span class="h-2 w-2 rounded-full flex-shrink-0" style="background-color:#ef4444;"></span>
                   <span><strong class="text-slate-300">Fastest time</strong> - Best finish that year</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <span class="h-2 w-2 rounded-full" style="background-color:#eab308;"></span>
+                  <span class="h-2 w-2 rounded-full flex-shrink-0" style="background-color:#eab308;"></span>
                   <span><strong class="text-slate-300">10th percentile</strong> - Top 10% of finishers</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <span class="h-3 w-4 rounded-sm border" style="border-color:#64748b; background-color:rgba(148,163,184,0.08)"></span>
-                  <span><strong class="text-slate-300">Box (IQR)</strong> - 25th to 75th percentile (middle 50% of finishers)</span>
+                  <span class="h-3 w-4 rounded-sm border flex-shrink-0" style="border-color:#64748b; background-color:rgba(148,163,184,0.08)"></span>
+                  <span><strong class="text-slate-300">Box (IQR)</strong> - 25th to 75th percentile</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <span class="h-1.5 w-5 rounded-full" style="background-color:#0f766e;"></span>
-                  <span><strong class="text-slate-300">Median line</strong> - 50th percentile (middle finisher)</span>
+                  <span class="h-2 w-2 rounded-full flex-shrink-0" style="background-color:#6366f1;"></span>
+                  <span><strong class="text-slate-300">Mean</strong> - Average finish time</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <span class="h-2 w-2 rounded-full" style="background-color:#6366f1;"></span>
-                  <span><strong class="text-slate-300">Mean dot</strong> - Average finish time</span>
+                  <span class="flex-shrink-0" style="color:#fbbf24; font-size:14px;">★</span>
+                  <span><strong class="text-slate-300">Gold stars</strong> - Multi-year riders</span>
                 </div>
               </div>
-              <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400">
+
+              <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2.5 text-xs text-slate-400">
                 <div class="flex items-center gap-2">
-                  <span class="h-3 w-6 rounded-sm" style="background-color:rgba(14, 165, 233, 0.15);"></span>
-                  <span><strong class="text-slate-300">Blue shading</strong> - Wind speed (darker = windier conditions)</span>
+                  <span class="h-1.5 w-5 rounded-full flex-shrink-0" style="background-color:#0f766e;"></span>
+                  <span><strong class="text-slate-300">Median line</strong> - 50th percentile trend</span>
+                </div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-slate-300 font-medium">Wind overlay:</span>
+                  <span class="h-3 w-4 rounded-sm flex-shrink-0" style="background-color:rgba(34, 197, 94, 0.25);"></span>
+                  <span class="text-slate-400 text-xs">Tailwind</span>
+                  <span class="h-3 w-4 rounded-sm flex-shrink-0" style="background-color:rgba(251, 191, 36, 0.25);"></span>
+                  <span class="text-slate-400 text-xs">Crosswind</span>
+                  <span class="h-3 w-4 rounded-sm flex-shrink-0" style="background-color:rgba(239, 68, 68, 0.25);"></span>
+                  <span class="text-slate-400 text-xs">Headwind</span>
                 </div>
                 <div class="flex items-center gap-2">
-                  <span class="h-1.5 w-5 rounded-full" style="background-color:#0f766e;"></span>
-                  <span><strong class="text-slate-300">Teal trend line</strong> - Median performance across years</span>
-                </div>
-                <div class="ml-auto flex items-center gap-2">
-                  <i data-lucide="info" class="w-3.5 h-3.5 text-slate-500"></i>
+                  <i data-lucide="info" class="w-3.5 h-3.5 text-slate-500 flex-shrink-0"></i>
                   <span class="text-slate-500">Y-axis inverted: faster times at top, slower at bottom</span>
                 </div>
               </div>
@@ -236,19 +263,28 @@
           </div>
         </div>
 
-        <!-- Notes -->
-        <div class="rounded-xl border p-4 sm:p-5 shadow-sm border-slate-800 bg-black">
-          <div class="flex items-start gap-3">
-            <div class="mt-0.5">
-              <i data-lucide="lightbulb" class="w-4 h-4 text-amber-500"></i>
+        <!-- Rider Search -->
+        <div class="rounded-xl border shadow-sm border-slate-800 bg-black">
+          <div class="px-4 sm:px-5 py-3 border-b flex items-center justify-between border-slate-800">
+            <div class="flex items-center gap-2">
+              <i data-lucide="user-search" class="w-4 h-4 text-slate-400"></i>
+              <div class="text-sm font-medium text-slate-200">Rider Lookup</div>
             </div>
-            <div>
-              <div class="text-sm font-medium text-slate-200">About Wind Impact</div>
-              <p class="text-sm mt-1 text-slate-400">
-                Wind is the primary weather factor affecting climb times. The summit is particularly exposed to wind,
-                which can add significant time to finishes. Toggle wind overlay to see correlation with performance.
-              </p>
+          </div>
+          <div class="p-4 sm:p-5">
+            <div class="relative">
+              <input
+                type="text"
+                id="riderSearch"
+                placeholder="Search for a rider..."
+                class="w-full px-3 py-2 text-sm rounded-md border bg-black text-slate-200 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-sky-500 border-slate-800"
+                autocomplete="off"
+              />
+              <div id="riderSearchResults" class="hidden absolute z-30 mt-1 w-full rounded-md border shadow-lg overflow-hidden border-slate-800 bg-black max-h-60 overflow-auto">
+                <!-- Populated by JavaScript -->
+              </div>
             </div>
+            <p class="text-xs text-slate-500 mt-2">Search for riders with multiple years of data to compare their year-over-year performance.</p>
           </div>
         </div>
       </aside>
@@ -264,46 +300,52 @@
         <div class="mt-3 space-y-2">
           <div class="flex items-center justify-between text-sm">
             <span class="text-slate-400">Last year vs prior</span>
-            <span class="font-medium tabular-nums text-emerald-400">-0.7%</span>
+            <span class="font-medium tabular-nums" id="yoy-last-year">—</span>
           </div>
           <div class="flex items-center justify-between text-sm">
-            <span class="text-slate-400">5-year trend</span>
-            <span class="font-medium tabular-nums text-slate-200">-3.1%</span>
+            <span class="text-slate-400">Average annual change</span>
+            <span class="font-medium tabular-nums text-slate-200" id="yoy-avg-change">—</span>
           </div>
           <div class="flex items-center justify-between text-sm">
-            <span class="text-slate-400">Volatility</span>
-            <span class="font-medium tabular-nums text-slate-200">σ = 2.4%</span>
+            <span class="text-slate-400">Volatility (std dev)</span>
+            <span class="font-medium tabular-nums text-slate-200" id="yoy-volatility">—</span>
           </div>
         </div>
       </div>
-      <!-- Wind Rose - hidden for now
       <div class="rounded-xl border p-5 shadow-sm border-slate-800 bg-black">
         <div class="flex items-center gap-2">
           <i data-lucide="compass" class="w-4 h-4 text-sky-400"></i>
-          <div class="text-sm font-medium text-slate-200">Wind Rose (preview)</div>
+          <div class="text-sm font-medium text-slate-200">Course Direction</div>
         </div>
         <div class="mt-3 flex items-center justify-center">
-          <svg viewBox="0 0 160 160" class="w-40 h-40">
-            <circle cx="80" cy="80" r="70" fill="white" stroke="#e5e7eb" stroke-width="1"></circle>
-            <g fill="#0ea5e9">
-              <rect x="78" y="12" width="4" height="30" rx="2"></rect>
-              <rect x="118" y="78" width="30" height="4" rx="2"></rect>
-              <rect x="78" y="118" width="4" height="30" rx="2"></rect>
-              <rect x="12" y="78" width="30" height="4" rx="2"></rect>
-            </g>
-            <circle cx="80" cy="80" r="4" fill="#0ea5e9"></circle>
-            <text x="80" y="10" text-anchor="middle" class="fill-slate-500 text-[9px]">N</text>
-            <text x="152" y="84" class="fill-slate-500 text-[9px]">E</text>
-            <text x="80" y="156" text-anchor="middle" class="fill-slate-500 text-[9px]">S</text>
-            <text x="6" y="84" class="fill-slate-500 text-[9px]">W</text>
-          </svg>
+          <div id="routeCompass" class="text-xs text-slate-500">
+            Loading route data...
+          </div>
         </div>
       </div>
-      -->
       <div class="rounded-xl border p-5 shadow-sm border-slate-800 bg-black">
         <div class="flex items-center gap-2">
+          <i data-lucide="wind" class="w-4 h-4 text-sky-400"></i>
+          <div class="text-sm font-medium text-slate-200">Wind Impact</div>
+        </div>
+        <div id="windBenefitBox" class="mt-3 text-xs text-slate-500">
+          Loading wind analysis...
+        </div>
+      </div>
+    </section>
+
+    <!-- Wind Analysis Detail (new row) -->
+    <section class="mt-6">
+      <div class="rounded-xl border p-5 shadow-sm border-slate-800 bg-black">
+        <div class="flex items-center gap-2 mb-4">
           <i data-lucide="target" class="w-4 h-4 text-slate-400"></i>
           <div class="text-sm font-medium text-slate-200">Performance Outliers</div>
+          <div class="relative group">
+            <i data-lucide="info" class="w-3.5 h-3.5 text-slate-500 cursor-help"></i>
+            <div class="absolute left-0 top-6 hidden group-hover:block w-64 bg-slate-900 border border-slate-700 rounded-lg px-3 py-2 text-xs shadow-lg z-50">
+              <div class="text-slate-200">Years shown are based on % difference from overall median time (77:03)</div>
+            </div>
+          </div>
         </div>
         <ul id="outliers-list" class="mt-3 divide-y divide-slate-800">
           <!-- Populated by JavaScript -->
@@ -312,13 +354,51 @@
     </section>
   </main>
 
+  <!-- Feedback Modal -->
+  <div id="feedbackModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-md mx-4 rounded-xl border shadow-xl border-slate-800 bg-black p-6">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-semibold text-slate-100">Send Feedback</h2>
+        <button id="closeFeedbackModal" class="text-slate-400 hover:text-slate-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <p class="text-slate-300 text-sm mb-4">We'd love to hear from you! Please send your feedback, questions, or suggestions via email.</p>
+      <div class="flex items-center gap-2 p-3 rounded-lg bg-slate-900 border border-slate-700">
+        <i data-lucide="mail" class="w-5 h-5 text-sky-400 flex-shrink-0"></i>
+        <span class="text-slate-200 font-medium">Colin at ThirdSouth.capital</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rider Performance Modal -->
+  <div id="riderModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+    <div class="relative w-full max-w-3xl mx-4 rounded-xl border shadow-xl border-slate-800 bg-black p-6">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <span class="text-amber-400 text-xl">★</span>
+          <h2 class="text-xl font-semibold text-slate-100" id="riderModalName">Rider Performance</h2>
+        </div>
+        <button id="closeRiderModal" class="text-slate-400 hover:text-slate-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div id="riderModalContent" class="space-y-4">
+        <!-- Populated by JavaScript -->
+      </div>
+    </div>
+  </div>
+
   <footer class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
     <div class="border-t pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 border-slate-800">
-      <div class="text-sm text-slate-500">© <span class="tabular-nums">2025</span> VELODATA</div>
+      <div class="flex items-center gap-2 text-sm">
+        <span class="text-slate-500">© <span class="tabular-nums">2025</span> VELODATA</span>
+        <span class="text-slate-700">•</span>
+        <span class="text-slate-500">Created by CJB</span>
+      </div>
       <div class="flex items-center gap-4 text-sm">
-        <a class="text-slate-400 hover:text-slate-100" href="#">Docs</a>
-        <a class="text-slate-400 hover:text-slate-100" href="#">Changelog</a>
-        <a class="text-slate-400 hover:text-slate-100" href="#">Feedback</a>
+        <button id="feedbackButton" class="text-slate-400 hover:text-slate-100 cursor-pointer">Feedback</button>
       </div>
     </div>
   </footer>
@@ -327,6 +407,266 @@
   <script>
     // Dashboard data (loaded from JSON)
     let dashboardData = null;
+    let routeData = null; // GPX route data
+
+    // Geospatial utility functions
+    function toRadians(degrees) {
+      return degrees * Math.PI / 180;
+    }
+
+    function toDegrees(radians) {
+      return radians * 180 / Math.PI;
+    }
+
+    // Calculate distance between two points using Haversine formula (returns meters)
+    function haversineDistance(lat1, lon1, lat2, lon2) {
+      const R = 6371e3; // Earth radius in meters
+      const φ1 = toRadians(lat1);
+      const φ2 = toRadians(lat2);
+      const Δφ = toRadians(lat2 - lat1);
+      const Δλ = toRadians(lon2 - lon1);
+
+      const a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
+                Math.cos(φ1) * Math.cos(φ2) *
+                Math.sin(Δλ/2) * Math.sin(Δλ/2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
+      return R * c; // Distance in meters
+    }
+
+    // Calculate bearing between two points (returns degrees 0-360)
+    function calculateBearing(lat1, lon1, lat2, lon2) {
+      const φ1 = toRadians(lat1);
+      const φ2 = toRadians(lat2);
+      const Δλ = toRadians(lon2 - lon1);
+
+      const y = Math.sin(Δλ) * Math.cos(φ2);
+      const x = Math.cos(φ1) * Math.sin(φ2) -
+                Math.sin(φ1) * Math.cos(φ2) * Math.cos(Δλ);
+      const θ = Math.atan2(y, x);
+
+      return (toDegrees(θ) + 360) % 360; // Normalize to 0-360
+    }
+
+    // Convert bearing to 16-direction compass (N, NNE, NE, etc.)
+    function bearingToDirection(bearing) {
+      const directions = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
+      const index = Math.round(bearing / 22.5) % 16;
+      return directions[index];
+    }
+
+    // Parse GPX file and calculate route directional distribution
+    async function fetchAndParseGPX() {
+      try {
+        const response = await fetch('data/Diablo%20Standard%20Uphill%20Only.gpx');
+        if (!response.ok) {
+          console.warn('GPX file not found. Wind directionality features will be disabled.');
+          return null;
+        }
+
+        const gpxText = await response.text();
+        const parser = new DOMParser();
+        const gpxDoc = parser.parseFromString(gpxText, 'text/xml');
+
+        // Extract track points
+        const trkpts = gpxDoc.querySelectorAll('trkpt');
+        if (trkpts.length === 0) {
+          console.warn('No track points found in GPX file.');
+          return null;
+        }
+
+        const points = Array.from(trkpts).map(pt => ({
+          lat: parseFloat(pt.getAttribute('lat')),
+          lon: parseFloat(pt.getAttribute('lon'))
+        }));
+
+        console.log(`Parsed ${points.length} GPS points from route`);
+
+        // Calculate distance traveled in each direction
+        const directionDistances = {};
+        const directions = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
+        directions.forEach(dir => directionDistances[dir] = 0);
+
+        let totalDistance = 0;
+
+        for (let i = 0; i < points.length - 1; i++) {
+          const p1 = points[i];
+          const p2 = points[i + 1];
+
+          const distance = haversineDistance(p1.lat, p1.lon, p2.lat, p2.lon);
+          const bearing = calculateBearing(p1.lat, p1.lon, p2.lat, p2.lon);
+          const direction = bearingToDirection(bearing);
+
+          directionDistances[direction] += distance;
+          totalDistance += distance;
+        }
+
+        // Convert to percentages
+        const directionPercentages = {};
+        directions.forEach(dir => {
+          directionPercentages[dir] = (directionDistances[dir] / totalDistance) * 100;
+        });
+
+        console.log('Route directional distribution:', directionPercentages);
+
+        return {
+          points: points,
+          directionDistances: directionDistances,
+          directionPercentages: directionPercentages,
+          totalDistance: totalDistance,
+          primaryDirection: Object.keys(directionPercentages).reduce((a, b) =>
+            directionPercentages[a] > directionPercentages[b] ? a : b
+          )
+        };
+      } catch (error) {
+        console.error('Error parsing GPX file:', error);
+        return null;
+      }
+    }
+
+    // Calculate wind benefit for a given wind direction based on route
+    function calculateWindImpact(windDirection, routeData) {
+      if (!routeData || !routeData.directionPercentages) return { impact: 'neutral', score: 0 };
+
+      // Calculate component of wind in each travel direction
+      let totalBenefit = 0;
+
+      Object.keys(routeData.directionPercentages).forEach(travelDir => {
+        const travelBearing = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'].indexOf(travelDir) * 22.5;
+        const travelPct = routeData.directionPercentages[travelDir];
+
+        // Calculate angle difference (tailwind is 180° behind travel direction)
+        let angleDiff = Math.abs(windDirection - travelBearing);
+        if (angleDiff > 180) angleDiff = 360 - angleDiff;
+
+        // Tailwind component: cos(angleDiff) where 0° = headwind, 180° = tailwind
+        const tailwindComponent = -Math.cos(toRadians(angleDiff));
+
+        // Weight by distance traveled in this direction
+        totalBenefit += tailwindComponent * travelPct;
+      });
+
+      // Normalize score (-1 = pure headwind, +1 = pure tailwind)
+      const normalizedScore = totalBenefit / 100;
+
+      let impact;
+      if (normalizedScore < -0.3) impact = 'detrimental';
+      else if (normalizedScore > 0.3) impact = 'beneficial';
+      else impact = 'neutral';
+
+      return { impact, score: normalizedScore };
+    }
+
+    // Render route direction compass
+    function renderRouteCompass() {
+      const compass = document.getElementById('routeCompass');
+
+      if (!routeData) {
+        compass.innerHTML = '<div class="text-slate-500">Route data not available</div>';
+        return;
+      }
+
+      const directions = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
+      const size = 200;
+      const center = size / 2;
+      const maxRadius = center - 20;
+
+      let svg = `<svg viewBox="0 0 ${size} ${size}" class="w-48 h-48">`;
+
+      // Background circle
+      svg += `<circle cx="${center}" cy="${center}" r="${maxRadius}" fill="none" stroke="#334155" stroke-width="1"/>`;
+
+      // Direction segments
+      directions.forEach((dir, i) => {
+        const angle = i * 22.5;
+        const pct = routeData.directionPercentages[dir];
+        const radius = (pct / Math.max(...Object.values(routeData.directionPercentages))) * maxRadius;
+
+        if (radius > 0) {
+          const startAngle = angle - 11.25;
+          const endAngle = angle + 11.25;
+
+          // Create pie slice
+          const x1 = center + radius * Math.sin(toRadians(startAngle));
+          const y1 = center - radius * Math.cos(toRadians(startAngle));
+          const x2 = center + radius * Math.sin(toRadians(endAngle));
+          const y2 = center - radius * Math.cos(toRadians(endAngle));
+
+          const largeArc = 0;
+
+          svg += `<path d="M ${center} ${center} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z" fill="#0ea5e9" fill-opacity="${0.3 + (pct / 100)}" stroke="#0ea5e9" stroke-width="1"/>`;
+        }
+      });
+
+      // Cardinal direction labels
+      const labelRadius = maxRadius + 10;
+      [
+        {dir: 'N', angle: 0},
+        {dir: 'E', angle: 90},
+        {dir: 'S', angle: 180},
+        {dir: 'W', angle: 270}
+      ].forEach(({dir, angle}) => {
+        const x = center + labelRadius * Math.sin(toRadians(angle));
+        const y = center - labelRadius * Math.cos(toRadians(angle)) + 4;
+        svg += `<text x="${x}" y="${y}" text-anchor="middle" class="fill-slate-400 text-[10px] font-medium">${dir}</text>`;
+      });
+
+      // Center dot
+      svg += `<circle cx="${center}" cy="${center}" r="3" fill="#0ea5e9"/>`;
+
+      svg += '</svg>';
+      svg += `<div class="mt-2 text-center text-xs text-slate-500">Primary direction: <span class="text-sky-400 font-medium">${routeData.primaryDirection}</span></div>`;
+
+      compass.innerHTML = svg;
+    }
+
+    // Render wind benefit/detriment box
+    function renderWindBenefitBox() {
+      const box = document.getElementById('windBenefitBox');
+
+      if (!routeData) {
+        box.innerHTML = '<div class="text-slate-500">Route data required for analysis</div>';
+        return;
+      }
+
+      // Analyze wind directions
+      const directions = ['N', 'NNE', 'NE', 'ENE', 'E', 'ESE', 'SE', 'SSE', 'S', 'SSW', 'SW', 'WSW', 'W', 'WNW', 'NW', 'NNW'];
+      const beneficial = [];
+      const detrimental = [];
+      const neutral = [];
+
+      directions.forEach((dir, i) => {
+        const bearing = i * 22.5;
+        const impact = calculateWindImpact(bearing, routeData);
+
+        if (impact.impact === 'beneficial') beneficial.push(dir);
+        else if (impact.impact === 'detrimental') detrimental.push(dir);
+        else neutral.push(dir);
+      });
+
+      let html = '<div class="space-y-2">';
+
+      if (beneficial.length > 0) {
+        html += `
+          <div class="flex items-start gap-2">
+            <div class="px-2 py-0.5 rounded text-xs font-medium bg-emerald-900/30 text-emerald-400 whitespace-nowrap">Beneficial</div>
+            <div class="text-slate-400 text-xs">${beneficial.join(', ')}</div>
+          </div>
+        `;
+      }
+
+      if (detrimental.length > 0) {
+        html += `
+          <div class="flex items-start gap-2">
+            <div class="px-2 py-0.5 rounded text-xs font-medium bg-rose-900/30 text-rose-400 whitespace-nowrap">Detrimental</div>
+            <div class="text-slate-400 text-xs">${detrimental.join(', ')}</div>
+          </div>
+        `;
+      }
+
+      html += '</div>';
+      box.innerHTML = html;
+    }
 
     // Fetch dashboard data from JSON file
     async function fetchDashboardData() {
@@ -377,29 +717,37 @@
 
     // Populate outliers with real data
     function populateOutliers() {
+      // Get filtered year range
+      const startYear = parseInt(document.getElementById('startYearValue').textContent);
+      const endYear = parseInt(document.getElementById('endYearValue').textContent);
+
       const stats = dashboardData.statistics.by_year;
       const weather = dashboardData.weather.by_year;
       const overallMedian = dashboardData.statistics.overall.overall_median_minutes;
 
-      // Calculate percent difference from overall median for each year
-      const yearData = stats.map((yearStats, idx) => {
-        const medianMinutes = yearStats.times.median;
-        const pctDiff = ((medianMinutes - overallMedian) / overallMedian) * 100;
-        const wind = weather[idx]?.summit?.wind_speed_avg || 0;
+      // Calculate percent difference from overall median for each year (filtered by year range)
+      const yearData = stats
+        .filter(yearStats => yearStats.year >= startYear && yearStats.year <= endYear)
+        .map((yearStats, idx) => {
+          const medianMinutes = yearStats.times.median;
+          const pctDiff = ((medianMinutes - overallMedian) / overallMedian) * 100;
+          // Find the correct weather index for this year
+          const weatherIdx = weather.findIndex(w => w.year === yearStats.year);
+          const wind = weatherIdx >= 0 ? (weather[weatherIdx]?.summit?.wind_speed_avg || 0) : 0;
 
-        return {
-          year: yearStats.year,
-          pctDiff: pctDiff,
-          wind: wind,
-          windLabel: wind > 10 ? 'high wind' : wind < 3 ? 'calm' : 'moderate wind'
-        };
-      });
+          return {
+            year: yearStats.year,
+            pctDiff: pctDiff,
+            wind: wind,
+            windLabel: wind > 10 ? 'high wind' : wind < 3 ? 'calm' : 'moderate wind'
+          };
+        });
 
       // Sort by absolute percent difference to find outliers
       const sortedByDiff = [...yearData].sort((a, b) => Math.abs(b.pctDiff) - Math.abs(a.pctDiff));
 
-      // Take top 3 outliers
-      const topOutliers = sortedByDiff.slice(0, 3);
+      // Take top 3 outliers (or fewer if filtered range has fewer years)
+      const topOutliers = sortedByDiff.slice(0, Math.min(3, sortedByDiff.length));
 
       // Populate the list
       const outliersList = document.getElementById('outliers-list');
@@ -421,11 +769,55 @@
       });
     }
 
+    // Populate YoY Delta metrics
+    function populateYoYMetrics() {
+      const stats = dashboardData.statistics.by_year;
+
+      if (stats.length < 2) {
+        // Not enough data for YoY calculations
+        document.getElementById('yoy-last-year').textContent = 'N/A';
+        document.getElementById('yoy-avg-change').textContent = 'N/A';
+        document.getElementById('yoy-volatility').textContent = 'N/A';
+        return;
+      }
+
+      // Calculate YoY changes in median time
+      const yoyChanges = [];
+      for (let i = 1; i < stats.length; i++) {
+        const prevMedian = stats[i - 1].times.median;
+        const currMedian = stats[i].times.median;
+        const pctChange = ((currMedian - prevMedian) / prevMedian) * 100;
+        yoyChanges.push(pctChange);
+      }
+
+      // Last year vs prior (most recent YoY change)
+      const lastYoYChange = yoyChanges[yoyChanges.length - 1];
+      const lastYoYElement = document.getElementById('yoy-last-year');
+      const lastYoYFormatted = `${lastYoYChange >= 0 ? '+' : ''}${lastYoYChange.toFixed(1)}%`;
+      lastYoYElement.textContent = lastYoYFormatted;
+      lastYoYElement.className = `font-medium tabular-nums ${lastYoYChange < 0 ? 'text-emerald-400' : 'text-rose-400'}`;
+
+      // Average annual change
+      const avgChange = yoyChanges.reduce((sum, val) => sum + val, 0) / yoyChanges.length;
+      const avgChangeElement = document.getElementById('yoy-avg-change');
+      const avgChangeFormatted = `${avgChange >= 0 ? '+' : ''}${avgChange.toFixed(1)}%`;
+      avgChangeElement.textContent = avgChangeFormatted;
+      avgChangeElement.className = `font-medium tabular-nums ${avgChange < 0 ? 'text-emerald-400' : 'text-slate-200'}`;
+
+      // Volatility (standard deviation of YoY changes)
+      const mean = avgChange;
+      const squaredDiffs = yoyChanges.map(val => Math.pow(val - mean, 2));
+      const variance = squaredDiffs.reduce((sum, val) => sum + val, 0) / yoyChanges.length;
+      const stdDev = Math.sqrt(variance);
+      document.getElementById('yoy-volatility').textContent = `σ = ${stdDev.toFixed(1)}%`;
+    }
+
     // Initialize on page load
     function loadData() {
       populateKPIs();
       populateYearDropdowns();
       populateOutliers();
+      populateYoYMetrics();
       renderChart();
     }
 
@@ -712,7 +1104,7 @@
 
       svg.appendChild(windDataGroup);
 
-      // Weather layer (wind overlay)
+      // Weather layer (wind overlay) - context-aware coloring
       const weatherLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
       weatherLayer.setAttribute('id', 'layer-wind');
       weatherLayer.setAttribute('opacity', '1');
@@ -721,14 +1113,42 @@
       filteredWeather.forEach((w, i) => {
         if (w.summit && w.summit.wind_speed_avg) {
           const windSpeed = w.summit.wind_speed_avg;
-          // Scale opacity based on wind speed (higher wind = more visible)
-          const opacity = Math.min(0.3, windSpeed / 40);
+          const windDirection = w.summit.wind_direction_avg;
+
+          let fillColor, opacity;
+
+          if (routeData && windDirection !== null) {
+            // Context-aware coloring based on wind impact
+            const impact = calculateWindImpact(windDirection, routeData);
+
+            // Base opacity on wind speed
+            const baseOpacity = Math.min(0.4, windSpeed / 30);
+
+            if (impact.impact === 'beneficial') {
+              // Green for tailwind
+              fillColor = `rgba(34, 197, 94, ${baseOpacity})`;
+            } else if (impact.impact === 'detrimental') {
+              // Red for headwind
+              fillColor = `rgba(239, 68, 68, ${baseOpacity})`;
+            } else {
+              // Orange/yellow for crosswind
+              fillColor = `rgba(251, 191, 36, ${baseOpacity})`;
+            }
+            opacity = 1;
+          } else {
+            // Fallback to blue if no route data
+            const baseOpacity = Math.min(0.3, windSpeed / 40);
+            fillColor = `rgba(14, 165, 233, ${baseOpacity})`;
+            opacity = 1;
+          }
+
           const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
           rect.setAttribute('x', xScale(i) - xSpacing/3);
           rect.setAttribute('y', marginTop);
           rect.setAttribute('width', xSpacing * 0.66);
           rect.setAttribute('height', chartHeight);
-          rect.setAttribute('fill', `rgba(14, 165, 233, ${opacity})`);
+          rect.setAttribute('fill', fillColor);
+          rect.setAttribute('opacity', opacity);
           weatherLayer.appendChild(rect);
         }
       });
@@ -911,6 +1331,63 @@
 
       svg.appendChild(boxPlotLayer);
 
+      // Multi-year rider stars layer
+      const multiYearRidersLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      multiYearRidersLayer.setAttribute('id', 'layer-multi-year-riders');
+
+      // Build a lookup of multi-year riders by year
+      const ridersByYear = {};
+      if (dashboardData.riders) {
+        dashboardData.riders.forEach(rider => {
+          rider.performances.forEach(perf => {
+            if (!ridersByYear[perf.year]) {
+              ridersByYear[perf.year] = [];
+            }
+            ridersByYear[perf.year].push({
+              name: rider.name,
+              timeSeconds: perf.time_seconds,
+              timeFormatted: perf.time_formatted,
+              place: perf.place
+            });
+          });
+        });
+      }
+
+      // Draw gold stars for multi-year riders in filtered years
+      filteredData.forEach((d, i) => {
+        const x = xScale(i);
+        const year = d.year;
+
+        if (ridersByYear[year]) {
+          ridersByYear[year].forEach(rider => {
+            const timeMinutes = rider.timeSeconds / 60;
+            const y = yScale(timeMinutes);
+
+            // Create gold star (unicode star character)
+            const star = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+            star.setAttribute('x', x);
+            star.setAttribute('y', y + 1);
+            star.setAttribute('text-anchor', 'middle');
+            star.setAttribute('font-size', '12');
+            star.setAttribute('fill', '#fbbf24');
+            star.setAttribute('cursor', 'pointer');
+            star.setAttribute('class', 'star-marker');
+            star.textContent = '★';
+
+            star.addEventListener('mouseenter', (e) => showTooltip(e, `
+              <strong class="text-amber-400">★ Multi-Year Rider</strong><br/>
+              <strong class="text-slate-100">${rider.name}</strong><br/>
+              ${year}: ${rider.timeFormatted} (Place ${rider.place})
+            `));
+            star.addEventListener('mouseleave', hideTooltip);
+
+            multiYearRidersLayer.appendChild(star);
+          });
+        }
+      });
+
+      svg.appendChild(multiYearRidersLayer);
+
       // Median trend line connecting all years
       const medianLineLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
       medianLineLayer.setAttribute('id', 'layer-median-line');
@@ -966,6 +1443,130 @@
       svg.appendChild(cutoffLayer);
     }
 
+    // Show rider performance in modal
+    function showRiderPerformance(rider) {
+      const riderModal = document.getElementById('riderModal');
+      const riderModalName = document.getElementById('riderModalName');
+      const riderModalContent = document.getElementById('riderModalContent');
+
+      // Set rider name
+      riderModalName.textContent = rider.name;
+
+      // Calculate year-over-year changes
+      const performances = rider.performances;
+      const yoyChanges = [];
+
+      for (let i = 1; i < performances.length; i++) {
+        const prevPerf = performances[i - 1];
+        const currPerf = performances[i];
+        const timeDiff = currPerf.time_seconds - prevPerf.time_seconds;
+        const pctChange = (timeDiff / prevPerf.time_seconds) * 100;
+
+        // Get pack median for both years
+        const prevYearStats = dashboardData.statistics.by_year.find(y => y.year === prevPerf.year);
+        const currYearStats = dashboardData.statistics.by_year.find(y => y.year === currPerf.year);
+
+        const prevPackMedian = prevYearStats ? prevYearStats.times.median * 60 : null;
+        const currPackMedian = currYearStats ? currYearStats.times.median * 60 : null;
+
+        const packTimeDiff = currPackMedian && prevPackMedian ? currPackMedian - prevPackMedian : null;
+        const packPctChange = packTimeDiff && prevPackMedian ? (packTimeDiff / prevPackMedian) * 100 : null;
+
+        const vsPackDiff = packPctChange !== null ? pctChange - packPctChange : null;
+
+        yoyChanges.push({
+          fromYear: prevPerf.year,
+          toYear: currPerf.year,
+          riderChange: pctChange,
+          packChange: packPctChange,
+          vsPackDiff: vsPackDiff,
+          riderTimeChange: timeDiff
+        });
+      }
+
+      // Build modal content
+      let content = `
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="rounded-lg border p-4 border-slate-800 bg-black">
+            <div class="text-xs uppercase tracking-wide text-slate-500 mb-2">Participation History</div>
+            <div class="space-y-2">
+              ${performances.map(perf => `
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-slate-400">${perf.year}</span>
+                  <div class="text-right">
+                    <div class="text-slate-200 font-medium">${perf.time_formatted}</div>
+                    <div class="text-slate-500 text-xs">Place ${perf.place}</div>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+
+          <div class="rounded-lg border p-4 border-slate-800 bg-black">
+            <div class="text-xs uppercase tracking-wide text-slate-500 mb-2">Summary Stats</div>
+            <div class="space-y-2 text-sm">
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Years participated</span>
+                <span class="text-slate-200 font-medium">${rider.years_participated}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Best time</span>
+                <span class="text-slate-200 font-medium">${performances.reduce((best, p) => p.time_seconds < best.time_seconds ? p : best).time_formatted}</span>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-slate-400">Best place</span>
+                <span class="text-slate-200 font-medium">${Math.min(...performances.map(p => p.place))}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      if (yoyChanges.length > 0) {
+        content += `
+          <div class="mt-4">
+            <div class="text-sm font-medium text-slate-200 mb-3">Year-over-Year Performance</div>
+            <div class="space-y-3">
+              ${yoyChanges.map(change => {
+                const riderColor = change.riderChange < 0 ? 'text-emerald-400' : 'text-rose-400';
+                const packColor = change.packChange < 0 ? 'text-emerald-400' : 'text-rose-400';
+                const vsPackColor = change.vsPackDiff < 0 ? 'text-emerald-400' : 'text-rose-400';
+                const riderSign = change.riderChange >= 0 ? '+' : '';
+                const packSign = change.packChange >= 0 ? '+' : '';
+                const vsPackSign = change.vsPackDiff >= 0 ? '+' : '';
+
+                return `
+                  <div class="rounded-lg border p-4 border-slate-800">
+                    <div class="text-sm font-medium text-slate-300 mb-3">${change.fromYear} → ${change.toYear}</div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+                      <div>
+                        <div class="text-slate-500 text-xs mb-1">Rider Change</div>
+                        <div class="${riderColor} font-medium tabular-nums">${riderSign}${change.riderChange.toFixed(1)}%</div>
+                        <div class="text-slate-500 text-xs">${riderSign}${change.riderTimeChange.toFixed(0)}s</div>
+                      </div>
+                      <div>
+                        <div class="text-slate-500 text-xs mb-1">Pack Median Change</div>
+                        <div class="${packColor} font-medium tabular-nums">${packSign}${change.packChange.toFixed(1)}%</div>
+                      </div>
+                      <div>
+                        <div class="text-slate-500 text-xs mb-1">vs Pack</div>
+                        <div class="${vsPackColor} font-medium tabular-nums">${vsPackSign}${change.vsPackDiff.toFixed(1)}%</div>
+                        <div class="text-slate-500 text-xs">${change.vsPackDiff < 0 ? 'Outperformed' : 'Underperformed'}</div>
+                      </div>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      riderModalContent.innerHTML = content;
+      riderModal.classList.remove('hidden');
+      lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+    }
+
     // Initialize icons and interactions
     document.addEventListener('DOMContentLoaded', async () => {
       lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
@@ -997,12 +1598,114 @@
         if (e.key === 'Escape' && !uploadModal.classList.contains('hidden')) {
           uploadModal.classList.add('hidden');
         }
+        if (e.key === 'Escape' && !feedbackModal.classList.contains('hidden')) {
+          feedbackModal.classList.add('hidden');
+        }
+      });
+
+      // Feedback modal handlers
+      const feedbackModal = document.getElementById('feedbackModal');
+      const feedbackButton = document.getElementById('feedbackButton');
+      const closeFeedbackModal = document.getElementById('closeFeedbackModal');
+
+      feedbackButton.addEventListener('click', () => {
+        feedbackModal.classList.remove('hidden');
+        lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+      });
+
+      closeFeedbackModal.addEventListener('click', () => {
+        feedbackModal.classList.add('hidden');
+      });
+
+      feedbackModal.addEventListener('click', (e) => {
+        if (e.target === feedbackModal) {
+          feedbackModal.classList.add('hidden');
+        }
+      });
+
+      // Rider modal handlers
+      const riderModal = document.getElementById('riderModal');
+      const closeRiderModal = document.getElementById('closeRiderModal');
+
+      closeRiderModal.addEventListener('click', () => {
+        riderModal.classList.add('hidden');
+      });
+
+      riderModal.addEventListener('click', (e) => {
+        if (e.target === riderModal) {
+          riderModal.classList.add('hidden');
+        }
+      });
+
+      // Rider search functionality
+      const riderSearchInput = document.getElementById('riderSearch');
+      const riderSearchResults = document.getElementById('riderSearchResults');
+
+      riderSearchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+
+        if (query.length < 2) {
+          riderSearchResults.classList.add('hidden');
+          return;
+        }
+
+        if (!dashboardData || !dashboardData.riders) {
+          return;
+        }
+
+        // Filter riders by name
+        const matches = dashboardData.riders.filter(rider =>
+          rider.name.toLowerCase().includes(query)
+        );
+
+        if (matches.length === 0) {
+          riderSearchResults.classList.add('hidden');
+          return;
+        }
+
+        // Populate results dropdown
+        riderSearchResults.innerHTML = '';
+        matches.slice(0, 10).forEach(rider => {
+          const li = document.createElement('div');
+          li.className = 'px-3 py-2 text-sm hover:bg-slate-950 cursor-pointer border-b border-slate-800 last:border-b-0';
+          li.innerHTML = `
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="text-slate-200 font-medium">${rider.name}</div>
+                <div class="text-slate-500 text-xs">${rider.years_participated} years: ${rider.performances.map(p => p.year).join(', ')}</div>
+              </div>
+              <span class="text-amber-400">★</span>
+            </div>
+          `;
+          li.addEventListener('click', () => {
+            showRiderPerformance(rider);
+            riderSearchResults.classList.add('hidden');
+            riderSearchInput.value = '';
+          });
+          riderSearchResults.appendChild(li);
+        });
+
+        riderSearchResults.classList.remove('hidden');
+      });
+
+      // Close search results when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!riderSearchInput.contains(e.target) && !riderSearchResults.contains(e.target)) {
+          riderSearchResults.classList.add('hidden');
+        }
       });
 
       // Fetch data first, then load dashboard
       await fetchDashboardData();
+      routeData = await fetchAndParseGPX();
+
       if (dashboardData) {
         loadData();
+      }
+
+      if (routeData) {
+        renderRouteCompass();
+        renderWindBenefitBox();
       }
 
       // Wind layer toggle
@@ -1062,10 +1765,11 @@
         }
       });
 
-      // Apply filters - re-render chart
+      // Apply filters - re-render chart and update outliers
       document.getElementById('applyFilters').addEventListener('click', () => {
         if (dashboardData) {
           renderChart();
+          populateOutliers(); // Also update outliers based on filtered years
         }
       });
 
@@ -1076,6 +1780,7 @@
           setText('startYearValue', years[0]);
           setText('endYearValue', years[years.length - 1]);
           renderChart();
+          populateOutliers(); // Also update outliers when resetting
         }
       });
     });

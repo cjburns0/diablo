@@ -1,6 +1,6 @@
 {
   "race_name": "Mount Diablo Challenge",
-  "generated_at": "2025-10-24T11:20:58.568138",
+  "generated_at": "2025-10-28T19:55:51.555771",
   "years": [
     2018,
     2019,
@@ -288,5 +288,315 @@
         }
       }
     ]
-  }
+  },
+  "riders": [
+    {
+      "name": "Abigail Cotton (# 164)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2023,
+          "time_seconds": 5870.3,
+          "time_formatted": "97:50",
+          "place": 672,
+          "gender": "F",
+          "age": 47
+        },
+        {
+          "year": 2025,
+          "time_seconds": 6026.6,
+          "time_formatted": "100:26",
+          "place": 662,
+          "gender": "F",
+          "age": 49
+        }
+      ]
+    },
+    {
+      "name": "Caleb Holtzinger (# 326)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2023,
+          "time_seconds": 3408.7,
+          "time_formatted": "56:48",
+          "place": 65,
+          "gender": "M",
+          "age": 34
+        },
+        {
+          "year": 2025,
+          "time_seconds": 3498.6,
+          "time_formatted": "58:18",
+          "place": 109,
+          "gender": "M",
+          "age": 36
+        }
+      ]
+    },
+    {
+      "name": "Chris Grossman (# 280)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2022,
+          "time_seconds": 5396.8,
+          "time_formatted": "89:56",
+          "place": 516,
+          "gender": "M",
+          "age": 41
+        },
+        {
+          "year": 2024,
+          "time_seconds": 4022.2,
+          "time_formatted": "67:02",
+          "place": 252,
+          "gender": "M",
+          "age": 43
+        }
+      ]
+    },
+    {
+      "name": "Fern Campbell (# 107)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2024,
+          "time_seconds": 5106.5,
+          "time_formatted": "85:06",
+          "place": 467,
+          "gender": "F",
+          "age": 16
+        },
+        {
+          "year": 2025,
+          "time_seconds": 4297.9,
+          "time_formatted": "71:37",
+          "place": 332,
+          "gender": "F",
+          "age": 17
+        }
+      ]
+    },
+    {
+      "name": "Igor Bulavko (# 96)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2024,
+          "time_seconds": 4518.2,
+          "time_formatted": "75:18",
+          "place": 355,
+          "gender": "M",
+          "age": 45
+        },
+        {
+          "year": 2025,
+          "time_seconds": 4081.0,
+          "time_formatted": "68:01",
+          "place": 282,
+          "gender": "M",
+          "age": 46
+        }
+      ]
+    },
+    {
+      "name": "Jeff Gelb (# 254)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2024,
+          "time_seconds": 6193.2,
+          "time_formatted": "103:13",
+          "place": 623,
+          "gender": "M",
+          "age": 41
+        },
+        {
+          "year": 2025,
+          "time_seconds": 5781.7,
+          "time_formatted": "96:21",
+          "place": 628,
+          "gender": "M",
+          "age": 42
+        }
+      ]
+    },
+    {
+      "name": "Jervie Castro (# 116)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2024,
+          "time_seconds": 6260.2,
+          "time_formatted": "104:20",
+          "place": 636,
+          "gender": "M",
+          "age": 32
+        },
+        {
+          "year": 2025,
+          "time_seconds": 7165.9,
+          "time_formatted": "119:25",
+          "place": 744,
+          "gender": "M",
+          "age": 33
+        }
+      ]
+    },
+    {
+      "name": "Justin Buscho (# 102)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2024,
+          "time_seconds": 4318.5,
+          "time_formatted": "71:58",
+          "place": 313,
+          "gender": "M",
+          "age": 42
+        },
+        {
+          "year": 2025,
+          "time_seconds": 3907.3,
+          "time_formatted": "65:07",
+          "place": 233,
+          "gender": "M",
+          "age": 43
+        }
+      ]
+    },
+    {
+      "name": "Kevin Carlin (# 111)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2024,
+          "time_seconds": 3825.3,
+          "time_formatted": "63:45",
+          "place": 189,
+          "gender": "M",
+          "age": 45
+        },
+        {
+          "year": 2025,
+          "time_seconds": 3495.7,
+          "time_formatted": "58:15",
+          "place": 106,
+          "gender": "M",
+          "age": 46
+        }
+      ]
+    },
+    {
+      "name": "Marko Cater (# 117)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2024,
+          "time_seconds": 3920.1,
+          "time_formatted": "65:20",
+          "place": 210,
+          "gender": "M",
+          "age": 44
+        },
+        {
+          "year": 2025,
+          "time_seconds": 3926.2,
+          "time_formatted": "65:26",
+          "place": 235,
+          "gender": "M",
+          "age": 45
+        }
+      ]
+    },
+    {
+      "name": "Mina Aganagic (# 10)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2024,
+          "time_seconds": 4380.2,
+          "time_formatted": "73:00",
+          "place": 323,
+          "gender": "F",
+          "age": 51
+        },
+        {
+          "year": 2025,
+          "time_seconds": 4289.3,
+          "time_formatted": "71:29",
+          "place": 327,
+          "gender": "F",
+          "age": 52
+        }
+      ]
+    },
+    {
+      "name": "Peter Ascanio (# 29)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2023,
+          "time_seconds": 6074.4,
+          "time_formatted": "101:14",
+          "place": 700,
+          "gender": "M",
+          "age": 63
+        },
+        {
+          "year": 2024,
+          "time_seconds": 6106.5,
+          "time_formatted": "101:46",
+          "place": 609,
+          "gender": "M",
+          "age": 64
+        }
+      ]
+    },
+    {
+      "name": "Peter Buhl (# 95)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2024,
+          "time_seconds": 3615.4,
+          "time_formatted": "60:15",
+          "place": 135,
+          "gender": "M",
+          "age": 60
+        },
+        {
+          "year": 2025,
+          "time_seconds": 3527.8,
+          "time_formatted": "58:47",
+          "place": 118,
+          "gender": "M",
+          "age": 61
+        }
+      ]
+    },
+    {
+      "name": "Shannon Gaffney (# 240)",
+      "years_participated": 2,
+      "performances": [
+        {
+          "year": 2024,
+          "time_seconds": 3661.5,
+          "time_formatted": "61:01",
+          "place": 147,
+          "gender": "F",
+          "age": 44
+        },
+        {
+          "year": 2025,
+          "time_seconds": 3781.8,
+          "time_formatted": "63:01",
+          "place": 194,
+          "gender": "F",
+          "age": 45
+        }
+      ]
+    }
+  ]
 }

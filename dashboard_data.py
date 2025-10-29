@@ -150,11 +150,72 @@ def generate_dashboard_data():
     wind_correlation = calculate_correlation(summit_wind_speeds, median_times)
     dashboard_data['statistics']['overall']['wind_correlation'] = wind_correlation
 
-    # No longer needed - removed fastest_year_pct_diff calculation
+    # Extract rider performance data
+    print("Extracting rider performance data...")
+    riders_data = extract_rider_performances(db, years)
+    dashboard_data['riders'] = riders_data
+    print(f"  - Found {len(riders_data)} riders with multiple years")
 
     analyzer.close()
 
     return dashboard_data
+
+def extract_rider_performances(db, years):
+    """
+    Extract individual rider performances across multiple years.
+    Only includes riders who have participated in 2+ years.
+    """
+    import pandas as pd
+
+    # Query to get all rider performances
+    query = """
+        SELECT
+            name,
+            year,
+            chip_time_seconds,
+            place,
+            gender,
+            age
+        FROM race_results
+        WHERE chip_time_seconds IS NOT NULL
+        ORDER BY name, year
+    """
+
+    df = pd.read_sql_query(query, db.conn)
+
+    # Group by rider name and count years
+    rider_groups = df.groupby('name')
+
+    riders_list = []
+
+    for name, group in rider_groups:
+        # Only include riders with 2+ years of data
+        if len(group) >= 2:
+            performances = []
+
+            for _, row in group.iterrows():
+                performances.append({
+                    "year": int(row['year']),
+                    "time_seconds": round(row['chip_time_seconds'], 1),
+                    "time_formatted": seconds_to_mmss(row['chip_time_seconds']),
+                    "place": int(row['place']),
+                    "gender": row['gender'],
+                    "age": int(row['age']) if row['age'] is not None else None
+                })
+
+            # Sort performances by year
+            performances.sort(key=lambda x: x['year'])
+
+            riders_list.append({
+                "name": name,
+                "years_participated": len(performances),
+                "performances": performances
+            })
+
+    # Sort riders by name
+    riders_list.sort(key=lambda x: x['name'])
+
+    return riders_list
 
 def main():
     """Main execution."""
@@ -175,6 +236,7 @@ def main():
     print(f"\n✓ Dashboard data saved to: {output_path}")
     print(f"  - Total years: {data['statistics']['overall']['total_years']}")
     print(f"  - Total finishers: {data['statistics']['overall']['total_finishers']}")
+    print(f"  - Riders with multiple years: {len(data['riders'])}")
     print(f"  - Fastest year by winner: {data['statistics']['overall']['fastest_year_by_winner']}")
     print(f"  - Fastest year by median: {data['statistics']['overall']['fastest_year_by_median']}")
     print(f"  - Wind correlation: {data['statistics']['overall']['wind_correlation']}")
