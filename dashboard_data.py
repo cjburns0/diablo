@@ -166,6 +166,7 @@ def extract_rider_performances(db, years):
     Only includes riders who have participated in 2+ years.
     """
     import pandas as pd
+    import re
 
     # Query to get all rider performances
     query = """
@@ -183,12 +184,18 @@ def extract_rider_performances(db, years):
 
     df = pd.read_sql_query(query, db.conn)
 
-    # Group by rider name and count years
-    rider_groups = df.groupby('name')
+    # Strip bib numbers from names (e.g., "Colin Burns (# 141)" -> "Colin Burns")
+    def clean_name(name):
+        return re.sub(r'\s*\(#\s*\d+\)\s*$', '', name).strip()
+
+    df['clean_name'] = df['name'].apply(clean_name)
+
+    # Group by clean rider name and count years
+    rider_groups = df.groupby('clean_name')
 
     riders_list = []
 
-    for name, group in rider_groups:
+    for clean_name, group in rider_groups:
         # Only include riders with 2+ years of data
         if len(group) >= 2:
             performances = []
@@ -207,7 +214,7 @@ def extract_rider_performances(db, years):
             performances.sort(key=lambda x: x['year'])
 
             riders_list.append({
-                "name": name,
+                "name": clean_name,  # Use clean name without bib numbers
                 "years_participated": len(performances),
                 "performances": performances
             })

@@ -408,6 +408,7 @@
     // Dashboard data (loaded from JSON)
     let dashboardData = null;
     let routeData = null; // GPX route data
+    let selectedRider = null; // Currently selected rider
 
     // Geospatial utility functions
     function toRadians(degrees) {
@@ -1331,36 +1332,22 @@
 
       svg.appendChild(boxPlotLayer);
 
-      // Multi-year rider stars layer
+      // Multi-year rider stars layer (only for selected rider)
       const multiYearRidersLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
       multiYearRidersLayer.setAttribute('id', 'layer-multi-year-riders');
 
-      // Build a lookup of multi-year riders by year
-      const ridersByYear = {};
-      if (dashboardData.riders) {
-        dashboardData.riders.forEach(rider => {
-          rider.performances.forEach(perf => {
-            if (!ridersByYear[perf.year]) {
-              ridersByYear[perf.year] = [];
-            }
-            ridersByYear[perf.year].push({
-              name: rider.name,
-              timeSeconds: perf.time_seconds,
-              timeFormatted: perf.time_formatted,
-              place: perf.place
-            });
-          });
-        });
-      }
+      // Only draw stars if a rider is selected
+      if (selectedRider) {
+        // Draw gold stars for selected rider's performances in filtered years
+        filteredData.forEach((d, i) => {
+          const x = xScale(i);
+          const year = d.year;
 
-      // Draw gold stars for multi-year riders in filtered years
-      filteredData.forEach((d, i) => {
-        const x = xScale(i);
-        const year = d.year;
+          // Find this rider's performance for this year
+          const performance = selectedRider.performances.find(p => p.year === year);
 
-        if (ridersByYear[year]) {
-          ridersByYear[year].forEach(rider => {
-            const timeMinutes = rider.timeSeconds / 60;
+          if (performance) {
+            const timeMinutes = performance.time_seconds / 60;
             const y = yScale(timeMinutes);
 
             // Create gold star (unicode star character)
@@ -1368,23 +1355,22 @@
             star.setAttribute('x', x);
             star.setAttribute('y', y + 1);
             star.setAttribute('text-anchor', 'middle');
-            star.setAttribute('font-size', '12');
+            star.setAttribute('font-size', '14');
             star.setAttribute('fill', '#fbbf24');
             star.setAttribute('cursor', 'pointer');
             star.setAttribute('class', 'star-marker');
             star.textContent = '★';
 
             star.addEventListener('mouseenter', (e) => showTooltip(e, `
-              <strong class="text-amber-400">★ Multi-Year Rider</strong><br/>
-              <strong class="text-slate-100">${rider.name}</strong><br/>
-              ${year}: ${rider.timeFormatted} (Place ${rider.place})
+              <strong class="text-amber-400">★ ${selectedRider.name}</strong><br/>
+              ${year}: ${performance.time_formatted} (Place ${performance.place})
             `));
             star.addEventListener('mouseleave', hideTooltip);
 
             multiYearRidersLayer.appendChild(star);
-          });
-        }
-      });
+          }
+        });
+      }
 
       svg.appendChild(multiYearRidersLayer);
 
@@ -1445,6 +1431,10 @@
 
     // Show rider performance in modal
     function showRiderPerformance(rider) {
+      // Set selected rider and re-render chart to show stars
+      selectedRider = rider;
+      renderChart();
+
       const riderModal = document.getElementById('riderModal');
       const riderModalName = document.getElementById('riderModalName');
       const riderModalContent = document.getElementById('riderModalContent');
@@ -1601,6 +1591,9 @@
         if (e.key === 'Escape' && !feedbackModal.classList.contains('hidden')) {
           feedbackModal.classList.add('hidden');
         }
+        if (e.key === 'Escape' && !riderModal.classList.contains('hidden')) {
+          closeRiderModalAndClearStars();
+        }
       });
 
       // Feedback modal handlers
@@ -1627,13 +1620,17 @@
       const riderModal = document.getElementById('riderModal');
       const closeRiderModal = document.getElementById('closeRiderModal');
 
-      closeRiderModal.addEventListener('click', () => {
+      function closeRiderModalAndClearStars() {
         riderModal.classList.add('hidden');
-      });
+        selectedRider = null; // Clear selected rider
+        renderChart(); // Re-render chart to remove stars
+      }
+
+      closeRiderModal.addEventListener('click', closeRiderModalAndClearStars);
 
       riderModal.addEventListener('click', (e) => {
         if (e.target === riderModal) {
-          riderModal.classList.add('hidden');
+          closeRiderModalAndClearStars();
         }
       });
 
