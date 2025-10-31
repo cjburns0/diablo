@@ -23,13 +23,16 @@ export function render(startYear, endYear) {
   const svg = document.getElementById('main-chart');
   svg.innerHTML = '';
 
-  // Chart dimensions and scales
+  // Detect mobile
+  const isMobile = window.innerWidth < 768;
+
+  // Chart dimensions and scales (responsive)
   const width = 960;
   const height = 550;
-  const marginLeft = 60;
-  const marginRight = 40;
+  const marginLeft = isMobile ? 45 : 60;
+  const marginRight = isMobile ? 20 : 40;
   const marginTop = 30;
-  const marginBottom = 150;
+  const marginBottom = isMobile ? 90 : 150;
   const chartWidth = width - marginLeft - marginRight;
   const chartHeight = height - marginTop - marginBottom;
 
@@ -78,12 +81,12 @@ export function render(startYear, endYear) {
 
   // Y-axis labels
   const yAxisGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-  yAxisGroup.setAttribute('class', 'text-[11px] fill-slate-400');
+  yAxisGroup.setAttribute('class', isMobile ? 'text-[9px] fill-slate-400' : 'text-[11px] fill-slate-400');
   const yValues = [40, 50, 60, 70, 80, 90, 100];
   yValues.forEach(minutes => {
     const y = yScale(minutes);
     const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    text.setAttribute('x', '6');
+    text.setAttribute('x', isMobile ? '2' : '6');
     text.setAttribute('y', y + 4);
     text.textContent = `${minutes}:00`;
     yAxisGroup.appendChild(text);
@@ -106,10 +109,13 @@ export function render(startYear, endYear) {
 
   // Wind data section
   const windDataGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-  windDataGroup.setAttribute('class', 'text-[10px] fill-slate-400');
+  windDataGroup.setAttribute('class', isMobile ? 'text-[8px] fill-slate-400' : 'text-[10px] fill-slate-400');
 
-  // Headers for wind data
-  const windHeaders = [
+  // Headers for wind data (simplified on mobile)
+  const windHeaders = isMobile ? [
+    { label: 'Avg Wind:', y: marginTop + chartHeight + 25, color: '#0ea5e9' },
+    { label: 'Riders:', y: marginTop + chartHeight + 55, color: '#10b981' }
+  ] : [
     { label: 'Wind @ Base:', y: marginTop + chartHeight + 35, color: '#94a3b8' },
     { label: 'Wind @ Summit:', y: marginTop + chartHeight + 50, color: '#94a3b8' },
     { label: 'Average Wind:', y: marginTop + chartHeight + 65, color: '#0ea5e9' },
@@ -130,95 +136,98 @@ export function render(startYear, endYear) {
   // Wind data values for each year
   filteredWeather.forEach((w, i) => {
     const x = xScale(i);
-
-    // Wind at base (start)
-    const baseWind = w.start && w.start.wind_speed_avg ? w.start.wind_speed_avg.toFixed(1) : 'N/A';
     const baseDir = w.start && w.start.wind_direction_avg !== null ? w.start.wind_direction_avg : null;
-
-    const baseText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    baseText.setAttribute('x', x - 8);
-    baseText.setAttribute('y', marginTop + chartHeight + 35);
-    baseText.setAttribute('text-anchor', 'middle');
-    baseText.setAttribute('fill', '#94a3b8');
-    baseText.textContent = `${baseWind} mph`;
-    windDataGroup.appendChild(baseText);
-
-    // Small arrow for base wind direction
-    if (baseDir !== null) {
-      const smallArrowSize = 5;
-      const baseArrowGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-      baseArrowGroup.setAttribute('transform', `translate(${x + 18}, ${marginTop + chartHeight + 32}) rotate(${(baseDir + 180) % 360})`);
-
-      const baseShaft = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      baseShaft.setAttribute('x1', '0');
-      baseShaft.setAttribute('y1', smallArrowSize);
-      baseShaft.setAttribute('x2', '0');
-      baseShaft.setAttribute('y2', '-1');
-      baseShaft.setAttribute('stroke', '#94a3b8');
-      baseShaft.setAttribute('stroke-width', '1.5');
-      baseArrowGroup.appendChild(baseShaft);
-
-      const baseArrowHead = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-      baseArrowHead.setAttribute('points', `0,-${smallArrowSize} -${smallArrowSize/2},0 ${smallArrowSize/2},0`);
-      baseArrowHead.setAttribute('fill', '#94a3b8');
-      baseArrowGroup.appendChild(baseArrowHead);
-
-      windDataGroup.appendChild(baseArrowGroup);
-    }
-
-    // Wind at summit
-    const summitWind = w.summit && w.summit.wind_speed_avg ? w.summit.wind_speed_avg.toFixed(1) : 'N/A';
     const summitDir = w.summit && w.summit.wind_direction_avg !== null ? w.summit.wind_direction_avg : null;
 
-    const summitText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    summitText.setAttribute('x', x - 8);
-    summitText.setAttribute('y', marginTop + chartHeight + 50);
-    summitText.setAttribute('text-anchor', 'middle');
-    summitText.setAttribute('fill', '#94a3b8');
-    summitText.textContent = `${summitWind} mph`;
-    windDataGroup.appendChild(summitText);
+    if (!isMobile) {
+      // Desktop: Show detailed wind data
+      // Wind at base (start)
+      const baseWind = w.start && w.start.wind_speed_avg ? w.start.wind_speed_avg.toFixed(1) : 'N/A';
 
-    // Small arrow for summit wind direction
-    if (summitDir !== null) {
-      const smallArrowSize = 5;
-      const summitArrowGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-      summitArrowGroup.setAttribute('transform', `translate(${x + 18}, ${marginTop + chartHeight + 47}) rotate(${(summitDir + 180) % 360})`);
+      const baseText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      baseText.setAttribute('x', x - 8);
+      baseText.setAttribute('y', marginTop + chartHeight + 35);
+      baseText.setAttribute('text-anchor', 'middle');
+      baseText.setAttribute('fill', '#94a3b8');
+      baseText.textContent = `${baseWind} mph`;
+      windDataGroup.appendChild(baseText);
 
-      const summitShaft = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-      summitShaft.setAttribute('x1', '0');
-      summitShaft.setAttribute('y1', smallArrowSize);
-      summitShaft.setAttribute('x2', '0');
-      summitShaft.setAttribute('y2', '-1');
-      summitShaft.setAttribute('stroke', '#94a3b8');
-      summitShaft.setAttribute('stroke-width', '1.5');
-      summitArrowGroup.appendChild(summitShaft);
+      // Small arrow for base wind direction
+      if (baseDir !== null) {
+        const smallArrowSize = 5;
+        const baseArrowGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        baseArrowGroup.setAttribute('transform', `translate(${x + 18}, ${marginTop + chartHeight + 32}) rotate(${(baseDir + 180) % 360})`);
 
-      const summitArrowHead = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
-      summitArrowHead.setAttribute('points', `0,-${smallArrowSize} -${smallArrowSize/2},0 ${smallArrowSize/2},0`);
-      summitArrowHead.setAttribute('fill', '#94a3b8');
-      summitArrowGroup.appendChild(summitArrowHead);
+        const baseShaft = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        baseShaft.setAttribute('x1', '0');
+        baseShaft.setAttribute('y1', smallArrowSize);
+        baseShaft.setAttribute('x2', '0');
+        baseShaft.setAttribute('y2', '-1');
+        baseShaft.setAttribute('stroke', '#94a3b8');
+        baseShaft.setAttribute('stroke-width', '1.5');
+        baseArrowGroup.appendChild(baseShaft);
 
-      windDataGroup.appendChild(summitArrowGroup);
+        const baseArrowHead = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        baseArrowHead.setAttribute('points', `0,-${smallArrowSize} -${smallArrowSize/2},0 ${smallArrowSize/2},0`);
+        baseArrowHead.setAttribute('fill', '#94a3b8');
+        baseArrowGroup.appendChild(baseArrowHead);
+
+        windDataGroup.appendChild(baseArrowGroup);
+      }
+
+      // Wind at summit
+      const summitWind = w.summit && w.summit.wind_speed_avg ? w.summit.wind_speed_avg.toFixed(1) : 'N/A';
+
+      const summitText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      summitText.setAttribute('x', x - 8);
+      summitText.setAttribute('y', marginTop + chartHeight + 50);
+      summitText.setAttribute('text-anchor', 'middle');
+      summitText.setAttribute('fill', '#94a3b8');
+      summitText.textContent = `${summitWind} mph`;
+      windDataGroup.appendChild(summitText);
+
+      // Small arrow for summit wind direction
+      if (summitDir !== null) {
+        const smallArrowSize = 5;
+        const summitArrowGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+        summitArrowGroup.setAttribute('transform', `translate(${x + 18}, ${marginTop + chartHeight + 47}) rotate(${(summitDir + 180) % 360})`);
+
+        const summitShaft = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        summitShaft.setAttribute('x1', '0');
+        summitShaft.setAttribute('y1', smallArrowSize);
+        summitShaft.setAttribute('x2', '0');
+        summitShaft.setAttribute('y2', '-1');
+        summitShaft.setAttribute('stroke', '#94a3b8');
+        summitShaft.setAttribute('stroke-width', '1.5');
+        summitArrowGroup.appendChild(summitShaft);
+
+        const summitArrowHead = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
+        summitArrowHead.setAttribute('points', `0,-${smallArrowSize} -${smallArrowSize/2},0 ${smallArrowSize/2},0`);
+        summitArrowHead.setAttribute('fill', '#94a3b8');
+        summitArrowGroup.appendChild(summitArrowHead);
+
+        windDataGroup.appendChild(summitArrowGroup);
+      }
     }
 
-    // Average wind
+    // Average wind (shown on both mobile and desktop)
     const avgWind = (w.start && w.summit && w.start.wind_speed_avg && w.summit.wind_speed_avg)
       ? ((w.start.wind_speed_avg + w.summit.wind_speed_avg) / 2).toFixed(1)
       : 'N/A';
     const avgText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     avgText.setAttribute('x', x);
-    avgText.setAttribute('y', marginTop + chartHeight + 65);
+    avgText.setAttribute('y', isMobile ? marginTop + chartHeight + 25 : marginTop + chartHeight + 65);
     avgText.setAttribute('text-anchor', 'middle');
     avgText.setAttribute('fill', '#0ea5e9');
     avgText.setAttribute('font-weight', '600');
-    avgText.textContent = `${avgWind} mph`;
+    avgText.textContent = `${avgWind}`;
     windDataGroup.appendChild(avgText);
 
     // Wind direction arrow (average of base and summit directions)
     if (baseDir !== null && summitDir !== null) {
       const avgDir = ((baseDir + summitDir) / 2) % 360;
-      const arrowY = marginTop + chartHeight + 80;
-      const arrowSize = 8;
+      const arrowY = isMobile ? marginTop + chartHeight + 38 : marginTop + chartHeight + 80;
+      const arrowSize = isMobile ? 5 : 8;
 
       const arrowGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
       arrowGroup.setAttribute('transform', `translate(${x}, ${arrowY}) rotate(${(avgDir + 180) % 360})`);
@@ -227,9 +236,9 @@ export function render(startYear, endYear) {
       shaft.setAttribute('x1', '0');
       shaft.setAttribute('y1', arrowSize);
       shaft.setAttribute('x2', '0');
-      shaft.setAttribute('y2', '-2');
+      shaft.setAttribute('y2', isMobile ? '0' : '-2');
       shaft.setAttribute('stroke', '#0ea5e9');
-      shaft.setAttribute('stroke-width', '2');
+      shaft.setAttribute('stroke-width', isMobile ? '1.5' : '2');
       arrowGroup.appendChild(shaft);
 
       const arrowHead = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
@@ -244,7 +253,7 @@ export function render(startYear, endYear) {
     const riderCount = filteredData[i] ? filteredData[i].count : 'N/A';
     const ridersText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     ridersText.setAttribute('x', x);
-    ridersText.setAttribute('y', marginTop + chartHeight + 110);
+    ridersText.setAttribute('y', isMobile ? marginTop + chartHeight + 55 : marginTop + chartHeight + 110);
     ridersText.setAttribute('text-anchor', 'middle');
     ridersText.setAttribute('fill', '#10b981');
     ridersText.setAttribute('font-weight', '600');

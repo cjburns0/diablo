@@ -183,6 +183,16 @@ function setupEventListeners() {
       }
     }
   });
+
+  // Window resize handler for responsive chart
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      const { startYear, endYear } = YearFilters.getSelectedYears();
+      MainChart.render(startYear, endYear);
+    }, 250);
+  });
 }
 
 /**
