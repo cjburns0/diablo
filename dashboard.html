@@ -29,10 +29,6 @@
         -->
       </div>
       <div class="flex items-center gap-3">
-        <button id="uploadButton" class="inline-flex items-center gap-1.5 text-sm font-medium border rounded-md px-3 py-1.5 text-slate-100 border-sky-700 bg-sky-900 hover:bg-sky-800">
-          <i data-lucide="upload" class="w-4 h-4 text-sky-400"></i>
-          Send Files Here
-        </button>
         <div class="hidden sm:flex items-center px-2.5 py-1.5 border rounded-md shadow-sm/50 border-slate-700 bg-slate-900 opacity-50 cursor-not-allowed">
           <i data-lucide="search" class="w-4 h-4 text-slate-500"></i>
           <input type="text" placeholder="Search races, years, riders…" class="ml-2 text-sm placeholder:text-slate-500 focus:outline-none bg-transparent w-64 cursor-not-allowed" disabled>
@@ -46,20 +42,6 @@
       </div>
     </div>
   </header>
-
-  <!-- Upload Modal -->
-  <div id="uploadModal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
-    <div class="relative w-full max-w-2xl mx-4 rounded-xl border shadow-xl border-slate-800 bg-black p-6">
-      <div class="flex items-center justify-between mb-4">
-        <h2 class="text-xl font-semibold text-slate-100">Upload Files</h2>
-        <button id="closeModal" class="text-slate-400 hover:text-slate-100">
-          <i data-lucide="x" class="w-5 h-5"></i>
-        </button>
-      </div>
-      <!-- UploadThingy Widget -->
-      <div id="uploadthingy-widget" data-domain="diablochallenge.com"></div>
-    </div>
-  </div>
 
   <!-- Main -->
   <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
@@ -410,6 +392,7 @@
         <span class="text-slate-500">Created by CJB</span>
       </div>
       <div class="flex items-center gap-4 text-sm">
+        <a href="upload.html" class="text-slate-400 hover:text-slate-100 cursor-pointer">UT Test</a>
         <button id="feedbackButton" class="text-slate-400 hover:text-slate-100 cursor-pointer">Feedback</button>
       </div>
     </div>
