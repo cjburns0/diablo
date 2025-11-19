@@ -54,7 +54,7 @@ export function render(startYear, endYear) {
   const xSpacing = chartWidth / (filteredData.length + 1);
   const xScale = (index) => marginLeft + (index + 1) * xSpacing;
 
-  // Add grid pattern
+  // Add grid pattern (vertical lines only)
   const defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
   const pattern = document.createElementNS('http://www.w3.org/2000/svg', 'pattern');
   pattern.setAttribute('id', 'grid');
@@ -62,7 +62,7 @@ export function render(startYear, endYear) {
   pattern.setAttribute('height', '60');
   pattern.setAttribute('patternUnits', 'userSpaceOnUse');
   const gridPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  gridPath.setAttribute('d', 'M 80 0 L 0 0 0 60');
+  gridPath.setAttribute('d', 'M 0 0 L 0 60');
   gridPath.setAttribute('fill', 'none');
   gridPath.setAttribute('stroke', '#1f293b');
   gridPath.setAttribute('stroke-width', '1');
