@@ -107,6 +107,23 @@ export function render(startYear, endYear) {
   });
   svg.appendChild(xAxisGroup);
 
+  // Horizontal leader lines at 10-minute intervals
+  const leaderLinesGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+  leaderLinesGroup.setAttribute('id', 'layer-leader-lines');
+  yValues.forEach(minutes => {
+    const y = yScale(minutes);
+    const leaderLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    leaderLine.setAttribute('x1', marginLeft);
+    leaderLine.setAttribute('y1', y);
+    leaderLine.setAttribute('x2', width - marginRight);
+    leaderLine.setAttribute('y2', y);
+    leaderLine.setAttribute('stroke', '#64748b');
+    leaderLine.setAttribute('stroke-width', '1');
+    leaderLine.setAttribute('opacity', '0.15');
+    leaderLinesGroup.appendChild(leaderLine);
+  });
+  svg.appendChild(leaderLinesGroup);
+
   // Wind data section
   const windDataGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
   windDataGroup.setAttribute('class', isMobile ? 'text-[8px] fill-slate-400' : 'text-[10px] fill-slate-400');
@@ -543,30 +560,4 @@ export function render(startYear, endYear) {
   medianLineLayer.appendChild(medianPath);
 
   svg.appendChild(medianLineLayer);
-
-  // 1-hour cutoff reference line
-  const cutoffLayer = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-  cutoffLayer.setAttribute('id', 'layer-cutoff');
-
-  const cutoffY = yScale(60);
-
-  const cutoffLine = document.createElementNS('http://www.w3.org/2000/svg', 'line');
-  cutoffLine.setAttribute('x1', marginLeft);
-  cutoffLine.setAttribute('y1', cutoffY);
-  cutoffLine.setAttribute('x2', width - marginRight);
-  cutoffLine.setAttribute('y2', cutoffY);
-  cutoffLine.setAttribute('stroke', '#64748b');
-  cutoffLine.setAttribute('stroke-width', '1.5');
-  cutoffLine.setAttribute('opacity', '0.6');
-  cutoffLayer.appendChild(cutoffLine);
-
-  const cutoffLabel = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-  cutoffLabel.setAttribute('x', width - marginRight + 5);
-  cutoffLabel.setAttribute('y', cutoffY + 4);
-  cutoffLabel.setAttribute('class', 'text-[11px] fill-slate-400');
-  cutoffLabel.setAttribute('font-weight', '500');
-  cutoffLabel.textContent = '1 hour cutoff';
-  cutoffLayer.appendChild(cutoffLabel);
-
-  svg.appendChild(cutoffLayer);
 }
