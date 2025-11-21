@@ -119,7 +119,7 @@ export function render(startYear, endYear) {
     leaderLine.setAttribute('y2', y);
     leaderLine.setAttribute('stroke', '#64748b');
     leaderLine.setAttribute('stroke-width', '1');
-    leaderLine.setAttribute('opacity', '0.15');
+    leaderLine.setAttribute('opacity', '0.3');
     leaderLinesGroup.appendChild(leaderLine);
   });
   svg.appendChild(leaderLinesGroup);
