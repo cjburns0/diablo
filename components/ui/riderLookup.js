@@ -58,18 +58,32 @@ export function showRiderPerformance(rider) {
     });
   }
 
+  // Calculate percentile for each performance
+  const performancesWithPercentile = performances.map(perf => {
+    const yearStats = dashboardData.statistics.by_year.find(y => y.year === perf.year);
+    const totalCount = yearStats ? yearStats.count : 0;
+    // Percentile: top X% means (total - place + 1) / total * 100
+    const percentile = totalCount > 0 ? ((totalCount - perf.place + 1) / totalCount) * 100 : 0;
+    return { ...perf, percentile, totalCount };
+  });
+
+  // Find best stats with their years
+  const bestTimePerf = performancesWithPercentile.reduce((best, p) => p.time_seconds < best.time_seconds ? p : best);
+  const bestPlacePerf = performancesWithPercentile.reduce((best, p) => p.place < best.place ? p : best);
+  const bestPercentilePerf = performancesWithPercentile.reduce((best, p) => p.percentile > best.percentile ? p : best);
+
   // Build modal content
   let content = `
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div class="rounded-lg border p-4 border-slate-800 bg-black">
         <div class="text-xs uppercase tracking-wide text-slate-500 mb-2">Participation History</div>
         <div class="space-y-2">
-          ${performances.map(perf => `
+          ${performancesWithPercentile.map(perf => `
             <div class="flex items-center justify-between text-sm">
               <span class="text-slate-400">${perf.year}</span>
               <div class="text-right">
                 <div class="text-slate-200 font-medium">${perf.time_formatted}</div>
-                <div class="text-slate-500 text-xs">Place ${perf.place}</div>
+                <div class="text-slate-500 text-xs">Place ${perf.place} of ${perf.totalCount} (${perf.percentile.toFixed(0)}th %ile)</div>
               </div>
             </div>
           `).join('')}
@@ -85,11 +99,15 @@ export function showRiderPerformance(rider) {
           </div>
           <div class="flex items-center justify-between">
             <span class="text-slate-400">Best time</span>
-            <span class="text-slate-200 font-medium">${performances.reduce((best, p) => p.time_seconds < best.time_seconds ? p : best).time_formatted}</span>
+            <span class="text-slate-200 font-medium">${bestTimePerf.time_formatted} <span class="text-slate-500">(${bestTimePerf.year})</span></span>
           </div>
           <div class="flex items-center justify-between">
             <span class="text-slate-400">Best place</span>
-            <span class="text-slate-200 font-medium">${Math.min(...performances.map(p => p.place))}</span>
+            <span class="text-slate-200 font-medium">${bestPlacePerf.place} <span class="text-slate-500">(${bestPlacePerf.year})</span></span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-slate-400">Best percentile</span>
+            <span class="text-slate-200 font-medium">${bestPercentilePerf.percentile.toFixed(0)}th %ile <span class="text-slate-500">(${bestPercentilePerf.year})</span></span>
           </div>
         </div>
       </div>

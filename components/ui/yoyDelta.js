@@ -19,10 +19,17 @@ export function init() {
 
   if (metrics.lastYearChange === null) {
     // Not enough data for YoY calculations
+    document.getElementById('yoy-last-year-label').textContent = 'Last year vs prior';
     document.getElementById('yoy-last-year').textContent = 'N/A';
     document.getElementById('yoy-avg-change').textContent = 'N/A';
     document.getElementById('yoy-volatility').textContent = 'N/A';
     return;
+  }
+
+  // Update the label to show specific years
+  const yearLabel = document.getElementById('yoy-last-year-label');
+  if (yearLabel) {
+    yearLabel.textContent = `${metrics.currentYear} vs. ${metrics.priorYear}`;
   }
 
   // Last year vs prior (most recent YoY change)

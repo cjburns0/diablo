@@ -5,14 +5,16 @@
 /**
  * Calculate Year-over-Year metrics
  * @param {Array} byYearStats - Statistics by year
- * @returns {Object} YoY metrics including last year change, average change, and volatility
+ * @returns {Object} YoY metrics including last year change, average change, volatility, and years compared
  */
 export function calculateYoYMetrics(byYearStats) {
   if (byYearStats.length < 2) {
     return {
       lastYearChange: null,
       avgChange: null,
-      volatility: null
+      volatility: null,
+      currentYear: null,
+      priorYear: null
     };
   }
 
@@ -28,6 +30,10 @@ export function calculateYoYMetrics(byYearStats) {
   // Last year vs prior (most recent YoY change)
   const lastYearChange = yoyChanges[yoyChanges.length - 1];
 
+  // Get the years being compared (last two years in the data)
+  const currentYear = byYearStats[byYearStats.length - 1].year;
+  const priorYear = byYearStats[byYearStats.length - 2].year;
+
   // Average annual change
   const avgChange = yoyChanges.reduce((sum, val) => sum + val, 0) / yoyChanges.length;
 
@@ -39,7 +45,9 @@ export function calculateYoYMetrics(byYearStats) {
   return {
     lastYearChange,
     avgChange,
-    volatility
+    volatility,
+    currentYear,
+    priorYear
   };
 }
 
