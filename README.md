@@ -11,7 +11,7 @@ We scrape the Diablo Challenge race time finish results for all the details poss
 
 This project provides complete data pipeline and analysis for the Mount Diablo Challenge race:
 
-- **Web Scraping**: Automated collection of race results from all available years (2018-2025)
+- **Web Scraping**: Automated collection of main-race results from all available years (2018-2026, excluding 2020)
 - **Weather Integration**: Historical weather data from Open-Meteo API (free, no API key needed)
 - **Database Storage**: SQLite database for efficient data management
 - **Statistical Analysis**: Year-over-year trends, distributions, and correlations
@@ -42,7 +42,7 @@ python3 main.py
 ```
 
 This will:
-- Scrape race results from years 2018, 2019, 2021-2025
+- Scrape race results from years 2018, 2019, 2021-2026
 - Fetch hourly weather data for race dates (7 AM - 11 AM window)
 - Store everything in SQLite database
 - Generate statistical analysis

@@ -1,0 +1,829 @@
+year,place,name,team,city_state,gender,gender_place,age,age_place,chip_time_str,chip_time_seconds,pace,start_time,race_date
+2026,1,Nathan Martin (# 511),MT-SpeedBlock-Terun,San Francisco,M,1,26,1 / 70,00:43:53.6,2633.6,3:55/mile,8:15 AM,2026-10-04
+2026,2,Logan Unger (# 832),MT-SpeedBlock-Terun,San Jose,M,2,23,1 / 17,00:44:01.0,2641.0,3:55/mile,8:15 AM,2026-10-04
+2026,3,Brent Baillie (# 39),MT-LottoShield,Danville,M,3,26,2 / 70,00:44:16.9,2656.9,3:57/mile,8:15 AM,2026-10-04
+2026,4,Justin Riele (# 678),,Lafayette,M,4,32,1 / 97,00:45:59.7,2759.7,4:06/mile,8:15 AM,2026-10-04
+2026,5,Adam White (# 875),MT-Lamorinda MBO Racing,Livermore,M,5,44,1 / 78,00:46:42.1,2802.1,4:10/mile,8:15 AM,2026-10-04
+2026,6,Shane Curtis (# 177),CT-SycipDevout,Windsor,M,6,16,1 / 17,00:46:44.0,2804.0,4:10/mile,8:15 AM,2026-10-04
+2026,7,Coy Johnson (# 922),,Santa Monica,M,7,36,1 / 98,00:46:48.3,2808.3,4:10/mile,8:15 AM,2026-10-04
+2026,8,Logan Freeman (# 254),,Santa Rosa,M,8,16,2 / 17,00:46:52.3,2812.3,4:11/mile,8:15 AM,2026-10-04
+2026,9,Cal Wilson (# 884),,San Francisco,M,9,24,2 / 17,00:47:15.4,2835.4,4:13/mile,8:15 AM,2026-10-04
+2026,10,Jason Freihofner (# 255),,Concord,M,10,21,3 / 17,00:48:04.9,2884.9,4:17/mile,8:15 AM,2026-10-04
+2026,11,Bradley Lovegren (# 479),,Menlo Park,M,11,36,2 / 98,00:48:06.7,2886.7,4:17/mile,8:15 AM,2026-10-04
+2026,12,Noah Libeskind (# 453),MT-Thursdays,San Francisco,M,12,26,3 / 70,00:48:37.6,2917.6,4:20/mile,8:15 AM,2026-10-04
+2026,13,Jason Tang (# 794),MT-Dolce Vita Cycling,El Cerrito,M,13,29,4 / 70,00:48:50.5,2930.5,4:21/mile,8:15 AM,2026-10-04
+2026,14,Nicholas Sweeney (# 790),,San Francisco,M,14,15,1 / 14,00:48:52.4,2932.4,4:21/mile,8:15 AM,2026-10-04
+2026,15,Andrew Ernst (# 236),CT-Alto Velo Racing Team,Cupertino,M,15,31,2 / 97,00:48:54.2,2934.2,4:21/mile,8:15 AM,2026-10-04
+2026,16,Colin Kwiecinski (# 420),MT-Thursdays,San Francisco,M,16,26,5 / 70,00:49:00.3,2940.3,4:22/mile,8:15 AM,2026-10-04
+2026,17,Aero Fisher (# 965),,Mill Valley,M,17,18,4 / 17,00:49:01.3,2941.3,4:22/mile,8:15 AM,2026-10-04
+2026,18,Will Brickler (# 96),,San Francisco,M,18,39,3 / 98,00:49:02.1,2942.1,4:22/mile,8:15 AM,2026-10-04
+2026,19,Andrea Cloarec (# 158),MT-SpeedBlock-Terun,Woodside,M,19,34,3 / 97,00:49:18.0,2958.0,4:24/mile,8:15 AM,2026-10-04
+2026,20,Ben Herken (# 330),MT-Thursdays,San Francisco,M,20,33,4 / 97,00:49:50.1,2990.1,4:26/mile,8:15 AM,2026-10-04
+2026,21,Christopher Peck (# 616),CT-Trapper McNutters,Los Gatos,M,21,55,1 / 47,00:49:58.8,2998.8,4:27/mile,8:15 AM,2026-10-04
+2026,22,Andrew Matuszewski (# 519),MT-Thursdays,San Francisco,M,22,35,4 / 98,00:50:02.2,3002.2,4:28/mile,8:15 AM,2026-10-04
+2026,23,Anastasia Ostashek (# 923),,Santa Monica,F,1,24,1 / 4,00:50:07.0,3007.0,4:28/mile,8:15 AM,2026-10-04
+2026,24,Jeremy Besmer (# 72),CT-Alto Velo Racing Team,San Francisco,M,23,36,5 / 98,00:50:16.8,3016.8,4:29/mile,8:15 AM,2026-10-04
+2026,25,Jack Blodgett (# 80),MT-Thursdays,San Francisco,M,24,31,5 / 97,00:50:18.3,3018.3,4:29/mile,8:15 AM,2026-10-04
+2026,26,Nathaniel English (# 981),,Matrinez,M,25,42,2 / 78,00:50:26.8,3026.8,4:30/mile,8:15 AM,2026-10-04
+2026,27,Matthew Schumann (# 723),,San Francisco,M,26,29,6 / 70,00:50:34.8,3034.8,4:30/mile,8:15 AM,2026-10-04
+2026,28,Hanns Detlefsen (# 197),,Evergreen,M,27,53,1 / 75,00:50:34.9,3034.9,4:30/mile,8:15 AM,2026-10-04
+2026,29,Scott Trummer (# 826),MT-Lamorinda MBO Racing,Livermore,M,28,35,6 / 98,00:50:39.5,3039.5,4:31/mile,8:15 AM,2026-10-04
+2026,30,Denny Rich (# 673),,Fremont,M,29,26,7 / 70,00:51:06.9,3066.9,4:33/mile,8:15 AM,2026-10-04
+2026,31,Matthew Van Heukelom (# 840),MT-Thursdays,San Francisco,M,30,30,6 / 97,00:51:13.1,3073.1,4:34/mile,8:15 AM,2026-10-04
+2026,32,Brennan Buscho (# 111),,Livermore,M,31,16,3 / 17,00:51:32.2,3092.2,4:36/mile,8:18 AM,2026-10-04
+2026,33,Ryan Chaney (# 134),MT-SpeedBlock-Terun,Carmel,M,32,26,8 / 70,00:51:39.2,3099.2,4:36/mile,8:15 AM,2026-10-04
+2026,34,Aiden Kaplan (# 387),MT-Sharp Bicycle Racing Team,Oakland,M,33,16,4 / 17,00:51:56.7,3116.7,4:38/mile,8:15 AM,2026-10-04
+2026,35,Gary Hicks (# 335),MT-Thursdays,San Francisco,M,34,27,9 / 70,00:52:00.6,3120.6,4:38/mile,8:15 AM,2026-10-04
+2026,36,William Draper (# 211),MT-C510,Oakland,M,35,42,3 / 78,00:52:40.0,3160.0,4:42/mile,8:15 AM,2026-10-04
+2026,37,Eric Jamison (# 373),MT-C510,Oakland,M,36,40,4 / 78,00:52:45.6,3165.6,4:42/mile,8:15 AM,2026-10-04
+2026,38,Bryan Enderle (# 230),,Davis,M,37,52,2 / 75,00:52:46.1,3166.1,4:42/mile,8:18 AM,2026-10-04
+2026,39,Jen Tave (# 950),,Redwood City,F,2,36,1 / 10,00:52:52.8,3172.8,4:43/mile,8:15 AM,2026-10-04
+2026,40,Matin Massoudi (# 991),,Palo Alto,M,38,26,10 / 70,00:52:57.9,3177.9,4:43/mile,8:21 AM,2026-10-04
+2026,41,Dan McGarry (# 533),,San Francisco,M,39,48,1 / 78,00:53:18.4,3198.4,4:45/mile,8:27 AM,2026-10-04
+2026,42,Jeffrey Yates (# 904),MT-Dolce Vita Cycling,San Francisco,M,40,33,7 / 97,00:53:22.5,3202.5,4:45/mile,8:15 AM,2026-10-04
+2026,43,Hoss Hayati (# 990),,Palo Alto,M,41,46,2 / 78,00:53:51.6,3231.6,4:48/mile,8:27 AM,2026-10-04
+2026,44,Oliver Collins (# 160),,Walnut Creek,M,42,17,5 / 17,00:54:04.8,3244.8,4:49/mile,8:15 AM,2026-10-04
+2026,45,Joseph Chance (# 132),,San Francisco,M,43,35,7 / 98,00:54:11.3,3251.3,4:50/mile,8:15 AM,2026-10-04
+2026,46,Anthony Pound (# 643),,San Anselmo,M,44,49,3 / 78,00:54:17.4,3257.4,4:50/mile,8:15 AM,2026-10-04
+2026,47,Drew Hagerstrom (# 308),CT-Thursdayscc Coed,Sf,M,45,32,8 / 97,00:54:27.8,3267.8,4:51/mile,8:21 AM,2026-10-04
+2026,48,Kyle Colton (# 161),CT-Super Sprinkles Racing pb Bicycle Law,San Francisco,M,46,34,9 / 97,00:54:28.1,3268.1,4:51/mile,8:15 AM,2026-10-04
+2026,49,Ivan Bonet (# 82),CT-Thursdayscc Coed,San Francisco,M,47,40,5 / 78,00:54:35.7,3275.7,4:52/mile,8:15 AM,2026-10-04
+2026,50,Xei Sackett (# 698),,Corte Madera,M,48,16,6 / 17,00:54:36.5,3276.5,4:52/mile,8:15 AM,2026-10-04
+2026,51,Phillip Maier (# 498),CT-Thursdayscc Coed,San Francisco,M,49,30,10 / 97,00:54:51.3,3291.3,4:53/mile,8:18 AM,2026-10-04
+2026,52,Adam Beliveau (# 62),CT-Alto Velo Racing Team,Palo Alto,M,50,26,11 / 70,00:54:55.4,3295.4,4:54/mile,8:18 AM,2026-10-04
+2026,53,Owen Wenzel (# 872),,San Rafael,M,51,15,2 / 14,00:55:02.4,3302.4,4:54/mile,8:15 AM,2026-10-04
+2026,54,Zac Blanco (# 78),,San Francisco,M,52,30,11 / 97,00:55:24.6,3324.6,4:56/mile,8:18 AM,2026-10-04
+2026,55,Brett Garrett (# 270),,Berkeley,M,53,38,8 / 98,00:55:25.1,3325.1,4:56/mile,8:21 AM,2026-10-04
+2026,56,Kevin Mains (# 499),MT-Lamorinda MBO Racing,Oakland,M,54,27,12 / 70,00:55:34.1,3334.1,4:57/mile,8:15 AM,2026-10-04
+2026,57,Alex Wolff (# 892),,San Francisco,M,55,30,12 / 97,00:55:49.1,3349.1,4:59/mile,8:18 AM,2026-10-04
+2026,58,Evan Stade (# 931),,Lafayette,M,56,40,6 / 78,00:55:54.2,3354.2,4:59/mile,8:15 AM,2026-10-04
+2026,59,Scot McIntosh (# 535),MT-Dolce Vita Cycling,San Francisco,M,57,45,4 / 78,00:55:56.3,3356.3,4:59/mile,8:21 AM,2026-10-04
+2026,60,Marc Osswald (# 946),,"Mountain View, CA",M,58,39,9 / 98,00:56:00.1,3360.1,5:00/mile,8:18 AM,2026-10-04
+2026,61,David Ritzman (# 679),,Albany,M,59,52,3 / 75,00:56:02.5,3362.5,5:00/mile,8:21 AM,2026-10-04
+2026,62,Henry Rose (# 685),CT-Berkeley Bicycle Club,Oakland,M,60,16,7 / 17,00:56:10.1,3370.1,5:00/mile,8:15 AM,2026-10-04
+2026,63,Scott Steffen (# 764),,Albuquerque,M,61,60,1 / 54,00:56:15.3,3375.3,5:01/mile,8:15 AM,2026-10-04
+2026,64,Kevin Kauffman (# 391),CT-Alto Velo Racing Team,Mountain View,M,62,29,13 / 70,00:56:30.6,3390.6,5:02/mile,8:15 AM,2026-10-04
+2026,65,Nathaniel Comar (# 162),,Oakland,M,63,30,13 / 97,00:56:39.9,3399.9,5:03/mile,8:18 AM,2026-10-04
+2026,66,Haley Hagerstrom (# 309),CT-Thursdayscc Coed,San Francisco,F,3,32,1 / 29,00:56:42.2,3402.2,5:03/mile,8:21 AM,2026-10-04
+2026,67,Martin Ek (# 223),MT-Thursdays,San Francisco,M,64,32,14 / 97,00:56:45.4,3405.4,5:04/mile,8:15 AM,2026-10-04
+2026,68,Silas Stevenson (# 767),CT-SycipDevout,Santa Rosa,M,65,17,8 / 17,00:56:56.2,3416.2,5:05/mile,8:15 AM,2026-10-04
+2026,69,Vince D''Onofrio (# 209),MT-C510,Oakland,M,66,40,7 / 78,00:57:03.8,3423.8,5:05/mile,8:18 AM,2026-10-04
+2026,70,David Glick (# 286),,Davis,M,67,44,8 / 78,00:57:13.5,3433.5,5:06/mile,8:18 AM,2026-10-04
+2026,71,Andrew Sanders (# 704),MT-Lamorinda MBO Racing,Livermore,M,68,35,10 / 98,00:57:16.3,3436.3,5:06/mile,8:15 AM,2026-10-04
+2026,72,Stanley Su (# 777),,San Francisco,M,69,29,14 / 70,00:57:18.1,3438.1,5:06/mile,8:21 AM,2026-10-04
+2026,73,Nicolas Morales (# 558),MT-Dolce Vita Cycling,San Francisco,M,70,36,11 / 98,00:57:29.0,3449.0,5:07/mile,8:18 AM,2026-10-04
+2026,74,Nico Perdomo (# 621),,San Francisco,M,71,32,15 / 97,00:57:32.2,3452.2,5:08/mile,8:24 AM,2026-10-04
+2026,75,Ben Trefry (# 823),,Berkeley,M,72,23,5 / 17,00:57:36.1,3456.1,5:08/mile,8:21 AM,2026-10-04
+2026,76,Graham Hymus (# 361),,Davis,M,73,56,2 / 47,00:57:37.0,3457.0,5:08/mile,8:18 AM,2026-10-04
+2026,77,Elliot Krigel (# 413),MT-707 Cycling Club,San Francisco,M,74,38,12 / 98,00:57:40.6,3460.6,5:08/mile,8:18 AM,2026-10-04
+2026,78,Aidan Pieper (# 635),,San Francisco,M,75,30,16 / 97,00:57:42.4,3462.4,5:09/mile,8:18 AM,2026-10-04
+2026,79,Carson Sawchuk (# 712),,Sparks,M,76,26,15 / 70,00:57:42.7,3462.7,5:09/mile,8:27 AM,2026-10-04
+2026,80,Jacob Riddles (# 675),MT-Lamorinda MBO Racing,San Mateo,M,77,27,16 / 70,00:57:42.8,3462.8,5:09/mile,8:15 AM,2026-10-04
+2026,81,Simon Gardiner (# 269),CT-Super Sprinkles Racing pb Bicycle Law,San Francisco,M,78,42,9 / 78,00:57:44.8,3464.8,5:09/mile,8:15 AM,2026-10-04
+2026,82,Christopher Watkins (# 865),,San Francisco,M,79,39,13 / 98,00:57:45.3,3465.3,5:09/mile,8:54 AM,2026-10-04
+2026,83,Aaron Long (# 475),MT-Tuesday Heads of State HOS,Alamo,M,80,60,2 / 54,00:57:45.8,3465.8,5:09/mile,8:18 AM,2026-10-04
+2026,84,Mauricio Hernandez (# 331),,Santa Rosa,M,81,49,5 / 78,00:57:48.7,3468.7,5:09/mile,8:18 AM,2026-10-04
+2026,85,Justin Roxbrough (# 692),,Studio City,M,82,31,17 / 97,00:57:50.0,3470.0,5:09/mile,8:24 AM,2026-10-04
+2026,86,Nick Harlan (# 318),MT-Lamorinda MBO Racing,Pleasanton,M,83,43,10 / 78,00:57:51.4,3471.4,5:09/mile,8:15 AM,2026-10-04
+2026,87,Joseph Sullivan (# 780),,San Jose,M,84,53,4 / 75,00:57:52.3,3472.3,5:10/mile,8:15 AM,2026-10-04
+2026,88,Devin Quinn (# 655),,Walnut Creek,M,85,36,14 / 98,00:57:53.8,3473.8,5:10/mile,8:18 AM,2026-10-04
+2026,89,Jack Halper (# 311),CT-Thursdayscc Coed,San Francisco,M,86,26,17 / 70,00:57:55.0,3475.0,5:10/mile,8:21 AM,2026-10-04
+2026,90,Greg Schebler (# 714),,Livermore,M,87,39,15 / 98,00:57:56.4,3476.4,5:10/mile,8:24 AM,2026-10-04
+2026,91,Shannon Gaffney (# 257),,Walnut Creek,F,4,46,1 / 13,00:58:05.3,3485.3,5:11/mile,8:18 AM,2026-10-04
+2026,92,Steve Archer (# 23),MT-Tuesday Heads of State HOS,Danville,M,88,71,1 / 10,00:58:11.3,3491.3,5:11/mile,8:18 AM,2026-10-04
+2026,93,Stefan Weigand (# 868),,San Mateo,M,89,56,3 / 47,00:58:11.6,3491.6,5:11/mile,8:24 AM,2026-10-04
+2026,94,Yun Liu (# 469),,Newark,M,90,40,11 / 78,00:58:40.8,3520.8,5:14/mile,8:21 AM,2026-10-04
+2026,95,Jake Inserra (# 366),CT-Super Sprinkles Racing pb Bicycle Law,San Francisco,M,91,34,18 / 97,00:58:45.7,3525.7,5:14/mile,8:21 AM,2026-10-04
+2026,96,Allie Ayers (# 34),CT-Super Sprinkles Racing pb Bicycle Law,San Francisco,F,5,24,2 / 4,00:58:51.7,3531.7,5:15/mile,8:24 AM,2026-10-04
+2026,97,M Jordan Gudebski (# 300),MT-C510,Piedmont,M,92,54,5 / 75,00:59:00.6,3540.6,5:16/mile,8:18 AM,2026-10-04
+2026,98,Brian Hicklin (# 334),,Walnut Creek,M,93,47,6 / 78,00:59:03.4,3543.4,5:16/mile,8:18 AM,2026-10-04
+2026,99,Scott Gammon (# 261),,Santa Clara,M,94,44,12 / 78,00:59:03.8,3543.8,5:16/mile,8:15 AM,2026-10-04
+2026,100,Eli Tanner (# 796),,Emeryville,M,95,49,7 / 78,00:59:09.7,3549.7,5:16/mile,8:18 AM,2026-10-04
+2026,101,Timothy Snyder (# 755),MT-Dolce Vita Cycling,San Francisco,M,96,40,13 / 78,00:59:17.8,3557.8,5:17/mile,8:15 AM,2026-10-04
+2026,102,Cristhian Montenegro (# 555),,San Francisco,M,97,34,19 / 97,00:59:19.3,3559.3,5:17/mile,8:18 AM,2026-10-04
+2026,103,Eric Smedberg (# 750),,Grass Valley,M,98,60,3 / 54,00:59:22.2,3562.2,5:18/mile,8:18 AM,2026-10-04
+2026,104,Tim Jannisse (# 376),MT-Cycling Untapped,Dublin,M,99,31,20 / 97,00:59:25.8,3565.8,5:18/mile,8:24 AM,2026-10-04
+2026,105,Geoffrey Lalonde (# 939),,"La Honda, CA",M,100,33,21 / 97,00:59:26.4,3566.4,5:18/mile,8:18 AM,2026-10-04
+2026,106,Pierantonio Di Prima (# 200),MT-Dolce Vita Cycling,San Francisco,M,101,39,16 / 98,00:59:26.5,3566.5,5:18/mile,8:21 AM,2026-10-04
+2026,107,Ben Yee (# 905),MT-Dolce Vita Cycling,San Francisco,M,102,50,6 / 75,00:59:26.8,3566.8,5:18/mile,8:21 AM,2026-10-04
+2026,108,Kevin Metcalfe (# 542),MT-Tuesday Heads of State HOS,Pleasant Hill,M,103,65,1 / 32,00:59:31.7,3571.7,5:18/mile,8:18 AM,2026-10-04
+2026,109,Max Balco (# 41),,Livermore,M,104,17,9 / 17,00:59:33.8,3573.8,5:19/mile,8:21 AM,2026-10-04
+2026,110,Jack Lund (# 487),CT-Alto Velo Racing Team,Los Altos Hills,M,105,30,22 / 97,00:59:36.4,3576.4,5:19/mile,8:15 AM,2026-10-04
+2026,111,Philip Villa (# 849),,Hercules,M,106,43,14 / 78,00:59:38.4,3578.4,5:19/mile,8:21 AM,2026-10-04
+2026,112,Aadil Faruqui (# 243),,Danville,M,107,24,6 / 17,00:59:43.9,3583.9,5:19/mile,8:18 AM,2026-10-04
+2026,113,Bryan Mendez (# 540),,Vallejo,M,108,25,18 / 70,00:59:45.9,3585.9,5:20/mile,8:21 AM,2026-10-04
+2026,114,Sam King (# 403),CT-B17 Racing,San Rafael,M,109,15,3 / 14,00:59:48.7,3588.7,5:20/mile,8:27 AM,2026-10-04
+2026,115,Sam Stansell (# 763),,San Francisco,M,110,31,23 / 97,00:59:50.5,3590.5,5:20/mile,8:24 AM,2026-10-04
+2026,116,Matthew Newton (# 586),,Albany,M,111,46,8 / 78,00:59:53.6,3593.6,5:20/mile,8:21 AM,2026-10-04
+2026,117,Edmond Chaussidon (# 139),,Berkeley,M,112,30,24 / 97,00:59:58.1,3598.1,5:21/mile,8:18 AM,2026-10-04
+2026,118,Patrick Lang (# 425),MT-C510,Piedmont,M,113,47,9 / 78,01:00:04.2,3604.2,5:21/mile,8:18 AM,2026-10-04
+2026,119,Travis McEuen (# 532),MT-Lamorinda MBO Racing,Martinez,M,114,36,17 / 98,01:00:11.4,3611.4,5:22/mile,8:15 AM,2026-10-04
+2026,120,Jeffery Florczak (# 246),,Lafayette,M,115,43,15 / 78,01:00:16.8,3616.8,5:22/mile,8:27 AM,2026-10-04
+2026,121,Daylen Yang (# 902),,San Francisco,M,116,31,25 / 97,01:00:17.2,3617.2,5:22/mile,8:21 AM,2026-10-04
+2026,122,Peter Parisi (# 607),MT-Thursdays,San Francisco,M,117,35,18 / 98,01:00:19.6,3619.6,5:23/mile,8:30 AM,2026-10-04
+2026,123,Elan Bernstein (# 69),,Berkeley,M,118,33,26 / 97,01:00:21.1,3621.1,5:23/mile,8:21 AM,2026-10-04
+2026,124,Richard Totten (# 817),,Walnut Creek,M,119,36,19 / 98,01:00:25.3,3625.3,5:23/mile,8:24 AM,2026-10-04
+2026,125,Zhenyu Chen (# 144),,Fremont,M,120,41,16 / 78,01:00:29.6,3629.6,5:24/mile,8:21 AM,2026-10-04
+2026,126,Louise Thomas (# 802),CT-Alto Velo Racing Team,Palo Alto,F,6,32,2 / 29,01:00:34.9,3634.9,5:24/mile,8:24 AM,2026-10-04
+2026,127,Londre Holmes (# 345),MT-Thursdays,Vallejo,M,121,36,20 / 98,01:00:43.3,3643.3,5:25/mile,8:24 AM,2026-10-04
+2026,128,Joe Foster (# 250),MT-Tuesday Heads of State HOS,Alamo,M,122,66,2 / 32,01:00:43.7,3643.7,5:25/mile,8:18 AM,2026-10-04
+2026,129,Matthew Arlyck (# 25),,Philadelphia,M,123,50,7 / 75,01:00:43.8,3643.8,5:25/mile,8:18 AM,2026-10-04
+2026,130,Tate Endress (# 231),,Milwaukee,M,124,15,4 / 14,01:00:52.9,3652.9,5:26/mile,8:18 AM,2026-10-04
+2026,131,Eugene Sturm (# 775),,Mill Valley,M,125,36,21 / 98,01:00:53.2,3653.2,5:26/mile,8:21 AM,2026-10-04
+2026,132,Chase Lambert (# 995),SUPER SPRINKLES RACING PB BICYCLE LAW,"Sf, CA",M,126,35,22 / 98,01:00:57.5,3657.5,5:26/mile,8:36 AM,2026-10-04
+2026,133,Bill Dahl (# 180),,Corrales,M,127,64,4 / 54,01:01:00.2,3660.2,5:26/mile,8:18 AM,2026-10-04
+2026,134,Richard Red (# 664),CT-Alto Velo Racing Team,San Francisco,M,128,29,19 / 70,01:01:03.8,3663.8,5:27/mile,8:21 AM,2026-10-04
+2026,135,Zackary Lee (# 440),,Sunnyvale,M,129,34,27 / 97,01:01:14.9,3674.9,5:28/mile,8:21 AM,2026-10-04
+2026,136,Samuel Markoff (# 507),,Sunnyvale,M,130,27,20 / 70,01:01:15.6,3675.6,5:28/mile,8:21 AM,2026-10-04
+2026,137,German Plazas (# 636),,San Francisco,M,131,36,23 / 98,01:01:30.6,3690.6,5:29/mile,8:18 AM,2026-10-04
+2026,138,Gillian Wagner (# 853),CT-Thursdayscc Coed,San Francisco,F,7,27,1 / 18,01:01:37.4,3697.4,5:30/mile,8:21 AM,2026-10-04
+2026,139,Brenden Cohen (# 996),,"Oakland, CA",M,132,32,28 / 97,01:01:37.6,3697.6,5:30/mile,8:36 AM,2026-10-04
+2026,140,Cedric Gitteau (# 284),CT-Thursdayscc Coed,San Francisco,M,133,29,21 / 70,01:01:43.9,3703.9,5:30/mile,8:21 AM,2026-10-04
+2026,141,Peter Buhl (# 103),,Atherton,M,134,62,5 / 54,01:01:50.1,3710.1,5:31/mile,8:18 AM,2026-10-04
+2026,142,Bill Sans (# 705),,San Mateo,M,135,65,3 / 32,01:02:09.4,3729.4,5:32/mile,8:18 AM,2026-10-04
+2026,143,Michael Lincoln (# 462),,San Francisco,M,136,27,22 / 70,01:02:12.9,3732.9,5:33/mile,8:24 AM,2026-10-04
+2026,144,Matt Gipple (# 283),,Alameda,M,137,40,17 / 78,01:02:23.8,3743.8,5:34/mile,8:21 AM,2026-10-04
+2026,145,Alan King (# 401),,Mountain View,M,138,45,10 / 78,01:02:36.7,3756.7,5:35/mile,8:24 AM,2026-10-04
+2026,146,Brent Russell (# 694),,San Francisco,M,139,35,24 / 98,01:02:37.4,3757.4,5:35/mile,8:24 AM,2026-10-04
+2026,147,Joe Healy (# 324),,San Francisco,M,140,54,8 / 75,01:02:40.2,3760.2,5:35/mile,8:18 AM,2026-10-04
+2026,148,Alex Winter (# 888),CT-Zoox,Foster City,M,141,30,29 / 97,01:02:49.9,3769.9,5:36/mile,8:21 AM,2026-10-04
+2026,149,Kailen Swain (# 788),,Sf,M,142,30,30 / 97,01:02:57.4,3777.4,5:37/mile,8:24 AM,2026-10-04
+2026,150,Tom Huang (# 356),,San Francisco,M,143,31,31 / 97,01:03:10.6,3790.6,5:38/mile,8:21 AM,2026-10-04
+2026,151,Max Neumeier (# 959),,Tiberon,M,144,16,10 / 17,01:03:15.9,3795.9,5:38/mile,8:24 AM,2026-10-04
+2026,152,Alex Greenwald (# 296),CT-Super Sprinkles Racing pb Bicycle Law,San Francisco,M,145,39,25 / 98,01:03:16.0,3796.0,5:38/mile,8:21 AM,2026-10-04
+2026,153,Aaron Smith (# 941),,"Davis, CA",M,146,53,9 / 75,01:03:16.8,3796.8,5:39/mile,8:18 AM,2026-10-04
+2026,154,Gary Phelps (# 631),,Walnut Creek,M,147,39,26 / 98,01:03:22.2,3802.2,5:39/mile,8:24 AM,2026-10-04
+2026,155,Ashwin Badrinath (# 37),,Livermore,M,148,27,23 / 70,01:03:29.0,3809.0,5:40/mile,8:21 AM,2026-10-04
+2026,156,Justin St Peter (# 761),MT-Dolce Vita Cycling,San Francisco,M,149,29,24 / 70,01:03:49.3,3829.3,5:41/mile,8:21 AM,2026-10-04
+2026,157,Charlie James (# 372),MT-Wildcats,Albany,M,150,14,5 / 14,01:03:51.1,3831.1,5:42/mile,8:24 AM,2026-10-04
+2026,158,Augusto Llerena (# 470),,Berkeley,M,151,67,4 / 32,01:03:51.5,3831.5,5:42/mile,8:21 AM,2026-10-04
+2026,159,Dirk Rothenb?cher (# 690),MT-Wildcats,Kensington,M,152,50,10 / 75,01:03:55.7,3835.7,5:42/mile,8:21 AM,2026-10-04
+2026,160,Jeff Patmon (# 613),,Alamo,M,153,40,18 / 78,01:04:05.2,3845.2,5:43/mile,8:24 AM,2026-10-04
+2026,161,Leo Poniard (# 639),CT-Zoox,Foster City,M,154,36,27 / 98,01:04:09.0,3849.0,5:43/mile,8:21 AM,2026-10-04
+2026,162,Andrew Persson (# 625),,San Francisco,M,155,46,11 / 78,01:04:10.7,3850.7,5:43/mile,8:18 AM,2026-10-04
+2026,163,Declan Reilly-Gordon (# 957),,San Francisco,M,156,28,25 / 70,01:04:17.0,3857.0,5:44/mile,8:24 AM,2026-10-04
+2026,164,Rick Chew (# 150),CT-Berkeley Bicycle Club,Oakland,M,157,32,32 / 97,01:04:24.3,3864.3,5:45/mile,8:21 AM,2026-10-04
+2026,165,Matthew Yeo (# 906),,San Francisco,M,158,45,12 / 78,01:04:25.6,3865.6,5:45/mile,8:33 AM,2026-10-04
+2026,166,Luke Xie (# 900),MT-No Neuron Left Behind,San Mateo,M,159,41,19 / 78,01:04:33.4,3873.4,5:45/mile,8:42 AM,2026-10-04
+2026,167,Christooher Cien (# 975),,Oakland,M,160,38,28 / 98,01:04:33.5,3873.5,5:45/mile,8:27 AM,2026-10-04
+2026,168,Tina Eakin (# 219),,Folsom,F,8,56,1 / 11,01:04:33.9,3873.9,5:45/mile,8:21 AM,2026-10-04
+2026,169,Matthew Lambert (# 424),MT-C510,Oakland,M,161,40,20 / 78,01:04:37.1,3877.1,5:46/mile,8:18 AM,2026-10-04
+2026,170,Lucas Azevedo (# 35),MT-Thursdays,San Francisco,M,162,39,29 / 98,01:04:44.1,3884.1,5:46/mile,8:21 AM,2026-10-04
+2026,171,Tom Vanderheiden (# 841),,Pleasant Hill,M,163,58,4 / 47,01:04:50.2,3890.2,5:47/mile,8:24 AM,2026-10-04
+2026,172,Scott Neperud (# 949),,Ogden,M,164,41,21 / 78,01:04:50.9,3890.9,5:47/mile,8:15 AM,2026-10-04
+2026,173,Avery Noonan (# 593),,Oakland,M,165,32,33 / 97,01:04:52.0,3892.0,5:47/mile,8:24 AM,2026-10-04
+2026,174,Mark Newton (# 585),,Vallejo,M,166,54,11 / 75,01:04:54.8,3894.8,5:47/mile,8:24 AM,2026-10-04
+2026,175,Alex Potente (# 641),CT-Trapper McNutters,San Francisco,M,167,55,5 / 47,01:04:55.5,3895.5,5:47/mile,8:21 AM,2026-10-04
+2026,176,Myrthe Breedijk (# 90),CT-Thursdayscc Coed,San Francisco,F,9,30,3 / 29,01:04:56.0,3896.0,5:47/mile,8:21 AM,2026-10-04
+2026,177,Scott Emmons (# 228),,San Francisco,M,168,30,34 / 97,01:04:56.0,3896.0,5:47/mile,8:18 AM,2026-10-04
+2026,178,Matias Ryan (# 695),,Kentfield,M,169,18,7 / 17,01:04:58.4,3898.4,5:48/mile,8:27 AM,2026-10-04
+2026,179,Kaushik Kalyan (# 385),,San Francisco,M,170,34,35 / 97,01:04:58.6,3898.6,5:48/mile,8:24 AM,2026-10-04
+2026,180,Colin Ng (# 587),,Orinda,M,171,38,30 / 98,01:05:01.9,3901.9,5:48/mile,8:18 AM,2026-10-04
+2026,181,Abbey Sundermeyer (# 782),,Bridgeton,F,10,44,1 / 11,01:05:04.7,3904.7,5:48/mile,8:24 AM,2026-10-04
+2026,182,Giovanni Bresin (# 94),,San Francisco,M,172,50,12 / 75,01:05:09.6,3909.6,5:49/mile,8:21 AM,2026-10-04
+2026,183,Avery Ellis (# 224),,Oakland,M,173,25,26 / 70,01:05:10.2,3910.2,5:49/mile,8:24 AM,2026-10-04
+2026,184,Craig Amerkhanian (# 19),,Albany,M,174,69,5 / 32,01:05:12.1,3912.1,5:49/mile,8:24 AM,2026-10-04
+2026,185,Stuart Boyer (# 86),,San Francisco,M,175,33,36 / 97,01:05:13.5,3913.5,5:49/mile,8:18 AM,2026-10-04
+2026,186,Vinson Fan (# 241),CT-Berkeley Bicycle Club,San Francisco,M,176,29,27 / 70,01:05:15.4,3915.4,5:49/mile,8:21 AM,2026-10-04
+2026,187,Sam Quinby (# 653),,San Francisco,M,177,30,37 / 97,01:05:18.1,3918.1,5:49/mile,8:36 AM,2026-10-04
+2026,188,Mina Aganagic (# 9),,Oakland,F,11,53,1 / 10,01:05:25.4,3925.4,5:50/mile,8:24 AM,2026-10-04
+2026,189,Nina Strika (# 774),,Santa Rosa,F,12,56,2 / 11,01:05:27.6,3927.6,5:50/mile,8:27 AM,2026-10-04
+2026,190,Jan Elsbach (# 226),,Davis,M,178,66,6 / 32,01:05:34.3,3934.3,5:51/mile,8:24 AM,2026-10-04
+2026,191,Zeger-Jan Van De Weg (# 838),,Danville,M,179,35,31 / 98,01:05:40.8,3940.8,5:51/mile,8:21 AM,2026-10-04
+2026,192,Matthew Kurkjian (# 993),,"San Francisco, CA",M,180,35,32 / 98,01:05:43.0,3943.0,5:52/mile,8:27 AM,2026-10-04
+2026,193,Tony Yang (# 994),,"San Francisco, CA",M,181,34,38 / 97,01:05:43.4,3943.4,5:52/mile,8:24 AM,2026-10-04
+2026,194,Luca Ortolani (# 600),,San Francisco,M,182,55,6 / 47,01:05:45.5,3945.5,5:52/mile,8:18 AM,2026-10-04
+2026,195,Kevin Lee (# 438),,Oakland,M,183,30,39 / 97,01:05:45.6,3945.6,5:52/mile,8:24 AM,2026-10-04
+2026,196,Alex Lloyd (# 471),,Livermore,M,184,41,22 / 78,01:05:47.7,3947.7,5:52/mile,8:21 AM,2026-10-04
+2026,197,Marko Cater (# 127),CT-Zoox,Foster City,M,185,46,13 / 78,01:05:48.4,3948.4,5:52/mile,8:24 AM,2026-10-04
+2026,198,Nicholas Pfeiffer (# 630),,San Franscisco,M,186,35,33 / 98,01:05:48.6,3948.6,5:52/mile,8:21 AM,2026-10-04
+2026,199,Tim Sutliff (# 786),CT-Berkeley Bicycle Club,Walnut Creek,M,187,59,7 / 47,01:05:52.6,3952.6,5:52/mile,8:21 AM,2026-10-04
+2026,200,Sam Kane (# 973),,Dallas,M,188,21,8 / 17,01:05:53.3,3953.3,5:52/mile,8:15 AM,2026-10-04
+2026,201,Klaus Tafta (# 948),,Citrus Heights,M,189,35,34 / 98,01:05:54.5,3954.5,5:53/mile,8:24 AM,2026-10-04
+2026,202,Martin Winterkorn (# 889),CT-Alto Velo Racing Team,Mountain View,M,190,34,40 / 97,01:05:56.4,3956.4,5:53/mile,8:24 AM,2026-10-04
+2026,203,Alejandro Virrueta (# 851),,Sunnyvale,M,191,35,35 / 98,01:06:00.3,3960.3,5:53/mile,8:21 AM,2026-10-04
+2026,204,Cat Culkin (# 176),CT-Im Gonna Be A Few Minutes Late,San Francisco,F,13,33,4 / 29,01:06:01.5,3961.5,5:53/mile,8:24 AM,2026-10-04
+2026,205,Josh Rani (# 929),,Walnut Creek,M,192,42,23 / 78,01:06:04.3,3964.3,5:53/mile,8:30 AM,2026-10-04
+2026,206,Matthew Brotman (# 98),,San Francisco,M,193,28,28 / 70,01:06:11.5,3971.5,5:54/mile,8:24 AM,2026-10-04
+2026,207,Daniel Aas (# 2),,Berkeley,M,194,41,24 / 78,01:06:23.9,3983.9,5:55/mile,8:21 AM,2026-10-04
+2026,208,Daniel Tsai (# 828),,Walnut Creek,M,195,39,36 / 98,01:06:30.4,3990.4,5:56/mile,8:18 AM,2026-10-04
+2026,209,Paul Hainsworth (# 310),CT-Berkeley Bicycle Club,Berkeley,M,196,52,13 / 75,01:06:41.2,4001.2,5:57/mile,8:21 AM,2026-10-04
+2026,210,Ryan Gillard (# 282),MT-RyanSquared,Pleasanton,M,197,39,37 / 98,01:06:43.3,4003.3,5:57/mile,8:30 AM,2026-10-04
+2026,211,Sandrine Veillette (# 844),CT-Alto Velo Racing Team,Mountain View,F,14,28,2 / 18,01:06:52.3,4012.3,5:58/mile,8:24 AM,2026-10-04
+2026,212,Nathan Pratt (# 647),,Richmond,M,198,40,25 / 78,01:06:54.0,4014.0,5:58/mile,8:24 AM,2026-10-04
+2026,213,Soledad Calderon (# 116),CT-Super Sprinkles Racing pb Bicycle Law,San Francisco,F,15,32,5 / 29,01:07:02.4,4022.4,5:59/mile,8:24 AM,2026-10-04
+2026,214,Doug Letterman (# 445),,Alameda,M,199,47,14 / 78,01:07:02.4,4022.4,5:59/mile,8:33 AM,2026-10-04
+2026,215,Eric Gelston (# 276),,Walnut Creek,M,200,59,8 / 47,01:07:02.8,4022.8,5:59/mile,8:27 AM,2026-10-04
+2026,216,Kevin Gove (# 292),,Sausalito,M,201,61,6 / 54,01:07:04.8,4024.8,5:59/mile,8:24 AM,2026-10-04
+2026,217,Neil Hunter-Smith (# 360),,Danville,M,202,37,38 / 98,01:07:06.7,4026.7,5:59/mile,8:27 AM,2026-10-04
+2026,218,Terry Hong (# 346),MT-707 Cycling Club,San Francisco,M,203,53,14 / 75,01:07:08.2,4028.2,5:59/mile,8:21 AM,2026-10-04
+2026,219,Jeff Brennecke (# 92),,Napa,M,204,44,26 / 78,01:07:08.9,4028.9,5:59/mile,8:27 AM,2026-10-04
+2026,220,Adam Wilczek (# 878),,Corte Madera,M,205,43,27 / 78,01:07:17.0,4037.0,6:00/mile,8:18 AM,2026-10-04
+2026,221,Howard Santos (# 706),MT-Dolce Vita Cycling,Elk Grove,M,206,36,39 / 98,01:07:19.8,4039.8,6:00/mile,8:21 AM,2026-10-04
+2026,222,Ronen Lee (# 439),,Sunnyvale,M,207,25,29 / 70,01:07:21.1,4041.1,6:00/mile,8:21 AM,2026-10-04
+2026,223,Patrick Hecht (# 325),,Los Altos,M,208,25,30 / 70,01:07:25.7,4045.7,6:01/mile,8:42 AM,2026-10-04
+2026,224,Miguel Cifuentes Baquero (# 156),,San Francisco,M,209,27,31 / 70,01:07:28.3,4048.3,6:01/mile,8:18 AM,2026-10-04
+2026,225,James Robinson (# 681),CT-Alto Velo Racing Team,Mountain View,M,210,40,28 / 78,01:07:28.7,4048.7,6:01/mile,8:24 AM,2026-10-04
+2026,226,Matteo Cavucci (# 128),CT-Berkeley Bicycle Club,Berkeley,M,211,43,29 / 78,01:07:31.1,4051.1,6:01/mile,8:21 AM,2026-10-04
+2026,227,Jackie Zintel (# 974),,Oakland,F,16,32,6 / 29,01:07:34.1,4054.1,6:01/mile,8:27 AM,2026-10-04
+2026,228,Christopher Heinemeyer (# 327),CT-Super Sprinkles Racing pb Bicycle Law,San Francisco,M,212,29,32 / 70,01:07:34.9,4054.9,6:02/mile,8:24 AM,2026-10-04
+2026,229,Ignacio Zendejas (# 914),,Fremont,M,213,42,30 / 78,01:07:38.5,4058.5,6:02/mile,8:21 AM,2026-10-04
+2026,230,Ben Wishovich (# 890),,San Rafael,M,214,32,41 / 97,01:07:39.1,4059.1,6:02/mile,8:42 AM,2026-10-04
+2026,231,Conor Hayes (# 966),,"Oakland, CA",M,215,34,42 / 97,01:07:40.0,4060.0,6:02/mile,8:27 AM,2026-10-04
+2026,232,Rob Ross (# 687),,Fairfax,M,216,33,43 / 97,01:07:40.8,4060.8,6:02/mile,8:30 AM,2026-10-04
+2026,233,Brook Shelley (# 737),,Emeryville,F,17,41,2 / 11,01:07:41.9,4061.9,6:02/mile,8:27 AM,2026-10-04
+2026,234,Jason Jaeger (# 370),,Oakland,M,217,29,33 / 70,01:07:45.3,4065.3,6:02/mile,8:27 AM,2026-10-04
+2026,235,Michael Gibb (# 281),,Alamo,M,218,38,40 / 98,01:07:46.8,4066.8,6:03/mile,8:27 AM,2026-10-04
+2026,237,Ben Candy (# 989),,"San Francisco, CA",M,219,45,15 / 78,01:07:52.7,4072.7,6:03/mile,8:33 AM,2026-10-04
+2026,238,Vilen Rodeski (# 682),,Santa Clara,M,221,43,31 / 78,01:08:00.5,4080.5,6:04/mile,8:30 AM,2026-10-04
+2026,239,Maksim Molchanov (# 549),,San Francisco,M,222,26,34 / 70,01:08:02.6,4082.6,6:04/mile,8:27 AM,2026-10-04
+2026,240,Mark Hunt (# 359),,Benicia,M,223,63,7 / 54,01:08:03.4,4083.4,6:04/mile,8:24 AM,2026-10-04
+2026,241,Igor Bulavko (# 104),,Dublin,M,224,47,16 / 78,01:08:05.1,4085.1,6:04/mile,8:30 AM,2026-10-04
+2026,242,David Setton (# 732),CT-Pedal ProjectRide4Good,Danville,M,225,55,9 / 47,01:08:06.5,4086.5,6:04/mile,8:27 AM,2026-10-04
+2026,243,Kaiming Qiu (# 652),,San Francisco,M,226,25,35 / 70,01:08:07.2,4087.2,6:04/mile,8:30 AM,2026-10-04
+2026,244,Jeff Cardoni (# 963),,"San Francisco, CA",M,227,38,41 / 98,01:08:09.5,4089.5,6:05/mile,8:24 AM,2026-10-04
+2026,245,Westly Shealy (# 736),,Berkeley,M,228,34,45 / 97,01:08:16.4,4096.4,6:05/mile,8:24 AM,2026-10-04
+2026,246,Jared Nishikawa (# 592),,Los Angeles,M,229,50,15 / 75,01:08:28.4,4108.4,6:06/mile,8:27 AM,2026-10-04
+2026,247,Jack Nelson (# 577),,Menlo Park,M,230,25,36 / 70,01:08:35.6,4115.6,6:07/mile,8:30 AM,2026-10-04
+2026,248,Victor Acosta (# 954),,Santa Rosa,M,231,36,42 / 98,01:08:36.4,4116.4,6:07/mile,8:15 AM,2026-10-04
+2026,249,Steven Tibbetts (# 810),,Walnut Creek,M,232,52,16 / 75,01:08:46.5,4126.5,6:08/mile,8:33 AM,2026-10-04
+2026,250,Heahter Peck (# 617),CT-Trapper McNutters,Los Gatos,F,18,56,3 / 11,01:08:46.8,4126.8,6:08/mile,8:27 AM,2026-10-04
+2026,251,Julien Faircloth (# 240),MT-Wildcats,Richmond,M,233,13,1 / 11,01:08:58.6,4138.6,6:09/mile,8:24 AM,2026-10-04
+2026,252,Rachel Marullo (# 515),,Oakland,F,19,42,3 / 11,01:08:59.9,4139.9,6:09/mile,8:33 AM,2026-10-04
+2026,253,Claire Dennis (# 195),,San Francisco,F,20,33,7 / 29,01:09:00.5,4140.5,6:09/mile,8:30 AM,2026-10-04
+2026,254,Priyan Madhani (# 496),,San Jose,M,234,17,11 / 17,01:09:02.3,4142.3,6:09/mile,8:18 AM,2026-10-04
+2026,255,Erna Kristin (# 936),,Walnut Creek,F,21,50,2 / 10,01:09:06.0,4146.0,6:10/mile,8:30 AM,2026-10-04
+2026,256,Alberto Chalon (# 129),,Monaco,M,235,55,10 / 47,01:09:06.8,4146.8,6:10/mile,8:24 AM,2026-10-04
+2026,257,Steven Curtis (# 178),CT-Red Peloton,Windsor,M,236,46,17 / 78,01:09:07.5,4147.5,6:10/mile,8:18 AM,2026-10-04
+2026,258,Johnny Boston (# 85),,Novato,M,237,51,17 / 75,01:09:07.7,4147.7,6:10/mile,8:21 AM,2026-10-04
+2026,259,Lara Rossi (# 688),,Longone Al Segrino,F,22,52,3 / 10,01:09:09.9,4149.9,6:10/mile,8:24 AM,2026-10-04
+2026,260,Filippo Pozzato (# 967),,"Diablo, CA",M,238,45,18 / 78,01:09:11.9,4151.9,6:10/mile,8:24 AM,2026-10-04
+2026,261,Carter Chen (# 140),MT-Burlingame United,Burlingame,M,239,14,6 / 14,01:09:12.8,4152.8,6:10/mile,8:27 AM,2026-10-04
+2026,262,Allison Gallaher (# 260),,San Francisco,F,23,36,2 / 10,01:09:13.9,4153.9,6:10/mile,8:30 AM,2026-10-04
+2026,263,Doug Rowland (# 691),MT-Dolce Vita Cycling,Davis,M,240,54,18 / 75,01:09:15.4,4155.4,6:11/mile,8:18 AM,2026-10-04
+2026,264,Brett Stephens (# 766),,Lafayette,M,241,37,43 / 98,01:09:15.4,4155.4,6:11/mile,8:27 AM,2026-10-04
+2026,265,Katia Wu (# 898),CT-Super Sprinkles Racing pb Bicycle Law,San francisco,F,24,28,3 / 18,01:09:24.1,4164.1,6:11/mile,8:27 AM,2026-10-04
+2026,266,Felix Silbelus (# 744),,Richmond,M,242,22,9 / 17,01:09:24.7,4164.7,6:11/mile,8:27 AM,2026-10-04
+2026,267,Robert Kosai (# 410),,San Francisco,M,243,59,11 / 47,01:09:27.5,4167.5,6:12/mile,8:27 AM,2026-10-04
+2026,268,Andres Siller (# 747),,San Francisco,M,244,37,44 / 98,01:09:32.4,4172.4,6:12/mile,8:18 AM,2026-10-04
+2026,269,Nathaniel Halsan (# 312),,Sacramento,M,245,44,32 / 78,01:09:39.4,4179.4,6:13/mile,8:39 AM,2026-10-04
+2026,270,Julien Guy (# 305),,El Cerrito,M,246,50,19 / 75,01:09:45.7,4185.7,6:13/mile,8:21 AM,2026-10-04
+2026,271,Andrew Kolas (# 406),MT-Lamorinda MBO Racing,Pleasant Hill,M,247,40,33 / 78,01:09:55.6,4195.6,6:14/mile,8:21 AM,2026-10-04
+2026,272,Joann Pavlovcak (# 614),FT-GPC Femmes,Newark,F,25,55,4 / 11,01:10:14.3,4214.3,6:16/mile,8:27 AM,2026-10-04
+2026,273,Hans Riegels (# 677),MT-Pleasanton Cycling Club PCC,Pleasanton,M,248,49,19 / 78,01:10:14.8,4214.8,6:16/mile,8:27 AM,2026-10-04
+2026,274,Calvin Dekoter (# 191),,Mountain View,M,249,27,37 / 70,01:10:16.1,4216.1,6:16/mile,8:33 AM,2026-10-04
+2026,275,Ryan Greene-Roesel (# 295),CT-Berkeley Bicycle Club,Berkeley,F,26,46,2 / 13,01:10:18.0,4218.0,6:16/mile,8:27 AM,2026-10-04
+2026,276,Jordan Brenke (# 91),,Redwood City,M,250,30,46 / 97,01:10:30.4,4230.4,6:17/mile,8:27 AM,2026-10-04
+2026,277,Kyle Barry (# 51),,San Francisco,M,251,44,34 / 78,01:10:31.9,4231.9,6:17/mile,8:27 AM,2026-10-04
+2026,278,Will Van Eaton (# 839),,Fairfax,M,252,37,45 / 98,01:10:34.0,4234.0,6:18/mile,8:30 AM,2026-10-04
+2026,279,Breanne Walter (# 854),,Livermore,F,27,45,3 / 13,01:10:39.6,4239.6,6:18/mile,8:27 AM,2026-10-04
+2026,280,Martin Lanner (# 927),,Berkeley,M,253,53,20 / 75,01:10:41.3,4241.3,6:18/mile,8:21 AM,2026-10-04
+2026,281,Trevor Taylor (# 961),,Los Gatos,M,254,54,21 / 75,01:10:50.3,4250.3,6:19/mile,8:30 AM,2026-10-04
+2026,282,Sparsh Patel (# 612),MT-Lamorinda MBO Racing,Fremont,M,255,14,7 / 14,01:10:55.3,4255.3,6:19/mile,8:27 AM,2026-10-04
+2026,283,Daniel Gold (# 288),,Briarcliff Manor,M,256,58,12 / 47,01:11:09.5,4269.5,6:21/mile,8:21 AM,2026-10-04
+2026,284,Owen Schulman (# 720),MT-Wildcats,El Cerrito,M,257,13,2 / 11,01:11:33.4,4293.4,6:23/mile,8:30 AM,2026-10-04
+2026,285,Cyrus Slavin (# 749),CT-Berkeley Bicycle Club,Oakland,M,258,17,12 / 17,01:11:34.8,4294.8,6:23/mile,8:33 AM,2026-10-04
+2026,286,Marco Garcia (# 267),,Windsor,M,259,40,35 / 78,01:11:36.3,4296.3,6:23/mile,8:15 AM,2026-10-04
+2026,287,Curtis Mannah (# 506),,Hayward,M,260,54,22 / 75,01:11:38.4,4298.4,6:23/mile,8:24 AM,2026-10-04
+2026,288,Paul Randall (# 657),MT-Tuesday Heads of State HOS,San Ramon,M,261,62,8 / 54,01:11:39.5,4299.5,6:23/mile,8:18 AM,2026-10-04
+2026,289,Chris Grossman (# 299),,Los Gatos,M,262,45,20 / 78,01:11:43.1,4303.1,6:24/mile,8:27 AM,2026-10-04
+2026,290,Quinn Connard (# 982),,San Francisco,M,263,14,8 / 14,01:11:52.8,4312.8,6:25/mile,8:36 AM,2026-10-04
+2026,291,Cisco Moran (# 559),,San Francisco,M,264,55,13 / 47,01:11:53.6,4313.6,6:25/mile,8:15 AM,2026-10-04
+2026,292,Fidel Salgado (# 702),,San Francisco,M,265,32,47 / 97,01:11:56.7,4316.7,6:25/mile,8:27 AM,2026-10-04
+2026,293,Julian Garzon (# 272),,Berkeley,M,266,39,46 / 98,01:12:00.6,4320.6,6:25/mile,8:24 AM,2026-10-04
+2026,294,Nick Post-Michaelsen (# 640),,Albany,M,267,31,48 / 97,01:12:03.7,4323.7,6:26/mile,8:45 AM,2026-10-04
+2026,295,David Lloyd (# 472),,Menlo Park,M,268,35,47 / 98,01:12:06.0,4326.0,6:26/mile,8:27 AM,2026-10-04
+2026,296,Dan Smith (# 751),,Davis,M,269,37,48 / 98,01:12:26.3,4346.3,6:28/mile,8:27 AM,2026-10-04
+2026,297,Daniel Armendariz (# 26),,Oakland,M,270,42,36 / 78,01:12:28.2,4348.2,6:28/mile,8:21 AM,2026-10-04
+2026,298,Lou Delano (# 192),,San Francisco,M,271,22,10 / 17,01:12:28.9,4348.9,6:28/mile,8:45 AM,2026-10-04
+2026,299,Eileen Bai (# 38),,San Francisco,F,28,36,3 / 10,01:12:29.2,4349.2,6:28/mile,8:27 AM,2026-10-04
+2026,300,Bolor Shirnen (# 741),,Alameda,F,29,40,4 / 11,01:12:30.2,4350.2,6:28/mile,8:24 AM,2026-10-04
+2026,301,John McCarthy (# 528),,Danville,M,272,60,9 / 54,01:12:30.8,4350.8,6:28/mile,8:27 AM,2026-10-04
+2026,302,Joshua McCarthy (# 529),,Danville,M,273,29,38 / 70,01:12:31.1,4351.1,6:28/mile,8:27 AM,2026-10-04
+2026,303,Sterling Brasher (# 87),,San Antonio,M,274,37,49 / 98,01:12:31.4,4351.4,6:28/mile,8:30 AM,2026-10-04
+2026,304,Gurveer Dhillon (# 199),,Fremont,M,275,15,9 / 14,01:12:37.2,4357.2,6:29/mile,8:21 AM,2026-10-04
+2026,305,Owen Dunkley (# 215),,Palo Alto,M,276,29,39 / 70,01:12:37.7,4357.7,6:29/mile,8:21 AM,2026-10-04
+2026,306,Dorjjantsan Ochir (# 933),,Lafayette,M,277,29,40 / 70,01:12:44.8,4364.8,6:29/mile,8:15 AM,2026-10-04
+2026,307,Joshua Roosa (# 684),,Livermore,M,278,52,23 / 75,01:12:47.0,4367.0,6:29/mile,8:24 AM,2026-10-04
+2026,308,James Raymond (# 662),,San Francisco,M,279,22,11 / 17,01:12:48.4,4368.4,6:30/mile,8:45 AM,2026-10-04
+2026,309,Andy Knickerbocker (# 405),,Walnut Creek,M,280,40,37 / 78,01:12:53.3,4373.3,6:30/mile,8:24 AM,2026-10-04
+2026,310,Michael Wetter (# 960),,Kenington,M,281,54,24 / 75,01:12:53.4,4373.4,6:30/mile,8:33 AM,2026-10-04
+2026,311,Dylan Crocker (# 958),,Larks,M,282,16,13 / 17,01:12:59.0,4379.0,6:30/mile,8:24 AM,2026-10-04
+2026,312,Nathaniel Eng (# 232),MT-Burlingame United,Alamo,M,283,43,38 / 78,01:13:05.3,4385.3,6:31/mile,8:27 AM,2026-10-04
+2026,313,Rob Zirkle (# 919),,Oakland,M,284,55,14 / 47,01:13:09.6,4389.6,6:31/mile,8:27 AM,2026-10-04
+2026,314,Christopher Parrish (# 609),,Alameda,M,285,46,21 / 78,01:13:16.0,4396.0,6:32/mile,8:24 AM,2026-10-04
+2026,315,Zach Schwarz (# 725),,Oakland,M,286,38,50 / 98,01:13:19.8,4399.8,6:32/mile,8:27 AM,2026-10-04
+2026,316,Surya Ganesan (# 263),,Dublin,M,287,23,12 / 17,01:13:20.2,4400.2,6:32/mile,8:21 AM,2026-10-04
+2026,317,Aaron Probus (# 649),,Oakland,M,288,37,51 / 98,01:13:24.6,4404.6,6:33/mile,8:45 AM,2026-10-04
+2026,318,Kai Sackett (# 697),,Corte Madera,M,289,14,10 / 14,01:13:31.1,4411.1,6:33/mile,8:36 AM,2026-10-04
+2026,319,Jimmy Ngo (# 588),,Milpitas,M,290,36,52 / 98,01:13:33.3,4413.3,6:34/mile,8:33 AM,2026-10-04
+2026,320,Luca Vallesi (# 836),,San Francisco,M,291,26,41 / 70,01:13:35.5,4415.5,6:34/mile,8:30 AM,2026-10-04
+2026,321,Vesselin Velev (# 845),,Los Gatos,M,292,37,53 / 98,01:13:35.6,4415.6,6:34/mile,8:30 AM,2026-10-04
+2026,322,Benjamin Silbelus (# 743),,Richmond,M,293,61,10 / 54,01:13:42.0,4422.0,6:34/mile,8:27 AM,2026-10-04
+2026,323,Mike Maksymowych (# 501),,San Francisco,M,294,30,49 / 97,01:13:45.3,4425.3,6:35/mile,8:42 AM,2026-10-04
+2026,324,Lingzi Yang (# 903),,Fremont,F,30,40,5 / 11,01:13:50.2,4430.2,6:35/mile,8:27 AM,2026-10-04
+2026,325,Jianxiong Dong (# 207),,Pleasanton,M,295,52,25 / 75,01:13:50.3,4430.3,6:35/mile,8:42 AM,2026-10-04
+2026,326,Ramon Garcia Gomez (# 268),MT-707 Cycling Club,San Jose,M,296,30,50 / 97,01:13:54.5,4434.5,6:35/mile,8:21 AM,2026-10-04
+2026,327,Dashiell Rappaport (# 952),,San Francisco,M,297,13,3 / 11,01:14:00.9,4440.9,6:36/mile,8:33 AM,2026-10-04
+2026,328,Elena De La Paz (# 186),,Mountain View,F,31,31,8 / 29,01:14:04.8,4444.8,6:36/mile,8:30 AM,2026-10-04
+2026,329,Sukhbat Azikh (# 992),,"Fremont, CA",M,298,25,42 / 70,01:14:05.8,4445.8,6:36/mile,8:30 AM,2026-10-04
+2026,330,Richard Hoyt (# 352),,Walnut Creek,M,299,45,22 / 78,01:14:10.8,4450.8,6:37/mile,8:27 AM,2026-10-04
+2026,331,Davis Lecours (# 956),,San Francisco,M,300,25,43 / 70,01:14:21.9,4461.9,6:38/mile,8:27 AM,2026-10-04
+2026,332,Sara Gregg (# 297),CT-Super Sprinkles Racing pb Bicycle Law,San Francisco,F,32,32,9 / 29,01:14:26.5,4466.5,6:38/mile,8:27 AM,2026-10-04
+2026,333,Kaela Lee (# 437),FT-GPC Femmes,Berkeley,F,33,26,4 / 18,01:14:30.3,4470.3,6:39/mile,8:33 AM,2026-10-04
+2026,334,Channing Chen (# 141),MT-Burlingame United,Burlingame,M,301,54,26 / 75,01:14:31.0,4471.0,6:39/mile,8:27 AM,2026-10-04
+2026,335,Lenard Lesser (# 444),,Oakland,M,302,47,23 / 78,01:14:45.9,4485.9,6:40/mile,8:27 AM,2026-10-04
+2026,336,Alexey Panteleev (# 604),,Walnut Creek,M,303,39,54 / 98,01:14:47.7,4487.7,6:40/mile,8:30 AM,2026-10-04
+2026,337,Shashank Sahni (# 700),,Alameda,M,304,36,55 / 98,01:14:48.4,4488.4,6:40/mile,8:30 AM,2026-10-04
+2026,338,Marie Town (# 819),,Oceanside,F,34,42,6 / 11,01:14:49.8,4489.8,6:40/mile,8:27 AM,2026-10-04
+2026,339,Matt Raschke (# 660),,Mountain View,M,305,56,15 / 47,01:14:55.4,4495.4,6:41/mile,8:27 AM,2026-10-04
+2026,340,Brian Ettlin (# 237),,Berkeley,M,306,70,2 / 10,01:14:56.9,4496.9,6:41/mile,8:24 AM,2026-10-04
+2026,341,Owen Fowler (# 251),CT-ECHSMTB,El Cerrito,M,307,16,14 / 17,01:15:07.2,4507.2,6:42/mile,8:33 AM,2026-10-04
+2026,342,Ondrej Antos (# 22),,Palo Alto,M,308,38,56 / 98,01:15:09.4,4509.4,6:42/mile,8:27 AM,2026-10-04
+2026,343,Andrew Gillies (# 977),,Lafayette,M,309,42,39 / 78,01:15:24.9,4524.9,6:44/mile,8:27 AM,2026-10-04
+2026,344,Gregory Gate (# 274),,San Francisco,M,310,34,51 / 97,01:15:32.7,4532.7,6:44/mile,8:36 AM,2026-10-04
+2026,345,Varun Punjabi (# 651),,Berkeley,M,311,29,44 / 70,01:15:33.6,4533.6,6:44/mile,8:30 AM,2026-10-04
+2026,346,Hannah Squier (# 760),,San Francisco,F,35,33,10 / 29,01:15:33.8,4533.8,6:44/mile,8:39 AM,2026-10-04
+2026,347,David Monterrosas Torres (# 557),,Angwin,M,312,44,40 / 78,01:15:39.5,4539.5,6:45/mile,8:15 AM,2026-10-04
+2026,348,Christophe Testi (# 800),CT-Alto Velo Racing Team,Mountain View,M,313,56,16 / 47,01:15:43.3,4543.3,6:45/mile,8:27 AM,2026-10-04
+2026,349,Jack Stegelman (# 765),,Oakland,M,314,26,45 / 70,01:15:44.9,4544.9,6:45/mile,8:24 AM,2026-10-04
+2026,350,Aaron White (# 874),,Walnut Creek,M,315,41,41 / 78,01:15:47.9,4547.9,6:46/mile,8:24 AM,2026-10-04
+2026,351,Ravi Bhanot (# 74),,Cupertino,M,316,37,57 / 98,01:15:52.5,4552.5,6:46/mile,8:33 AM,2026-10-04
+2026,352,Bradley Han (# 313),,San Mateo,M,317,11,4 / 11,01:15:52.6,4552.6,6:46/mile,8:27 AM,2026-10-04
+2026,353,I-Tao Tsai (# 829),,San Jose,M,318,54,27 / 75,01:15:52.6,4552.6,6:46/mile,8:24 AM,2026-10-04
+2026,354,Kevin Prochaska (# 650),,Valley Center,M,319,69,7 / 32,01:16:00.1,4560.1,6:47/mile,8:30 AM,2026-10-04
+2026,355,Kevin Tang (# 795),,Woodside,M,320,28,46 / 70,01:16:20.0,4580.0,6:48/mile,8:39 AM,2026-10-04
+2026,356,Isabel Jellen (# 377),,Sunol,F,36,29,5 / 18,01:16:20.3,4580.3,6:48/mile,8:30 AM,2026-10-04
+2026,357,Richard Liu (# 468),,Fremont,M,321,14,11 / 14,01:16:25.9,4585.9,6:49/mile,8:27 AM,2026-10-04
+2026,358,Andy Burger (# 105),,Granite Bay,M,322,46,24 / 78,01:16:27.3,4587.3,6:49/mile,8:33 AM,2026-10-04
+2026,359,Jeff Shih (# 740),,Castro Valley,M,323,49,25 / 78,01:16:27.6,4587.6,6:49/mile,8:39 AM,2026-10-04
+2026,360,Daniel Cain (# 115),,Oakland,M,324,46,26 / 78,01:16:35.9,4595.9,6:50/mile,8:30 AM,2026-10-04
+2026,361,Geoffrey Belanger (# 61),,Gilroy,M,325,46,27 / 78,01:16:35.9,4595.9,6:50/mile,8:33 AM,2026-10-04
+2026,362,Anthony Lee (# 430),,Corte Madera,M,326,18,13 / 17,01:16:36.9,4596.9,6:50/mile,8:15 AM,2026-10-04
+2026,363,Emma Thomson (# 808),,San Francisco,F,37,30,11 / 29,01:16:42.3,4602.3,6:50/mile,8:39 AM,2026-10-04
+2026,364,Jenni Klose (# 970),,"Sebastopol, CA",F,38,57,5 / 11,01:16:45.4,4605.4,6:51/mile,8:36 AM,2026-10-04
+2026,365,Leo McGarry (# 534),,San Francisco,M,327,14,12 / 14,01:16:49.1,4609.1,6:51/mile,8:36 AM,2026-10-04
+2026,366,Brad Renoult (# 669),,Roseville,M,328,55,17 / 47,01:16:52.1,4612.1,6:51/mile,8:33 AM,2026-10-04
+2026,367,Thomas Monroe Jr (# 554),,Pleasant Hill,M,329,62,11 / 54,01:16:52.7,4612.7,6:51/mile,8:27 AM,2026-10-04
+2026,368,Brad Crow (# 175),,Danville,M,330,51,28 / 75,01:17:01.8,4621.8,6:52/mile,8:24 AM,2026-10-04
+2026,369,Ivan Makarov (# 500),,Diablo,M,331,45,28 / 78,01:17:02.0,4622.0,6:52/mile,8:24 AM,2026-10-04
+2026,370,Richard Hansen (# 315),,Cotati,M,332,54,29 / 75,01:17:04.2,4624.2,6:52/mile,8:24 AM,2026-10-04
+2026,371,Jack Liu (# 466),CT-Zoox,Foster City,M,333,31,52 / 97,01:17:10.8,4630.8,6:53/mile,8:27 AM,2026-10-04
+2026,372,Bill Becker (# 942),,"Oakdale, CA",M,334,58,18 / 47,01:17:12.8,4632.8,6:53/mile,8:33 AM,2026-10-04
+2026,373,Tricia Bromley (# 97),,Stanford,F,39,49,4 / 13,01:17:27.3,4647.3,6:54/mile,8:45 AM,2026-10-04
+2026,374,Kathy De Chaumont Quitry (# 185),CT-Berkeley Bicycle Club,Oakland,F,40,33,12 / 29,01:17:36.8,4656.8,6:55/mile,8:33 AM,2026-10-04
+2026,375,Greg Woelki (# 891),CT-Zoox,Foster City,M,335,28,47 / 70,01:17:44.8,4664.8,6:56/mile,8:36 AM,2026-10-04
+2026,376,Max Gerbracht (# 278),,San Ramon,M,336,12,5 / 11,01:17:45.3,4665.3,6:56/mile,8:27 AM,2026-10-04
+2026,377,Steve Ackert (# 5),,San Jose,M,337,56,19 / 47,01:17:56.6,4676.6,6:57/mile,8:24 AM,2026-10-04
+2026,378,Te-Yuan Huang (# 355),FT-GPC Femmes,San Francisco,F,41,42,7 / 11,01:17:56.6,4676.6,6:57/mile,8:33 AM,2026-10-04
+2026,379,Scott Mackke (# 493),,South San Francisco,M,338,31,53 / 97,01:18:05.8,4685.8,6:58/mile,8:33 AM,2026-10-04
+2026,380,Chaitanya Malik (# 503),,San Francisco,M,339,28,48 / 70,01:18:07.1,4687.1,6:58/mile,8:39 AM,2026-10-04
+2026,381,Joe Williams (# 880),,Petaluma,M,340,44,42 / 78,01:18:11.3,4691.3,6:58/mile,8:30 AM,2026-10-04
+2026,382,Michael Fogelquist (# 248),,San Jose,M,341,56,20 / 47,01:18:16.4,4696.4,6:59/mile,8:36 AM,2026-10-04
+2026,383,Zolboo Luvsan (# 490),,Lafayette,M,342,45,29 / 78,01:18:19.4,4699.4,6:59/mile,8:30 AM,2026-10-04
+2026,384,Andrei Litskevich (# 463),,San Jose,M,343,51,30 / 75,01:18:21.8,4701.8,6:59/mile,8:33 AM,2026-10-04
+2026,385,Saylor Stewart (# 770),,Brooklyn,M,344,28,49 / 70,01:18:22.3,4702.3,6:59/mile,8:39 AM,2026-10-04
+2026,386,Jorge Troncoso (# 824),MT-Quad squad,Sunnyvale,M,345,31,54 / 97,01:18:24.2,4704.2,7:00/mile,8:30 AM,2026-10-04
+2026,387,Dan Harrelson (# 319),,Danville,M,346,51,31 / 75,01:18:31.9,4711.9,7:00/mile,8:24 AM,2026-10-04
+2026,388,Noa Schachter (# 713),,San Francisco,F,42,16,1 / 4,01:18:40.7,4720.7,7:01/mile,8:24 AM,2026-10-04
+2026,389,Johannes Bos (# 83),,Fairfax,M,347,62,12 / 54,01:18:41.4,4721.4,7:01/mile,8:33 AM,2026-10-04
+2026,390,Rick Bigelow (# 925),,Oakland,M,348,62,13 / 54,01:18:45.1,4725.1,7:01/mile,8:24 AM,2026-10-04
+2026,391,Sergiu Galchin (# 259),,Foster City,M,349,43,43 / 78,01:18:46.3,4726.3,7:02/mile,8:30 AM,2026-10-04
+2026,392,Julie Perrodin (# 623),,El Cerrito,F,43,17,2 / 4,01:18:53.5,4733.5,7:02/mile,8:30 AM,2026-10-04
+2026,393,Greg McCormac (# 928),,Danville,M,350,61,14 / 54,01:19:11.7,4751.7,7:04/mile,8:24 AM,2026-10-04
+2026,394,Cj Vaughn (# 843),,Piedmont,F,44,42,8 / 11,01:19:12.3,4752.3,7:04/mile,8:30 AM,2026-10-04
+2026,395,Lesley Jensen (# 378),FT-GPC Femmes,Lafayette,F,45,69,1 / 5,01:19:14.5,4754.5,7:04/mile,8:30 AM,2026-10-04
+2026,396,Ethan Wang (# 856),,Campbell,M,351,37,58 / 98,01:19:21.9,4761.9,7:05/mile,8:24 AM,2026-10-04
+2026,397,Amanda Morrison (# 564),,Palo Alto,F,46,29,6 / 18,01:19:23.2,4763.2,7:05/mile,8:39 AM,2026-10-04
+2026,398,Clovis Scotti (# 726),,san francisco,M,352,40,44 / 78,01:19:24.9,4764.9,7:05/mile,8:30 AM,2026-10-04
+2026,399,Ramsey Emera (# 227),,Pittsburg,M,353,48,30 / 78,01:19:27.7,4767.7,7:05/mile,8:39 AM,2026-10-04
+2026,400,Van Ly (# 491),,Alameda,M,354,45,31 / 78,01:19:29.0,4769.0,7:05/mile,8:42 AM,2026-10-04
+2026,401,Bill John (# 379),,Alameda,M,355,63,15 / 54,01:19:33.2,4773.2,7:06/mile,8:48 AM,2026-10-04
+2026,402,Leland Ellison (# 225),,Livermore,M,356,39,59 / 98,01:19:41.0,4781.0,7:06/mile,8:30 AM,2026-10-04
+2026,403,Daniel Lauriola (# 428),MT-Quad squad,Mountain View,M,357,32,55 / 97,01:19:41.6,4781.6,7:06/mile,8:30 AM,2026-10-04
+2026,404,Joshua Wise (# 962),,"Pittsburgh, PA",M,358,37,60 / 98,01:19:51.0,4791.0,7:07/mile,8:30 AM,2026-10-04
+2026,405,Cyrus Blankinship (# 79),CT-Zoox,Foster City,M,359,34,56 / 97,01:20:06.2,4806.2,7:09/mile,8:30 AM,2026-10-04
+2026,406,Mark Wooldridge (# 895),,Pleasant Hill,M,360,33,57 / 97,01:20:11.5,4811.5,7:09/mile,8:33 AM,2026-10-04
+2026,407,Christopher Kauffman (# 390),,San Francisco,M,361,35,61 / 98,01:20:16.2,4816.2,7:10/mile,8:24 AM,2026-10-04
+2026,408,Dave Stalters (# 762),,Concord,M,362,70,3 / 10,01:20:16.3,4816.3,7:10/mile,8:33 AM,2026-10-04
+2026,409,Scott Burke (# 106),,Concord,M,363,54,32 / 75,01:20:20.8,4820.8,7:10/mile,8:51 AM,2026-10-04
+2026,410,Ryan Dysart (# 218),,Clayton,M,364,42,45 / 78,01:20:26.5,4826.5,7:10/mile,8:33 AM,2026-10-04
+2026,411,Daniel Mox (# 988),IM GONNA BE A FEW MINUTES LATE,"San Francisco, CA",M,365,34,58 / 97,01:20:27.0,4827.0,7:10/mile,8:30 AM,2026-10-04
+2026,412,Jeffrey Paterson (# 983),,Alameda,M,366,58,21 / 47,01:20:28.4,4828.4,7:11/mile,8:39 AM,2026-10-04
+2026,413,Pavan Kulkarni (# 418),,Mountain View,M,367,38,62 / 98,01:20:29.0,4829.0,7:11/mile,8:33 AM,2026-10-04
+2026,414,Denis Koush (# 412),,Mountain View,M,368,23,14 / 17,01:20:30.5,4830.5,7:11/mile,8:45 AM,2026-10-04
+2026,415,Satomi Nakamura (# 573),,Monte Sereno,F,47,49,5 / 13,01:20:31.0,4831.0,7:11/mile,8:33 AM,2026-10-04
+2026,416,Daniil Lapshin (# 426),,Sacramento,M,369,36,63 / 98,01:20:32.1,4832.1,7:11/mile,8:51 AM,2026-10-04
+2026,417,Shiv Karthik Prabakaran (# 645),,Fremont,M,370,15,13 / 14,01:20:33.4,4833.4,7:11/mile,8:27 AM,2026-10-04
+2026,418,Tony Sarathchandra (# 708),CT-Alto Velo Racing Team,Menlo Park,M,371,53,33 / 75,01:20:40.9,4840.9,7:12/mile,8:27 AM,2026-10-04
+2026,419,Jay Todesco (# 812),,Concord,M,372,75,1 / 1,01:20:48.3,4848.3,7:12/mile,8:33 AM,2026-10-04
+2026,420,Edgar Molina (# 550),,Oakley,M,373,38,64 / 98,01:20:53.0,4853.0,7:13/mile,8:42 AM,2026-10-04
+2026,421,Dylan Aiken (# 14),,Pleasanton,M,374,25,50 / 70,01:20:53.7,4853.7,7:13/mile,8:39 AM,2026-10-04
+2026,422,Galen Doman (# 205),,Walnut Creek,M,375,14,14 / 14,01:20:55.1,4855.1,7:13/mile,8:45 AM,2026-10-04
+2026,423,Noah Adler (# 8),,San Francisco,M,376,26,51 / 70,01:20:57.9,4857.9,7:13/mile,8:33 AM,2026-10-04
+2026,424,Brendan Glackin (# 285),MT-C510,Orinda,M,377,53,34 / 75,01:21:04.1,4864.1,7:14/mile,8:27 AM,2026-10-04
+2026,425,Craig Lichleisten (# 980),,Burlingame,M,378,50,35 / 75,01:21:12.1,4872.1,7:15/mile,8:27 AM,2026-10-04
+2026,426,Hadley Irwin (# 367),,San Francisco,F,48,28,7 / 18,01:21:25.0,4885.0,7:16/mile,8:39 AM,2026-10-04
+2026,427,Reynaldo Vieira (# 848),,South San Francisco,M,379,46,32 / 78,01:21:34.9,4894.9,7:17/mile,8:36 AM,2026-10-04
+2026,428,Sean Macnew (# 495),,San Rafael,M,380,52,36 / 75,01:21:39.5,4899.5,7:17/mile,8:33 AM,2026-10-04
+2026,429,Bev Monahan (# 551),,Highland,F,49,65,2 / 5,01:21:42.7,4902.7,7:17/mile,8:39 AM,2026-10-04
+2026,430,Curt Rettig (# 671),,Livermore,M,381,63,16 / 54,01:21:43.8,4903.8,7:17/mile,8:39 AM,2026-10-04
+2026,431,Sarbajeet Naug (# 574),,Union City,M,382,47,33 / 78,01:21:50.6,4910.6,7:18/mile,8:30 AM,2026-10-04
+2026,432,Daniel Parkes (# 608),,San Francisco,M,383,50,37 / 75,01:21:51.9,4911.9,7:18/mile,8:36 AM,2026-10-04
+2026,433,Satish Vasudeva (# 842),MT-WTHBiking,Danville,M,384,51,38 / 75,01:22:14.9,4934.9,7:20/mile,8:39 AM,2026-10-04
+2026,434,Lisa Susan McPhate (# 536),,Oakland,F,50,58,6 / 11,01:22:21.7,4941.7,7:21/mile,8:39 AM,2026-10-04
+2026,435,Russell Woods (# 894),,Palo Alto,M,385,45,34 / 78,01:22:23.1,4943.1,7:21/mile,8:30 AM,2026-10-04
+2026,436,Anna Kuo (# 419),FT-GPC Femmes,San Francisco,F,51,51,4 / 10,01:22:27.7,4947.7,7:21/mile,8:33 AM,2026-10-04
+2026,437,Glen Augustine (# 32),,Berkeley,M,386,61,17 / 54,01:22:28.7,4948.7,7:21/mile,8:30 AM,2026-10-04
+2026,438,Michael Beresford (# 64),,Palo Alto,M,387,45,35 / 78,01:22:42.3,4962.3,7:23/mile,8:33 AM,2026-10-04
+2026,439,Jason Martin (# 510),,Martinez,M,388,42,46 / 78,01:22:44.0,4964.0,7:23/mile,8:30 AM,2026-10-04
+2026,440,Andrew Chang (# 947),,"Dublin, CA",M,389,49,36 / 78,01:22:47.9,4967.9,7:23/mile,8:24 AM,2026-10-04
+2026,441,Grace Eysenbach (# 239),,San Francisco,F,52,28,8 / 18,01:22:49.3,4969.3,7:23/mile,8:33 AM,2026-10-04
+2026,442,Thomas Sander (# 703),,Walnut Creek,M,390,37,65 / 98,01:23:05.3,4985.3,7:25/mile,8:30 AM,2026-10-04
+2026,443,Adwait Dongare (# 208),,Palo Alto,M,391,34,59 / 97,01:23:22.5,5002.5,7:26/mile,8:45 AM,2026-10-04
+2026,444,Jose Orlando Rivas (# 680),,Concord,M,392,34,60 / 97,01:23:24.2,5004.2,7:26/mile,8:24 AM,2026-10-04
+2026,445,Adriel Martinez (# 512),,Fremont,M,393,32,61 / 97,01:23:24.5,5004.5,7:26/mile,9:01 AM,2026-10-04
+2026,446,Chien-Yu Lin (# 459),CT-Little Husky,Redwood City,M,394,33,62 / 97,01:23:49.8,5029.8,7:29/mile,9:23 AM,2026-10-04
+2026,447,Terri Bimes (# 77),FT-GPC Femmes,Berkeley,F,53,59,7 / 11,01:23:55.2,5035.2,7:29/mile,8:45 AM,2026-10-04
+2026,448,Tom Imrei (# 363),,Pleasant Hill,M,395,56,22 / 47,01:23:57.3,5037.3,7:29/mile,8:36 AM,2026-10-04
+2026,449,Brian Lee (# 432),,Richmond,M,396,49,37 / 78,01:23:59.5,5039.5,7:29/mile,8:24 AM,2026-10-04
+2026,450,Samuel Holechek (# 344),,Oakland,M,397,32,63 / 97,01:24:01.1,5041.1,7:30/mile,8:45 AM,2026-10-04
+2026,451,Derrick Sung (# 784),CTPedalPushers,Hillsborough,M,398,53,39 / 75,01:24:01.1,5041.1,7:30/mile,8:42 AM,2026-10-04
+2026,452,Naveen Rao (# 659),,San Ramon,M,399,44,47 / 78,01:24:06.8,5046.8,7:30/mile,8:27 AM,2026-10-04
+2026,453,Eddie Carrillo (# 123),,Concord,M,400,34,64 / 97,01:24:11.0,5051.0,7:30/mile,8:36 AM,2026-10-04
+2026,454,Xiong Chang (# 137),CT-Alto Velo Racing Team,Palo Alto,M,401,37,66 / 98,01:24:14.7,5054.7,7:31/mile,8:27 AM,2026-10-04
+2026,455,Emma Fulweiler (# 256),,Redwood City,F,54,28,9 / 18,01:24:16.6,5056.6,7:31/mile,8:33 AM,2026-10-04
+2026,456,Victor Flores (# 247),,Mountain View,M,402,30,65 / 97,01:24:28.7,5068.7,7:32/mile,8:33 AM,2026-10-04
+2026,457,Andres Tello (# 799),,Hayward,M,403,31,66 / 97,01:24:29.0,5069.0,7:32/mile,8:27 AM,2026-10-04
+2026,458,Murat Ozgur (# 601),,Carmel,M,404,54,40 / 75,01:24:30.4,5070.4,7:32/mile,8:27 AM,2026-10-04
+2026,459,Jered Sneesby (# 754),,Sacramento,M,405,52,41 / 75,01:24:38.1,5078.1,7:33/mile,8:24 AM,2026-10-04
+2026,460,Fiona Winder (# 886),,Boulder,F,55,31,13 / 29,01:24:52.5,5092.5,7:34/mile,8:30 AM,2026-10-04
+2026,461,David Trujillo (# 825),,San Francisco,M,406,51,42 / 75,01:24:54.5,5094.5,7:34/mile,8:42 AM,2026-10-04
+2026,462,Steve Schmitt (# 718),,Walnut Creek,M,407,57,23 / 47,01:24:55.7,5095.7,7:34/mile,8:30 AM,2026-10-04
+2026,463,Mark Miller (# 543),,Pleasanton,M,408,65,8 / 32,01:24:59.9,5099.9,7:35/mile,8:30 AM,2026-10-04
+2026,464,Benny Newman (# 582),,Sonoma,F,56,16,3 / 4,01:25:01.2,5101.2,7:35/mile,8:27 AM,2026-10-04
+2026,465,Tarik Sturm (# 776),,San Francisco,M,409,41,48 / 78,01:25:01.9,5101.9,7:35/mile,8:36 AM,2026-10-04
+2026,466,Courtney Phuong (# 633),,Belmont,F,57,49,6 / 13,01:25:12.6,5112.6,7:36/mile,8:30 AM,2026-10-04
+2026,467,Marion Ollier (# 598),,San Francisco,F,58,29,10 / 18,01:25:15.4,5115.4,7:36/mile,8:33 AM,2026-10-04
+2026,468,Hannah Williams (# 879),,San Francisco,F,59,26,11 / 18,01:25:21.7,5121.7,7:37/mile,8:33 AM,2026-10-04
+2026,469,Rewon Child (# 153),,Palo Alto,M,410,37,67 / 98,01:25:24.1,5124.1,7:37/mile,8:42 AM,2026-10-04
+2026,470,Javier Zapata (# 913),,Richmond,M,411,46,38 / 78,01:25:29.2,5129.2,7:37/mile,8:15 AM,2026-10-04
+2026,471,Ryan King (# 402),,San Rafael,M,412,48,39 / 78,01:25:33.0,5133.0,7:38/mile,8:36 AM,2026-10-04
+2026,472,David Boardman (# 81),,Ponte Vedra,M,413,64,18 / 54,01:25:38.4,5138.4,7:38/mile,8:36 AM,2026-10-04
+2026,473,Todd Morgan (# 561),,Concord,M,414,61,19 / 54,01:25:43.7,5143.7,7:39/mile,8:33 AM,2026-10-04
+2026,474,Doug Aiken (# 13),,Pleasanton,M,415,62,20 / 54,01:26:05.2,5165.2,7:41/mile,8:39 AM,2026-10-04
+2026,475,Megan Potente (# 642),CT-Trapper McNutters,San Francisco,F,60,53,5 / 10,01:26:08.5,5168.5,7:41/mile,8:30 AM,2026-10-04
+2026,476,Jessica Hickel (# 333),CT-Pedal ProjectRide4Good,Windsor,F,61,67,3 / 5,01:26:14.9,5174.9,7:42/mile,8:30 AM,2026-10-04
+2026,477,Pramod Chandraiah (# 133),,Pleasanton,M,416,48,40 / 78,01:26:15.7,5175.7,7:42/mile,8:27 AM,2026-10-04
+2026,478,Andres Martinez Cancino (# 514),CT-Zoox,Foster City,M,417,30,67 / 97,01:26:16.0,5176.0,7:42/mile,8:48 AM,2026-10-04
+2026,479,David Agger (# 11),,San Francisco,M,418,62,21 / 54,01:26:16.1,5176.1,7:42/mile,8:42 AM,2026-10-04
+2026,480,Brandy Stewart (# 769),CT-Alto Velo Racing Team,Palo Alto,F,62,49,7 / 13,01:26:17.6,5177.6,7:42/mile,8:30 AM,2026-10-04
+2026,481,William Doyle-Capitman (# 210),CT-Berkeley Bicycle Club,Berkeley,M,419,43,49 / 78,01:26:20.3,5180.3,7:42/mile,8:18 AM,2026-10-04
+2026,482,Daniel Ziegler (# 918),,Berkeley,M,420,31,68 / 97,01:26:21.0,5181.0,7:42/mile,8:45 AM,2026-10-04
+2026,483,Colin Chiapello (# 151),,Danville,M,421,31,69 / 97,01:26:23.4,5183.4,7:42/mile,8:27 AM,2026-10-04
+2026,484,Samantha Totten (# 818),,Walnut Creek,F,63,36,4 / 10,01:26:26.3,5186.3,7:43/mile,8:39 AM,2026-10-04
+2026,485,Cristian Baldeon (# 42),,Rohnert Park,M,422,41,50 / 78,01:26:35.8,5195.8,7:43/mile,8:51 AM,2026-10-04
+2026,486,Ryan Lewis (# 447),MT-DiabloDash,Belmont,M,423,47,41 / 78,01:26:43.1,5203.1,7:44/mile,8:33 AM,2026-10-04
+2026,487,Douglas Gettel (# 280),,Walnut Creek,M,424,40,51 / 78,01:26:51.7,5211.7,7:45/mile,8:39 AM,2026-10-04
+2026,488,Sara Kennedy (# 396),CT-Berkeley Bicycle Club,San Rafael,F,64,25,12 / 18,01:26:53.3,5213.3,7:45/mile,8:33 AM,2026-10-04
+2026,489,Soren Warming (# 862),,Alameda,M,425,54,43 / 75,01:27:00.4,5220.4,7:46/mile,8:36 AM,2026-10-04
+2026,490,Derrick Wu (# 897),,San Jose,M,426,36,68 / 98,01:27:02.0,5222.0,7:46/mile,8:45 AM,2026-10-04
+2026,491,Ted Trambley (# 822),,Martinez,M,427,74,4 / 10,01:27:02.1,5222.1,7:46/mile,8:39 AM,2026-10-04
+2026,492,Alison Kuehner (# 417),FT-GPC Femmes,Piedmont,F,65,64,1 / 4,01:27:02.1,5222.1,7:46/mile,8:33 AM,2026-10-04
+2026,493,Brandon Zabaneh (# 912),,San Francisco,M,428,26,52 / 70,01:27:05.3,5225.3,7:46/mile,8:42 AM,2026-10-04
+2026,494,David Lee (# 434),,Hayward,M,429,53,44 / 75,01:27:07.8,5227.8,7:46/mile,8:33 AM,2026-10-04
+2026,495,Dave Nicoll (# 590),,Oakland,M,430,57,24 / 47,01:27:12.1,5232.1,7:47/mile,8:36 AM,2026-10-04
+2026,496,Jozua Van De Weg (# 837),,Danville,M,431,13,6 / 11,01:27:27.5,5247.5,7:48/mile,8:27 AM,2026-10-04
+2026,497,Andrew Nelson (# 576),,Oakland,M,432,31,70 / 97,01:27:31.5,5251.5,7:48/mile,8:39 AM,2026-10-04
+2026,498,Jerry Monahan (# 553),,Highland,M,433,66,9 / 32,01:27:39.1,5259.1,7:49/mile,8:39 AM,2026-10-04
+2026,499,Kyle Klein (# 404),MT-Aperol Blitz,San Jose,M,434,31,71 / 97,01:27:53.1,5273.1,7:50/mile,8:48 AM,2026-10-04
+2026,500,Gail Ashton (# 29),,Mill Valley,F,66,45,8 / 13,01:27:53.7,5273.7,7:50/mile,8:33 AM,2026-10-04
+2026,501,Dan Gerber (# 924),,Los Altos Hills,M,435,38,69 / 98,01:27:59.9,5279.9,7:51/mile,8:45 AM,2026-10-04
+2026,502,Angel Alvarez (# 18),,San Jose,M,436,49,42 / 78,01:28:01.4,5281.4,7:51/mile,8:30 AM,2026-10-04
+2026,503,Ryan Carlon (# 122),,Redwood City,M,437,42,52 / 78,01:28:10.5,5290.5,7:52/mile,8:45 AM,2026-10-04
+2026,504,Bill Peters (# 628),,Danville,M,438,60,22 / 54,01:28:20.0,5300.0,7:53/mile,8:33 AM,2026-10-04
+2026,505,Colin Ward (# 987),,"Larado, TX",M,439,45,43 / 78,01:28:39.3,5319.3,7:54/mile,8:42 AM,2026-10-04
+2026,506,Emily Thompson (# 806),,San Francisco,F,67,32,14 / 29,01:28:40.2,5320.2,7:55/mile,8:33 AM,2026-10-04
+2026,507,Oyuntulkhuur Semjid (# 729),,Lafayette,F,68,43,9 / 11,01:28:46.2,5326.2,7:55/mile,8:24 AM,2026-10-04
+2026,508,Abby Keller (# 394),,Oakland,F,69,31,15 / 29,01:29:06.3,5346.3,7:57/mile,8:39 AM,2026-10-04
+2026,509,Shane Clarke (# 157),,Lafayette,M,440,51,45 / 75,01:29:15.3,5355.3,7:58/mile,8:30 AM,2026-10-04
+2026,510,David Lichtblau (# 454),,Mill Valley,M,441,59,25 / 47,01:29:25.3,5365.3,7:59/mile,8:33 AM,2026-10-04
+2026,511,Miguel Pondon (# 638),,Fremont,M,442,61,23 / 54,01:29:33.8,5373.8,7:59/mile,8:33 AM,2026-10-04
+2026,512,Peter Gao (# 265),,San Francisco,M,443,32,72 / 97,01:29:39.2,5379.2,8:00/mile,8:42 AM,2026-10-04
+2026,513,Sam Hoeven (# 340),,Fremont,M,444,27,53 / 70,01:29:39.5,5379.5,8:00/mile,8:45 AM,2026-10-04
+2026,514,Al Kallel (# 384),,Atherton,M,445,47,44 / 78,01:29:45.3,5385.3,8:00/mile,8:24 AM,2026-10-04
+2026,515,Roman Rappaport (# 953),,San Francisco,M,446,11,7 / 11,01:29:49.2,5389.2,8:01/mile,8:33 AM,2026-10-04
+2026,516,David Gold (# 289),,Oakland,M,447,31,73 / 97,01:29:51.7,5391.7,8:01/mile,8:36 AM,2026-10-04
+2026,517,Loic Lescoat (# 443),MT-707 Cycling Club,San Francisco,M,448,26,54 / 70,01:29:55.7,5395.7,8:01/mile,8:39 AM,2026-10-04
+2026,518,Michael Huang (# 354),,Rocklin,M,449,60,24 / 54,01:29:57.3,5397.3,8:01/mile,8:27 AM,2026-10-04
+2026,519,Lewis Ase (# 28),,Riverbank,M,450,64,25 / 54,01:30:05.9,5405.9,8:02/mile,8:39 AM,2026-10-04
+2026,520,Seth Elliott (# 937),,San Francisco,M,451,37,70 / 98,01:30:10.2,5410.2,8:03/mile,8:39 AM,2026-10-04
+2026,521,John Engstrom (# 235),,Gold River,M,452,68,10 / 32,01:30:21.0,5421.0,8:04/mile,8:45 AM,2026-10-04
+2026,522,Ryan Day (# 183),MT-Numbass2000s,Livermore,M,453,48,45 / 78,01:30:28.0,5428.0,8:04/mile,8:48 AM,2026-10-04
+2026,523,Paul Shigley (# 739),,Santa Rosa,M,454,62,26 / 54,01:30:35.2,5435.2,8:05/mile,8:42 AM,2026-10-04
+2026,524,Milana Dolezal (# 204),,Berkeley,F,70,55,8 / 11,01:30:45.7,5445.7,8:06/mile,8:33 AM,2026-10-04
+2026,525,Bayartulga Bayarkhuu (# 54),,Los Angeles,M,455,35,71 / 98,01:31:05.1,5465.1,8:07/mile,8:30 AM,2026-10-04
+2026,526,Andrey Chernikov (# 146),,Belmont,M,456,61,27 / 54,01:31:09.0,5469.0,8:08/mile,8:33 AM,2026-10-04
+2026,527,Ernie Long (# 476),,Monterey,M,457,68,11 / 32,01:31:13.2,5473.2,8:08/mile,8:42 AM,2026-10-04
+2026,528,Ulziibat Tserenbat (# 932),,Lafayette,M,458,45,46 / 78,01:31:20.0,5480.0,8:09/mile,8:30 AM,2026-10-04
+2026,529,Will Rose (# 686),,Oakland,M,459,52,46 / 75,01:31:49.5,5509.5,8:11/mile,8:33 AM,2026-10-04
+2026,530,Kevin Lunde (# 489),,Oakland,M,460,50,47 / 75,01:31:54.2,5514.2,8:12/mile,8:42 AM,2026-10-04
+2026,531,Thomas Nedelsky (# 575),,Santa Cruz,M,461,74,5 / 10,01:31:59.0,5519.0,8:12/mile,8:42 AM,2026-10-04
+2026,532,Rebecca Carter (# 124),,Oakland,F,71,39,5 / 10,01:32:06.1,5526.1,8:13/mile,8:54 AM,2026-10-04
+2026,533,Rafael Guzman (# 306),,Woodside,M,462,41,53 / 78,01:32:06.5,5526.5,8:13/mile,8:30 AM,2026-10-04
+2026,534,Denise Monahan (# 552),,Livermore,F,72,30,16 / 29,01:32:07.4,5527.4,8:13/mile,8:39 AM,2026-10-04
+2026,535,Serena Li (# 451),,Los Altos,F,73,52,6 / 10,01:32:08.2,5528.2,8:13/mile,8:51 AM,2026-10-04
+2026,536,Alexander Quinn (# 654),,Berkeley,M,463,54,48 / 75,01:32:09.2,5529.2,8:13/mile,8:39 AM,2026-10-04
+2026,537,Ganerdene Sharkhuu (# 945),,"San Ramon, CA",M,464,37,72 / 98,01:32:14.7,5534.7,8:14/mile,8:30 AM,2026-10-04
+2026,538,Michael Hoffman (# 342),,Oakland,M,465,61,28 / 54,01:32:17.4,5537.4,8:14/mile,8:39 AM,2026-10-04
+2026,539,Jonathan Bernstein (# 70),,San Francisco,M,466,64,29 / 54,01:32:18.0,5538.0,8:14/mile,8:36 AM,2026-10-04
+2026,540,Wenjun Wu (# 899),CT-Little Husky,Seattle,F,74,31,17 / 29,01:32:18.1,5538.1,8:14/mile,9:23 AM,2026-10-04
+2026,541,Bernhard Schmidt (# 715),,Millbrae,M,467,40,54 / 78,01:32:26.3,5546.3,8:15/mile,8:54 AM,2026-10-04
+2026,542,Jose M Avila (# 33),,Pittsburg,M,468,40,55 / 78,01:32:33.3,5553.3,8:15/mile,8:39 AM,2026-10-04
+2026,543,Bruce Kolas (# 407),MT-Lamorinda MBO Racing,Pleasant Hill,M,469,11,8 / 11,01:32:40.5,5560.5,8:16/mile,8:33 AM,2026-10-04
+2026,544,Robert Tatum (# 797),,San Francisco,M,470,26,55 / 70,01:32:41.0,5561.0,8:16/mile,8:42 AM,2026-10-04
+2026,545,Lloyd Villanueva (# 850),,Milpitas,M,471,38,73 / 98,01:32:42.7,5562.7,8:16/mile,8:42 AM,2026-10-04
+2026,546,Brandon Beck (# 58),,Arlington,M,472,26,56 / 70,01:32:45.9,5565.9,8:16/mile,8:33 AM,2026-10-04
+2026,547,Sonja Petek (# 627),,Concord,F,75,50,7 / 10,01:32:52.8,5572.8,8:17/mile,8:36 AM,2026-10-04
+2026,548,Rob Butner (# 113),,Hayward,M,473,46,47 / 78,01:33:06.3,5586.3,8:18/mile,8:36 AM,2026-10-04
+2026,549,Andrew Chamberlain (# 130),,Oakland,M,474,39,74 / 98,01:33:09.7,5589.7,8:19/mile,8:51 AM,2026-10-04
+2026,550,Justin Nguyen (# 589),CT-Zoox,Foster City,M,475,28,57 / 70,01:33:10.1,5590.1,8:19/mile,8:54 AM,2026-10-04
+2026,551,Isaac Howenstine (# 351),,Chicago,M,476,32,74 / 97,01:33:10.3,5590.3,8:19/mile,8:54 AM,2026-10-04
+2026,552,Leigh McBain (# 525),,Berkeley,F,76,33,18 / 29,01:33:10.6,5590.6,8:19/mile,8:33 AM,2026-10-04
+2026,553,Amor Jr Cantiga (# 119),,Alameda,M,477,30,75 / 97,01:33:15.2,5595.2,8:19/mile,8:51 AM,2026-10-04
+2026,554,Norbert Jaeger (# 371),,Brentwood,M,478,67,12 / 32,01:33:23.6,5603.6,8:20/mile,8:42 AM,2026-10-04
+2026,555,Chris Safranski (# 699),,Hayward,M,479,38,75 / 98,01:33:38.8,5618.8,8:21/mile,8:42 AM,2026-10-04
+2026,556,Lauren Orr (# 599),,San Francisco,F,77,28,13 / 18,01:33:41.4,5621.4,8:21/mile,8:33 AM,2026-10-04
+2026,557,Joseph Chen (# 142),,Los Altos,M,480,49,48 / 78,01:33:49.7,5629.7,8:22/mile,8:42 AM,2026-10-04
+2026,558,Reman Child (# 152),,Loomis,M,481,42,56 / 78,01:33:51.5,5631.5,8:22/mile,8:42 AM,2026-10-04
+2026,559,Jason McCarthy (# 526),,Benicia,M,482,56,26 / 47,01:33:56.4,5636.4,8:23/mile,8:39 AM,2026-10-04
+2026,560,Lis Schultze (# 721),,Berkekey,F,78,60,2 / 4,01:34:10.1,5650.1,8:24/mile,8:24 AM,2026-10-04
+2026,561,Tarjei Widding-Havneraas (# 876),,Berkeley,M,483,36,76 / 98,01:34:11.7,5651.7,8:24/mile,8:42 AM,2026-10-04
+2026,562,Clare Schumann (# 722),,San Francisco,F,79,26,14 / 18,01:34:13.9,5653.9,8:24/mile,8:54 AM,2026-10-04
+2026,563,Matthew Esposito (# 955),,Oakland,M,484,32,76 / 97,01:34:14.3,5654.3,8:24/mile,8:18 AM,2026-10-04
+2026,564,Anne Gulley (# 302),FT-GPC Femmes,Albany,F,80,45,9 / 13,01:34:15.2,5655.2,8:24/mile,8:39 AM,2026-10-04
+2026,565,Peter Richards (# 674),,San Francisco,M,485,55,27 / 47,01:34:19.8,5659.8,8:25/mile,8:39 AM,2026-10-04
+2026,566,Natalie Logan (# 474),CT-Super Sprinkles Racing pb Bicycle Law,San Francisco,F,81,29,15 / 18,01:34:34.0,5674.0,8:26/mile,8:33 AM,2026-10-04
+2026,567,Matt Rozek (# 693),CT-Zoox,Foster City,M,486,40,57 / 78,01:34:35.9,5675.9,8:26/mile,8:54 AM,2026-10-04
+2026,568,Prithu Janardhanan Nair (# 374),,San Ramon,M,487,45,49 / 78,01:34:36.4,5676.4,8:26/mile,8:33 AM,2026-10-04
+2026,569,Ya-Lin Huang (# 357),,Campbell,F,82,43,10 / 11,01:34:39.0,5679.0,8:27/mile,8:45 AM,2026-10-04
+2026,570,Mohsen Mousavi (# 565),,Walnut Creek,M,488,55,28 / 47,01:34:42.9,5682.9,8:27/mile,8:51 AM,2026-10-04
+2026,571,Will Oldam (# 926),,Belmont,M,489,49,50 / 78,01:34:51.9,5691.9,8:28/mile,8:39 AM,2026-10-04
+2026,572,Vicki Jo Townsend (# 820),,Paso Robles,F,83,71,1 / 5,01:34:57.1,5697.1,8:28/mile,8:48 AM,2026-10-04
+2026,573,Jadei Santos Da Silva (# 707),,OAKLAND,M,490,38,77 / 98,01:35:06.1,5706.1,8:29/mile,8:45 AM,2026-10-04
+2026,574,Wilburt Tam (# 791),,San Ramon,M,491,32,77 / 97,01:35:19.1,5719.1,8:30/mile,8:39 AM,2026-10-04
+2026,575,Tamim Khan (# 398),,Redwood City,M,492,26,58 / 70,01:35:21.1,5721.1,8:30/mile,9:01 AM,2026-10-04
+2026,576,Bill Oldham (# 597),,Kihei,M,493,88,1 / 3,01:35:21.7,5721.7,8:30/mile,8:39 AM,2026-10-04
+2026,577,Badeea Alazem (# 735),CT-Zoox,Foster City,M,494,33,78 / 97,01:35:41.0,5741.0,8:32/mile,8:51 AM,2026-10-04
+2026,578,Marty Mathis (# 517),,Saratoga,M,495,68,13 / 32,01:35:42.8,5742.8,8:32/mile,8:39 AM,2026-10-04
+2026,579,Nathan Breaux (# 89),MT-Wildcats,Kensington,M,496,11,9 / 11,01:35:47.6,5747.6,8:33/mile,8:33 AM,2026-10-04
+2026,580,Brittany Breaux (# 88),,Kensington,F,84,43,11 / 11,01:35:47.9,5747.9,8:33/mile,8:33 AM,2026-10-04
+2026,581,Gautam Reddy (# 665),,Tracy,M,497,42,58 / 78,01:35:51.5,5751.5,8:33/mile,8:27 AM,2026-10-04
+2026,582,Bryan Han (# 314),,San Mateo,M,498,50,49 / 75,01:35:52.0,5752.0,8:33/mile,8:27 AM,2026-10-04
+2026,583,Walter Kearnan (# 393),,San Francisco,M,499,32,79 / 97,01:35:56.9,5756.9,8:34/mile,8:51 AM,2026-10-04
+2026,584,Amy Weldon (# 870),FT-GPC Femmes,Concord,F,85,34,19 / 29,01:36:01.0,5761.0,8:34/mile,8:39 AM,2026-10-04
+2026,585,Ronald Totsubo (# 816),,Los Angeles,M,500,66,14 / 32,01:36:07.1,5767.1,8:34/mile,8:33 AM,2026-10-04
+2026,586,Erin Foy (# 253),,Danville,F,86,49,10 / 13,01:36:17.2,5777.2,8:35/mile,8:33 AM,2026-10-04
+2026,587,Amanda Wang (# 855),,Oakland,F,87,37,6 / 10,01:36:17.7,5777.7,8:35/mile,8:51 AM,2026-10-04
+2026,588,George Wineinger (# 887),,San Ramon,M,501,66,15 / 32,01:36:19.6,5779.6,8:36/mile,8:36 AM,2026-10-04
+2026,589,Tianhua Zhang (# 916),CT-Zoox,Foster City,M,502,36,78 / 98,01:36:26.4,5786.4,8:36/mile,8:48 AM,2026-10-04
+2026,590,Archie Lee (# 431),CT-Zoox,Foster City,M,503,30,80 / 97,01:36:30.2,5790.2,8:36/mile,8:51 AM,2026-10-04
+2026,591,Joseph Lee (# 436),,San Ramon,M,504,10,1 / 1,01:36:37.9,5797.9,8:37/mile,8:39 AM,2026-10-04
+2026,592,Alexandre De Chaumont Quitry (# 184),,Oakland,M,505,38,79 / 98,01:36:46.5,5806.5,8:38/mile,8:39 AM,2026-10-04
+2026,593,Mike Krigel (# 414),,Palo Alto,M,506,70,6 / 10,01:36:47.0,5807.0,8:38/mile,8:42 AM,2026-10-04
+2026,594,Martin Thalody (# 801),,Pleasant Hill,M,507,37,80 / 98,01:36:50.3,5810.3,8:38/mile,8:54 AM,2026-10-04
+2026,595,Joseph Lin (# 460),MT-No Neuron Left Behind,San Mateo,M,508,52,50 / 75,01:36:55.5,5815.5,8:39/mile,8:42 AM,2026-10-04
+2026,596,Shourya Patel (# 611),MT-Lamorinda MBO Racing,Fremont,M,509,12,10 / 11,01:36:58.5,5818.5,8:39/mile,8:27 AM,2026-10-04
+2026,597,Casper Hoogenraad (# 348),MT-No Neuron Left Behind,San Mateo,M,510,53,51 / 75,01:37:18.3,5838.3,8:41/mile,8:42 AM,2026-10-04
+2026,598,Abigail Cotton (# 168),FT-GPC Femmes,Orinda,F,88,50,8 / 10,01:37:18.9,5838.9,8:41/mile,8:58 AM,2026-10-04
+2026,599,Aaron Holby (# 343),,Roseville,M,511,51,52 / 75,01:37:20.2,5840.2,8:41/mile,8:39 AM,2026-10-04
+2026,600,Kathryn Askin (# 30),,San Diego,F,89,70,2 / 5,01:37:21.7,5841.7,8:41/mile,8:45 AM,2026-10-04
+2026,601,John Dagata (# 179),,Walnut Creek,M,512,48,51 / 78,01:37:40.6,5860.6,8:43/mile,8:42 AM,2026-10-04
+2026,602,Shawn Hayes (# 321),MT-DiabloDash,San Jose,M,513,39,81 / 98,01:37:43.5,5863.5,8:43/mile,8:42 AM,2026-10-04
+2026,603,Scott Riddles (# 676),,Oak Ridge,M,514,59,29 / 47,01:37:47.9,5867.9,8:43/mile,8:36 AM,2026-10-04
+2026,604,Ryan Casey (# 125),,Berkeley,M,515,41,59 / 78,01:37:54.8,5874.8,8:44/mile,8:39 AM,2026-10-04
+2026,605,Dai Truong (# 827),,Saratoga,M,516,54,53 / 75,01:38:02.4,5882.4,8:45/mile,8:33 AM,2026-10-04
+2026,606,Annemarije Santman (# 944),,"San Francisco, CA",F,90,36,7 / 10,01:38:12.5,5892.5,8:46/mile,8:30 AM,2026-10-04
+2026,607,Ryan Wheeler (# 873),,Danville,M,517,35,82 / 98,01:38:12.8,5892.8,8:46/mile,8:42 AM,2026-10-04
+2026,608,Thomas Swain (# 789),,Walnut Creek,M,518,67,16 / 32,01:38:28.2,5908.2,8:47/mile,8:42 AM,2026-10-04
+2026,609,Greg Mandler (# 504),,Elk Grove,M,519,63,30 / 54,01:38:35.5,5915.5,8:48/mile,8:45 AM,2026-10-04
+2026,610,Devin Washoe (# 864),,Livermore,M,520,58,30 / 47,01:38:48.5,5928.5,8:49/mile,8:36 AM,2026-10-04
+2026,611,Scott McDonald (# 530),,Rocklin,M,521,49,52 / 78,01:38:54.3,5934.3,8:49/mile,8:45 AM,2026-10-04
+2026,612,Jenny Wang (# 857),,San Francisco,F,91,37,8 / 10,01:39:06.0,5946.0,8:50/mile,8:39 AM,2026-10-04
+2026,613,David Lowry (# 482),,Pleasanton,M,522,72,7 / 10,01:39:06.3,5946.3,8:50/mile,8:45 AM,2026-10-04
+2026,614,Pedro Murteira (# 572),,Berkeley,M,523,51,54 / 75,01:39:15.7,5955.7,8:51/mile,8:24 AM,2026-10-04
+2026,615,Steve Kim (# 399),CT-Zoox,Foster City,M,524,33,81 / 97,01:39:25.9,5965.9,8:52/mile,8:51 AM,2026-10-04
+2026,616,Marijn Peeters (# 618),,Coloma,M,525,51,55 / 75,01:39:38.6,5978.6,8:53/mile,8:42 AM,2026-10-04
+2026,617,Wende Hargrove (# 317),,Rocklin,F,92,60,3 / 4,01:39:42.9,5982.9,8:54/mile,8:45 AM,2026-10-04
+2026,618,Rami Abueshsheikh (# 3),,San Carlos,M,526,30,82 / 97,01:39:55.3,5995.3,8:55/mile,8:39 AM,2026-10-04
+2026,619,Joe Pessano (# 626),,Fremont,M,527,54,56 / 75,01:40:08.4,6008.4,8:56/mile,8:27 AM,2026-10-04
+2026,620,Jerry McCarthy (# 527),,Tracy,M,528,68,17 / 32,01:40:09.1,6009.1,8:56/mile,8:48 AM,2026-10-04
+2026,621,Madeleine Liem (# 455),,Antioch,F,93,23,3 / 4,01:40:25.8,6025.8,8:58/mile,8:36 AM,2026-10-04
+2026,622,Mark Backman (# 36),,Albany,M,529,53,57 / 75,01:40:28.1,6028.1,8:58/mile,8:33 AM,2026-10-04
+2026,623,Samuel Gould (# 291),,Emeryville,M,530,29,59 / 70,01:40:33.4,6033.4,8:58/mile,8:45 AM,2026-10-04
+2026,624,Steve Hoeven (# 341),,Fremont,M,531,63,31 / 54,01:40:53.5,6053.5,9:00/mile,8:45 AM,2026-10-04
+2026,625,Henry Tominaga (# 814),,Pleasant Hill,M,532,65,18 / 32,01:41:04.1,6064.1,9:01/mile,8:42 AM,2026-10-04
+2026,626,Peter Ascanio (# 27),,Fremont,M,533,66,19 / 32,01:41:04.8,6064.8,9:01/mile,8:39 AM,2026-10-04
+2026,627,Paul Burley (# 107),,San Leandro,M,534,47,53 / 78,01:41:05.1,6065.1,9:01/mile,8:51 AM,2026-10-04
+2026,628,Tonya Spencer (# 758),,San Francisco,F,94,46,11 / 13,01:41:14.0,6074.0,9:02/mile,8:45 AM,2026-10-04
+2026,629,Naichuan Zhang (# 915),,Mountainview,M,535,31,83 / 97,01:41:21.2,6081.2,9:02/mile,8:36 AM,2026-10-04
+2026,630,Meredith Henstridge (# 329),,Palo Alto,F,95,38,9 / 10,01:41:22.4,6082.4,9:03/mile,8:42 AM,2026-10-04
+2026,631,Aishwarya Prem Renu (# 648),,Palo Alto,F,96,31,20 / 29,01:41:26.2,6086.2,9:03/mile,8:45 AM,2026-10-04
+2026,632,Taylor Jang (# 375),MT-DiabloDash,San Francisco,M,536,37,83 / 98,01:41:26.5,6086.5,9:03/mile,8:42 AM,2026-10-04
+2026,633,Tony Powell (# 644),,San Ramon,M,537,69,20 / 32,01:42:00.3,6120.3,9:06/mile,8:39 AM,2026-10-04
+2026,634,Brian Yoxall (# 909),MT-Numbass2000s,Livermore,M,538,46,54 / 78,01:42:11.9,6131.9,9:07/mile,8:48 AM,2026-10-04
+2026,635,Nat Weber (# 867),,Moraga,M,539,68,21 / 32,01:42:12.4,6132.4,9:07/mile,8:48 AM,2026-10-04
+2026,636,Glenn Davis (# 182),,Berkeley,M,540,61,32 / 54,01:42:15.9,6135.9,9:07/mile,8:33 AM,2026-10-04
+2026,637,Pranava Adduri (# 7),,San Francisco,M,541,37,84 / 98,01:42:17.3,6137.3,9:07/mile,8:48 AM,2026-10-04
+2026,638,Abhinav Adduri (# 6),,Fremont,M,542,29,60 / 70,01:42:24.4,6144.4,9:08/mile,8:48 AM,2026-10-04
+2026,639,Alejandro Alferez Handszer (# 15),,San Francisco,M,543,33,84 / 97,01:42:31.6,6151.6,9:09/mile,9:21 AM,2026-10-04
+2026,640,Michael Savina (# 711),,San Ramon,M,544,66,22 / 32,01:42:43.7,6163.7,9:10/mile,8:57 AM,2026-10-04
+2026,641,Kevin Grierson (# 298),,Petaluma,M,545,38,85 / 98,01:42:47.0,6167.0,9:10/mile,8:42 AM,2026-10-04
+2026,642,Yuh Jong (# 978),,Pleasanton,M,546,61,33 / 54,01:43:07.4,6187.4,9:12/mile,8:39 AM,2026-10-04
+2026,643,Kevin Wills (# 883),,Danville,M,547,38,86 / 98,01:43:07.9,6187.9,9:12/mile,8:42 AM,2026-10-04
+2026,644,Elliot Stevenson (# 768),CT-SycipDevout,Sacramento,M,548,41,60 / 78,01:43:27.1,6207.1,9:14/mile,8:39 AM,2026-10-04
+2026,645,Patrick Mullikin (# 567),,Danville,M,549,50,58 / 75,01:43:29.9,6209.9,9:14/mile,8:42 AM,2026-10-04
+2026,646,Amarjargal Chuluun (# 155),,Los Angeles,M,550,40,61 / 78,01:44:26.5,6266.5,9:19/mile,8:30 AM,2026-10-04
+2026,647,Lucas Jurgensen (# 382),,San Francisco,M,551,28,61 / 70,01:44:29.9,6269.9,9:19/mile,8:42 AM,2026-10-04
+2026,648,Sarah Mountjoy (# 969),,"San Francisco, CA",F,97,34,21 / 29,01:44:33.3,6273.3,9:20/mile,8:42 AM,2026-10-04
+2026,649,Kaori Kambayashi (# 386),,Millbrae,F,98,45,12 / 13,01:44:38.7,6278.7,9:20/mile,8:54 AM,2026-10-04
+2026,650,Gene Au (# 31),,San Jose,M,552,41,62 / 78,01:44:40.6,6280.6,9:20/mile,8:33 AM,2026-10-04
+2026,651,Dieter De Schrijver (# 188),,Woodside,M,553,40,63 / 78,01:44:43.3,6283.3,9:21/mile,8:42 AM,2026-10-04
+2026,652,John Behring (# 60),,Danville,M,554,44,64 / 78,01:44:57.2,6297.2,9:22/mile,8:18 AM,2026-10-04
+2026,653,Erdenesaikhan Tumen Ayush (# 830),,Los Angeles,M,555,45,55 / 78,01:45:23.0,6323.0,9:24/mile,8:30 AM,2026-10-04
+2026,654,Konstantin Antonov (# 21),,Palo Alto,M,556,18,15 / 17,01:45:34.4,6334.4,9:25/mile,8:45 AM,2026-10-04
+2026,655,Kenneth Mayer (# 522),,Livermore,M,557,30,85 / 97,01:45:34.5,6334.5,9:25/mile,8:54 AM,2026-10-04
+2026,656,David Peak (# 615),,Los Gatos,M,558,53,59 / 75,01:45:35.2,6335.2,9:25/mile,8:42 AM,2026-10-04
+2026,657,Christopher Beasley (# 56),,San Ramon,M,559,60,34 / 54,01:45:48.9,6348.9,9:26/mile,8:24 AM,2026-10-04
+2026,658,Hao Peng (# 619),CT-Little Husky,Champaign,M,560,33,86 / 97,01:45:50.4,6350.4,9:27/mile,9:23 AM,2026-10-04
+2026,659,Kevin Ha (# 307),,San Leandro,M,561,45,56 / 78,01:46:39.9,6399.9,9:31/mile,8:42 AM,2026-10-04
+2026,660,Andres Martin (# 509),,San Francisco,M,562,33,87 / 97,01:47:05.0,6425.0,9:33/mile,8:33 AM,2026-10-04
+2026,661,Christopher Tandiono (# 792),,Belmont,M,563,36,87 / 98,01:47:13.9,6433.9,9:34/mile,8:39 AM,2026-10-04
+2026,662,Joanne Engel (# 233),,San Francisco,F,99,70,3 / 5,01:47:21.1,6441.1,9:35/mile,8:42 AM,2026-10-04
+2026,663,Thomas Greenspan (# 971),,"San Francisco, CA",M,564,33,88 / 97,01:47:27.3,6447.3,9:35/mile,8:42 AM,2026-10-04
+2026,664,Oliver Murillo (# 570),,San Francisco,M,565,16,15 / 17,01:47:34.1,6454.1,9:36/mile,8:45 AM,2026-10-04
+2026,665,Howard Thu (# 809),,San Leandro,M,566,48,57 / 78,01:47:49.7,6469.7,9:37/mile,8:48 AM,2026-10-04
+2026,666,Susan Morris (# 563),,Livermore,F,100,68,4 / 5,01:47:57.6,6477.6,9:38/mile,8:30 AM,2026-10-04
+2026,667,Kathy Long (# 477),,Monterey,F,101,68,5 / 5,01:47:58.8,6478.8,9:38/mile,8:42 AM,2026-10-04
+2026,668,Dirk Launt (# 427),,Pleasant Hill,M,567,74,8 / 10,01:48:36.6,6516.6,9:41/mile,8:42 AM,2026-10-04
+2026,669,Joe Grabski (# 294),,Napa,M,568,62,35 / 54,01:48:37.3,6517.3,9:41/mile,8:39 AM,2026-10-04
+2026,670,Mike Gnos (# 287),,Danville,M,569,58,31 / 47,01:48:56.8,6536.8,9:43/mile,8:42 AM,2026-10-04
+2026,671,Gordon Newman (# 584),,Sonoma,M,570,48,58 / 78,01:49:07.7,6547.7,9:44/mile,8:27 AM,2026-10-04
+2026,672,Jeff Gelb (# 275),,Danville,M,571,43,65 / 78,01:49:10.9,6550.9,9:44/mile,8:45 AM,2026-10-04
+2026,673,Stephen Marotti (# 508),,Danville,M,572,53,60 / 75,01:49:20.4,6560.4,9:45/mile,8:48 AM,2026-10-04
+2026,674,Charly Newman (# 583),,Sonoma,F,102,17,4 / 4,01:49:20.7,6560.7,9:45/mile,8:27 AM,2026-10-04
+2026,675,Christopher Barnes (# 48),,Mountain View,M,573,46,59 / 78,01:50:01.3,6601.3,9:49/mile,8:48 AM,2026-10-04
+2026,676,Leslie Williams (# 881),,El Cerrito,M,574,65,23 / 32,01:50:04.0,6604.0,9:49/mile,8:48 AM,2026-10-04
+2026,677,Simon Edwards-Parton (# 221),,San Francsicso,M,575,47,60 / 78,01:50:11.7,6611.7,9:50/mile,8:30 AM,2026-10-04
+2026,678,Thomas Thomas (# 804),,San Rafael,M,576,67,24 / 32,01:50:18.3,6618.3,9:50/mile,8:45 AM,2026-10-04
+2026,679,Wendell Doman (# 206),,Walnut Creek,M,577,67,25 / 32,01:50:28.4,6628.4,9:51/mile,8:48 AM,2026-10-04
+2026,680,Pat Oflaherty (# 596),,Sacramento,M,578,66,26 / 32,01:50:32.6,6632.6,9:52/mile,8:51 AM,2026-10-04
+2026,681,Dirk Bergstrom (# 67),CT-Alto Velo Racing Team,Mountain View,M,579,59,32 / 47,01:50:35.7,6635.7,9:52/mile,8:30 AM,2026-10-04
+2026,682,Ryan Deubel (# 198),,Concord,M,580,44,66 / 78,01:50:37.6,6637.6,9:52/mile,8:36 AM,2026-10-04
+2026,683,Merrill Schwartz (# 724),,Emeryville,M,581,84,2 / 3,01:50:44.7,6644.7,9:53/mile,8:30 AM,2026-10-04
+2026,684,Weilun Cheng (# 145),,Union City,M,582,49,61 / 78,01:50:50.0,6650.0,9:53/mile,8:45 AM,2026-10-04
+2026,685,Jordan Rackmil (# 656),,San Ramon,M,583,27,62 / 70,01:51:05.6,6665.6,9:55/mile,8:51 AM,2026-10-04
+2026,686,Ryan Nordman (# 594),,San Francisco,M,584,46,62 / 78,01:51:30.8,6690.8,9:57/mile,8:45 AM,2026-10-04
+2026,687,Jay Farrell (# 242),CT-Zoox,Foster City,M,585,62,36 / 54,01:52:01.8,6721.8,10:00/mile,8:21 AM,2026-10-04
+2026,688,Michael Durr (# 217),,Livermore,M,586,50,61 / 75,01:52:05.7,6725.7,10:00/mile,8:48 AM,2026-10-04
+2026,689,Rhia Acebedo (# 4),,San Jose,F,103,29,16 / 18,01:52:09.7,6729.7,10:00/mile,8:51 AM,2026-10-04
+2026,690,Nick Gurnard (# 304),CT-Zoox,Foster City,M,587,27,63 / 70,01:52:29.5,6749.5,10:02/mile,8:48 AM,2026-10-04
+2026,691,Augustus Cicala (# 984),,Martinez,M,588,43,67 / 78,01:52:55.9,6775.9,10:04/mile,8:45 AM,2026-10-04
+2026,692,Brad Hanson (# 316),,Napa,M,589,63,37 / 54,01:53:02.9,6782.9,10:05/mile,8:48 AM,2026-10-04
+2026,693,Meiying Li (# 450),,Cupertino,M,590,28,64 / 70,01:53:30.4,6810.4,10:08/mile,8:51 AM,2026-10-04
+2026,694,Jayden Hirsch (# 337),,Santa Clara,M,591,18,16 / 17,01:53:48.4,6828.4,10:09/mile,8:39 AM,2026-10-04
+2026,695,Oskar Cross (# 174),,Berkeley,M,592,17,16 / 17,01:54:08.7,6848.7,10:11/mile,8:45 AM,2026-10-04
+2026,696,Scott Dudley (# 214),,San Ramon,M,593,61,38 / 54,01:54:18.8,6858.8,10:12/mile,8:45 AM,2026-10-04
+2026,697,Bobby Liao (# 452),,Palo Alto,M,594,60,39 / 54,01:54:29.9,6869.9,10:13/mile,8:33 AM,2026-10-04
+2026,698,Dave Greenwood (# 449),CT-PedalPushers,Sunnyvale,M,595,51,62 / 75,01:54:37.2,6877.2,10:14/mile,8:42 AM,2026-10-04
+2026,699,William Watson (# 866),,Walnut Creek,M,596,41,68 / 78,01:54:41.6,6881.6,10:14/mile,8:42 AM,2026-10-04
+2026,700,Sylvia Matthes (# 518),,Berkeley,F,104,59,9 / 11,01:54:54.1,6894.1,10:15/mile,8:39 AM,2026-10-04
+2026,701,Douglas Jacobsen (# 369),,Walnut Creek,M,597,47,63 / 78,01:55:05.8,6905.8,10:16/mile,8:33 AM,2026-10-04
+2026,702,Javad Shadzi (# 734),CT-034Motorsport,Pleasanton,M,598,52,63 / 75,01:55:13.2,6913.2,10:17/mile,8:45 AM,2026-10-04
+2026,703,Jim Gentes (# 277),,Soquel,M,599,69,27 / 32,01:55:23.3,6923.3,10:18/mile,8:36 AM,2026-10-04
+2026,704,Elliott Callahan (# 117),,Emeryville,M,600,40,69 / 78,01:55:25.4,6925.4,10:18/mile,8:45 AM,2026-10-04
+2026,705,Michael Cross (# 173),,Berkeley,M,601,48,64 / 78,01:56:03.4,6963.4,10:21/mile,8:45 AM,2026-10-04
+2026,706,Stan Thomas (# 803),,Palo Alto,M,602,66,28 / 32,01:56:09.3,6969.3,10:22/mile,8:45 AM,2026-10-04
+2026,707,Greg Meier (# 539),,Placerville,M,603,66,29 / 32,01:56:09.8,6969.8,10:22/mile,8:48 AM,2026-10-04
+2026,708,Jervie Castro (# 126),,San Ramon,M,604,34,89 / 97,01:56:25.1,6985.1,10:23/mile,8:48 AM,2026-10-04
+2026,709,Stan Torrez (# 815),,Albany,M,605,62,40 / 54,01:56:29.6,6989.6,10:24/mile,8:39 AM,2026-10-04
+2026,710,Ryan Armstrong (# 938),,Sunnyvale,M,606,29,65 / 70,01:56:38.0,6998.0,10:24/mile,8:39 AM,2026-10-04
+2026,711,Robert Montero (# 556),MT-Valley Spokesmen Bicycle Club,San Ramon,M,607,67,30 / 32,01:56:40.8,7000.8,10:25/mile,8:39 AM,2026-10-04
+2026,712,Avish Paralkar (# 605),,Cupertino,M,608,47,65 / 78,01:56:56.1,7016.1,10:26/mile,8:57 AM,2026-10-04
+2026,713,Patrick Kelley (# 395),CT-Zoox,Foster City,M,609,28,66 / 70,01:56:58.5,7018.5,10:26/mile,8:51 AM,2026-10-04
+2026,714,Steve Thompson (# 807),,Danville,M,610,63,41 / 54,01:57:46.1,7066.1,10:30/mile,8:57 AM,2026-10-04
+2026,715,Wei Sun (# 781),CT-Zoox,Foster City,M,611,39,88 / 98,01:58:01.1,7081.1,10:32/mile,8:54 AM,2026-10-04
+2026,716,Matt Crocker (# 170),,San Francisco,M,612,44,70 / 78,01:58:15.3,7095.3,10:33/mile,8:45 AM,2026-10-04
+2026,717,John Cooper (# 165),,Lafayette,M,613,55,33 / 47,01:58:42.8,7122.8,10:35/mile,8:45 AM,2026-10-04
+2026,718,Firas Trabelsi (# 821),,Unit B,M,614,29,67 / 70,01:58:48.3,7128.3,10:36/mile,8:42 AM,2026-10-04
+2026,719,Rishi Misra (# 547),,San Francisco,M,615,47,66 / 78,01:58:56.6,7136.6,10:37/mile,8:42 AM,2026-10-04
+2026,720,William Liss (# 934),,Danville,M,616,64,42 / 54,01:59:08.4,7148.4,10:38/mile,8:42 AM,2026-10-04
+2026,721,Andrew Timmons (# 811),,Emeryville,M,617,41,71 / 78,01:59:10.6,7150.6,10:38/mile,8:45 AM,2026-10-04
+2026,722,Piko Nikolov (# 591),,Danville,M,618,51,64 / 75,01:59:12.6,7152.6,10:38/mile,8:33 AM,2026-10-04
+2026,723,Stephen Liem (# 456),,Antioch,M,619,64,43 / 54,01:59:31.2,7171.2,10:40/mile,8:36 AM,2026-10-04
+2026,724,Caroline Gao (# 264),,Woodside,F,105,28,17 / 18,01:59:32.3,7172.3,10:40/mile,8:48 AM,2026-10-04
+2026,725,Sabeer Bhatia (# 75),,San Francisco,M,620,57,34 / 47,01:59:33.4,7173.4,10:40/mile,8:42 AM,2026-10-04
+2026,726,Reggie Cooper (# 167),,San Lorenzo,M,621,34,90 / 97,01:59:53.4,7193.4,10:42/mile,8:57 AM,2026-10-04
+2026,727,Nick Jolley (# 976),,Danville,M,622,17,17 / 17,01:59:57.7,7197.7,10:42/mile,8:48 AM,2026-10-04
+2026,728,David Gilbert (# 921),,Danville,M,623,57,35 / 47,02:00:49.5,7249.5,10:47/mile,8:42 AM,2026-10-04
+2026,729,Pete Phillips (# 632),,Danville,M,624,58,36 / 47,02:00:52.8,7252.8,10:47/mile,8:42 AM,2026-10-04
+2026,730,Garrett Wankel (# 859),,Walnut Creek,M,625,38,89 / 98,02:00:55.0,7255.0,10:47/mile,8:54 AM,2026-10-04
+2026,731,Robert Riccio (# 672),,Danville,M,626,61,44 / 54,02:02:07.9,7327.9,10:54/mile,8:42 AM,2026-10-04
+2026,732,Andres Rodriguez Campo (# 683),CT-Zoox,Foster City,M,627,35,90 / 98,02:02:46.3,7366.3,10:57/mile,8:48 AM,2026-10-04
+2026,733,Sean Reardon (# 663),,Stanford,M,628,62,45 / 54,02:03:42.6,7422.6,11:02/mile,8:45 AM,2026-10-04
+2026,734,Aimee Baker (# 40),,Napa,F,106,57,10 / 11,02:03:44.0,7424.0,11:02/mile,8:33 AM,2026-10-04
+2026,735,Tommy Chan (# 131),,Fremont,M,629,50,65 / 75,02:04:14.3,7454.3,11:05/mile,8:57 AM,2026-10-04
+2026,736,Eric Cross (# 172),,Oakland,M,630,50,66 / 75,02:04:22.7,7462.7,11:06/mile,8:48 AM,2026-10-04
+2026,737,Jiamu Hu (# 353),CT-Zoox,Foster City,M,631,58,37 / 47,02:04:27.4,7467.4,11:06/mile,8:51 AM,2026-10-04
+2026,738,Irusha Vidanamadura (# 847),CT-Zoox,Foster City,M,632,31,91 / 97,02:04:31.9,7471.9,11:07/mile,8:51 AM,2026-10-04
+2026,739,Jerry Forristal (# 249),,Oakland,M,633,53,67 / 75,02:04:36.1,7476.1,11:07/mile,8:39 AM,2026-10-04
+2026,740,James Irwin (# 368),,Santa Clara,M,634,43,72 / 78,02:04:58.0,7498.0,11:09/mile,8:51 AM,2026-10-04
+2026,741,Chris Beauchamp (# 57),,Los Gatos,M,635,60,46 / 54,02:05:09.3,7509.3,11:10/mile,8:54 AM,2026-10-04
+2026,742,Sarah Lin-Aamodt (# 461),,Fair Oaks,F,107,72,4 / 5,02:05:27.4,7527.4,11:12/mile,8:51 AM,2026-10-04
+2026,743,Andrew Dugowson (# 986),,"San Francisco, CA",M,636,47,67 / 78,02:05:55.2,7555.2,11:14/mile,8:42 AM,2026-10-04
+2026,744,Jake Brenneise (# 93),,San Jose,M,637,57,38 / 47,02:06:08.9,7568.9,11:15/mile,8:33 AM,2026-10-04
+2026,745,Wilmer Valle (# 835),,Sunnyvale,M,638,47,68 / 78,02:06:26.2,7586.2,11:17/mile,8:30 AM,2026-10-04
+2026,746,Ram Gopalan (# 290),,Sunnyvale,M,639,64,47 / 54,02:06:29.8,7589.8,11:17/mile,8:57 AM,2026-10-04
+2026,747,Mark Dean (# 189),MT-Numbass2000s,Dublin,M,640,46,69 / 78,02:07:24.0,7644.0,11:22/mile,8:48 AM,2026-10-04
+2026,748,Michael Engel (# 234),,Dublin,M,641,62,48 / 54,02:07:26.1,7646.1,11:22/mile,8:45 AM,2026-10-04
+2026,749,Karthik Sudhir (# 778),,Campbell,M,642,41,73 / 78,02:08:08.0,7688.0,11:26/mile,8:54 AM,2026-10-04
+2026,750,Diana Hellman (# 328),,San Jose,F,108,51,9 / 10,02:08:23.8,7703.8,11:27/mile,8:33 AM,2026-10-04
+2026,751,Luis Valenzuela (# 833),,Lockeford,M,643,60,49 / 54,02:08:25.7,7705.7,11:28/mile,8:57 AM,2026-10-04
+2026,752,Brian Bueza (# 101),,Sacramento,M,644,53,68 / 75,02:08:29.6,7709.6,11:28/mile,8:54 AM,2026-10-04
+2026,753,David Brewer (# 95),,Lodi,M,645,62,50 / 54,02:08:41.0,7721.0,11:29/mile,8:57 AM,2026-10-04
+2026,754,Victor Limon (# 458),,Pittsburg,M,646,38,91 / 98,02:09:18.5,7758.5,11:32/mile,8:39 AM,2026-10-04
+2026,755,Mangesh Bendre (# 63),,Fremont,M,647,45,70 / 78,02:09:23.3,7763.3,11:33/mile,8:54 AM,2026-10-04
+2026,756,Lawrence Zhu (# 917),,San Francisco,M,648,32,92 / 97,02:09:34.3,7774.3,11:34/mile,8:54 AM,2026-10-04
+2026,757,Nelanka Perera (# 622),,Castro Valley,M,649,48,71 / 78,02:09:46.1,7786.1,11:35/mile,8:51 AM,2026-10-04
+2026,758,Doug McQuillan (# 538),,Danville,M,650,71,9 / 10,02:10:54.7,7854.7,11:41/mile,8:42 AM,2026-10-04
+2026,759,Adrienne Deangelo (# 190),,Oakland,F,109,56,11 / 11,02:11:16.1,7876.1,11:43/mile,8:48 AM,2026-10-04
+2026,760,Tracey Hong (# 347),,Palo Alto,F,110,35,10 / 10,02:11:39.7,7899.7,11:45/mile,8:54 AM,2026-10-04
+2026,761,Muhammad Karim (# 389),,Dublin,M,651,46,72 / 78,02:12:09.5,7929.5,11:47/mile,8:51 AM,2026-10-04
+2026,762,Matt Diffley (# 203),MT-Valley Spokesmen Bicycle Club,Walnut Creek,M,652,54,69 / 75,02:12:39.9,7959.9,11:50/mile,8:45 AM,2026-10-04
+2026,763,Michael Diep (# 201),,Walnut Creek,M,653,31,93 / 97,02:12:45.4,7965.4,11:51/mile,8:51 AM,2026-10-04
+2026,764,Wenran Chen (# 143),CT-Zoox,Foster City,M,654,36,92 / 98,02:12:50.4,7970.4,11:51/mile,8:54 AM,2026-10-04
+2026,765,Magdaleno Magana (# 497),,Pittsburg,M,655,50,70 / 75,02:13:39.4,8019.4,11:56/mile,8:51 AM,2026-10-04
+2026,766,Jared Nelson (# 578),,Alamo,M,656,51,71 / 75,02:14:01.7,8041.7,11:58/mile,8:45 AM,2026-10-04
+2026,767,Melville Tan (# 968),,"Roseville, CA",M,657,55,39 / 47,02:14:16.2,8056.2,11:59/mile,8:54 AM,2026-10-04
+2026,768,Anthony Ladd (# 422),,San Jose,M,658,56,40 / 47,02:14:17.8,8057.8,11:59/mile,8:45 AM,2026-10-04
+2026,769,Aidan Spiller (# 759),,Livermore,M,659,20,17 / 17,02:15:02.5,8102.5,12:03/mile,8:54 AM,2026-10-04
+2026,770,Daniel Mayer (# 521),,Livermore,M,660,36,93 / 98,02:15:03.8,8103.8,12:03/mile,8:54 AM,2026-10-04
+2026,771,Daniel Raya (# 661),MT-Aperol Blitz,Modesto,M,661,29,68 / 70,02:15:40.3,8140.3,12:06/mile,8:48 AM,2026-10-04
+2026,772,Jason Little (# 464),,Sacramento,M,662,49,73 / 78,02:16:07.0,8167.0,12:09/mile,8:51 AM,2026-10-04
+2026,773,Julia Strehlow (# 773),,Fremont,F,111,13,1 / 1,02:18:06.2,8286.2,12:19/mile,8:54 AM,2026-10-04
+2026,774,Dana Lu Silverstein (# 748),,Dublin,M,663,57,41 / 47,02:18:09.4,8289.4,12:20/mile,8:48 AM,2026-10-04
+2026,775,Kester Allen (# 16),CT-Novonesis Davis,Berkeley,M,664,52,72 / 75,02:18:13.8,8293.8,12:20/mile,8:39 AM,2026-10-04
+2026,776,Heiko Strehlow (# 772),,Fremont,M,665,55,42 / 47,02:18:14.6,8294.6,12:20/mile,8:54 AM,2026-10-04
+2026,777,Avery Lambert (# 423),CT-Novonesis Davis,Sacramento,F,112,24,4 / 4,02:18:32.0,8312.0,12:22/mile,8:39 AM,2026-10-04
+2026,778,Khatanbaatar Bayarmaa (# 55),,Lafayette,M,666,43,74 / 78,02:18:36.6,8316.6,12:22/mile,8:30 AM,2026-10-04
+2026,779,Damian Brown (# 99),,Berkeley,M,667,50,73 / 75,02:18:56.4,8336.4,12:24/mile,8:33 AM,2026-10-04
+2026,780,Martha Alejandra Bayardo (# 53),,San Francisco,F,113,54,10 / 10,02:19:42.1,8382.1,12:28/mile,8:45 AM,2026-10-04
+2026,781,Satish Sathe (# 709),MT-Valley Spokesmen Bicycle Club,San Ramon,M,668,62,51 / 54,02:20:07.5,8407.5,12:30/mile,8:48 AM,2026-10-04
+2026,782,Lisa Sato (# 710),,Burlingame,F,114,64,4 / 4,02:20:19.8,8419.8,12:31/mile,8:54 AM,2026-10-04
+2026,783,Daneesha Kenyon (# 397),,Redwood City,F,115,33,22 / 29,02:20:49.3,8449.3,12:34/mile,8:57 AM,2026-10-04
+2026,784,Karen Bals (# 45),,Oakland,F,116,70,5 / 5,02:20:50.7,8450.7,12:34/mile,8:51 AM,2026-10-04
+2026,785,Andreas Wiele (# 877),,London,M,669,64,52 / 54,02:20:56.8,8456.8,12:35/mile,8:24 AM,2026-10-04
+2026,786,Steve Williams (# 882),,Venice,M,670,68,31 / 32,02:21:50.5,8510.5,12:39/mile,8:54 AM,2026-10-04
+2026,787,Katherine Murphy (# 571),,San Francisco,F,117,34,23 / 29,02:21:59.9,8519.9,12:40/mile,8:54 AM,2026-10-04
+2026,788,David Shui (# 742),,Pleasant Hill,M,671,38,94 / 98,02:22:30.3,8550.3,12:43/mile,8:48 AM,2026-10-04
+2026,789,Kumar Sukhdeo (# 779),MT-Valley Spokesmen Bicycle Club,Dublin,M,672,44,75 / 78,02:22:39.2,8559.2,12:44/mile,8:45 AM,2026-10-04
+2026,790,J Richard Soderberg (# 756),,San Francisco,M,673,58,43 / 47,02:22:59.5,8579.5,12:46/mile,8:39 AM,2026-10-04
+2026,791,Blake McPherson (# 537),,Martinez,M,674,28,69 / 70,02:24:20.2,8660.2,12:53/mile,8:57 AM,2026-10-04
+2026,792,Spencer Ingels (# 365),,Richmond,M,675,40,76 / 78,02:24:35.7,8675.7,12:54/mile,8:42 AM,2026-10-04
+2026,793,Yue Guo (# 303),CT-Little Husky,Champaign,F,118,33,24 / 29,02:25:14.2,8714.2,12:58/mile,9:23 AM,2026-10-04
+2026,794,Yoshimi Elisa Muneta Sato (# 568),,San Francisco,F,119,33,25 / 29,02:25:30.3,8730.3,12:59/mile,8:51 AM,2026-10-04
+2026,795,Fabian Bueza (# 102),,Sacramento,M,676,56,44 / 47,02:26:13.7,8773.7,13:03/mile,8:48 AM,2026-10-04
+2026,796,Anna Kubacsek (# 416),,Palo Alto,F,120,31,26 / 29,02:27:00.1,8820.1,13:07/mile,8:51 AM,2026-10-04
+2026,797,Qipeng Wang (# 943),,"Santa Clara, CA",M,677,28,70 / 70,02:27:22.9,8842.9,13:09/mile,8:36 AM,2026-10-04
+2026,798,Brian Prentiss (# 940),,"Pleasant Hill, CA",M,678,35,95 / 98,02:27:31.0,8851.0,13:10/mile,8:45 AM,2026-10-04
+2026,799,Will Uher (# 831),,Castro Valley,M,679,80,3 / 3,02:28:47.6,8927.6,13:17/mile,8:39 AM,2026-10-04
+2026,800,Rigo Lujano (# 484),,Brentwood,M,680,38,96 / 98,02:29:39.4,8979.4,13:21/mile,8:57 AM,2026-10-04
+2026,801,Patrick Lekovish (# 441),,San Diego,M,681,63,53 / 54,02:29:49.3,8989.3,13:22/mile,8:54 AM,2026-10-04
+2026,802,Zoe Ward (# 861),,Palo Alto,F,121,30,27 / 29,02:30:18.7,9018.7,13:25/mile,8:54 AM,2026-10-04
+2026,803,Samuel Little (# 465),,Palo Alto,M,682,32,94 / 97,02:30:24.2,9024.2,13:25/mile,8:54 AM,2026-10-04
+2026,804,Emanuel Washington (# 863),,Redwood City,M,683,66,32 / 32,02:32:14.0,9134.0,13:35/mile,8:54 AM,2026-10-04
+2026,805,Shirley Kong (# 409),,Mountain View,F,122,27,18 / 18,02:33:02.3,9182.3,13:39/mile,8:48 AM,2026-10-04
+2026,806,Mike Schmidt (# 716),MT-Numbass2000s,San Ramon,M,684,48,74 / 78,02:35:59.3,9359.3,13:55/mile,8:48 AM,2026-10-04
+2026,807,Marcela Macias (# 492),,Palo Alto,F,123,33,28 / 29,02:36:02.0,9362.0,13:55/mile,8:51 AM,2026-10-04
+2026,808,David Morimoto (# 562),,Fremont,M,685,59,45 / 47,02:38:42.2,9522.2,14:10/mile,8:42 AM,2026-10-04
+2026,809,Bruce Young (# 908),,Oakland,M,686,74,10 / 10,02:39:03.7,9543.7,14:12/mile,8:59 AM,2026-10-04
+2026,810,John Burns (# 108),,San Ramon,M,687,36,97 / 98,02:42:15.3,9735.3,14:29/mile,8:45 AM,2026-10-04
+2026,811,David Hew (# 332),,Los Altos,M,688,55,46 / 47,02:42:51.3,9771.3,14:32/mile,8:27 AM,2026-10-04
+2026,812,Carl Spanoghe (# 757),,Oakland,M,689,45,75 / 78,02:45:29.3,9929.3,14:46/mile,8:48 AM,2026-10-04
+2026,813,Jason Yan (# 901),,San Francisco,M,690,55,47 / 47,02:45:30.6,9930.6,14:46/mile,8:27 AM,2026-10-04
+2026,814,Eric Smith (# 752),,Sacramento,M,691,53,74 / 75,02:47:15.9,10035.9,14:56/mile,8:54 AM,2026-10-04
+2026,815,Peter Cheuk (# 147),,Daly City,M,692,60,54 / 54,02:47:34.0,10054.0,14:57/mile,8:57 AM,2026-10-04
+2026,816,Spencer Camarda (# 118),CT-Zoox,Foster City,M,693,32,95 / 97,02:48:10.6,10090.6,15:00/mile,8:51 AM,2026-10-04
+2026,817,Rajan Malhotra (# 502),,Fremont,M,694,40,77 / 78,02:49:32.0,10172.0,15:08/mile,8:51 AM,2026-10-04
+2026,818,Cassandra Tomazic (# 813),,San Francisco,F,124,30,29 / 29,02:52:10.3,10330.3,15:22/mile,8:54 AM,2026-10-04
+2026,819,Ryan Woo (# 893),,San Francisco,M,695,32,96 / 97,02:52:17.7,10337.7,15:23/mile,8:54 AM,2026-10-04
+2026,820,Ray Sung (# 785),,Mountain View,M,696,46,76 / 78,02:53:00.1,10380.1,15:26/mile,8:57 AM,2026-10-04
+2026,821,S Bergado (# 66),,Fremont,M,697,54,75 / 75,02:54:03.9,10443.9,15:32/mile,8:57 AM,2026-10-04
+2026,822,Albert Sung (# 783),,Mountain View,M,698,12,11 / 11,02:54:17.2,10457.2,15:33/mile,8:57 AM,2026-10-04
+2026,823,Balaji Ganesan (# 262),,Fremont,M,699,48,77 / 78,02:57:46.4,10666.4,15:52/mile,8:48 AM,2026-10-04
+2026,824,Jacob Sevart (# 733),,San Francisco,M,700,31,97 / 97,02:58:00.1,10680.1,15:53/mile,8:54 AM,2026-10-04
+2026,825,Dianne Thompson (# 805),,San Ramon,F,125,79,1 / 1,03:01:15.9,10875.9,16:11/mile,8:30 AM,2026-10-04
+2026,826,Donny Ward (# 860),,San Francisco,M,701,37,98 / 98,03:02:29.5,10949.5,16:17/mile,8:54 AM,2026-10-04
+2026,827,Ankur Agrawal (# 12),,Fremont,M,702,40,78 / 78,03:07:49.8,11269.8,16:46/mile,8:51 AM,2026-10-04
+2026,828,Rebeca Ventura (# 846),,West Sacramento,F,126,47,13 / 13,03:10:07.5,11407.5,16:58/mile,8:51 AM,2026-10-04
+2026,829,Ryan Ice (# 362),,Richmond,M,703,45,78 / 78,03:23:55.9,12235.9,18:12/mile,8:36 AM,2026-10-04

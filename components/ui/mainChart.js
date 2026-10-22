@@ -40,9 +40,9 @@ export function render(startYear, endYear) {
   const filteredData = dashboardData.statistics.by_year.filter(d => d.year >= startYear && d.year <= endYear);
   const filteredWeather = dashboardData.weather.by_year.filter(d => d.year >= startYear && d.year <= endYear);
 
-  // Fixed Y-axis range: 40 to 100 minutes
+  // Keep the full IQR visible (2026's 75th percentile exceeds 100 minutes).
   const minTime = 40;
-  const maxTime = 100;
+  const maxTime = Math.max(100, ...filteredData.map(d => Math.ceil(d.times.p75 / 10) * 10));
 
   // Y scale (INVERTED: faster times at TOP, slower times at BOTTOM)
   const yScale = (minutes) => {
@@ -82,7 +82,7 @@ export function render(startYear, endYear) {
   // Y-axis labels
   const yAxisGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
   yAxisGroup.setAttribute('class', isMobile ? 'text-[9px] fill-slate-400' : 'text-[11px] fill-slate-400');
-  const yValues = [40, 50, 60, 70, 80, 90, 100];
+  const yValues = Array.from({ length: (maxTime - minTime) / 10 + 1 }, (_, i) => minTime + i * 10);
   yValues.forEach(minutes => {
     const y = yScale(minutes);
     const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');

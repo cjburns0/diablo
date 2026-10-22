@@ -16,7 +16,7 @@ DATABASE_PATH = os.path.join(DATA_DIR, 'diablo_challenge.db')
 # Race results URL
 RACE_RESULTS_BASE_URL = 'https://mountdiablochallenge.itsyourrace.com/Results.aspx'
 # Years to scrape
-RACE_YEARS = list(range(2018, 2026))  # 2018 to 2025
+RACE_YEARS = [2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026]  # No 2020 race
 
 # Mount Diablo coordinates
 # Start location (approximate)
