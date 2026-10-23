@@ -156,6 +156,14 @@ def generate_dashboard_data():
     dashboard_data['riders'] = riders_data
     print(f"  - Found {len(riders_data)} riders with multiple years")
 
+    # Additional race categories have their own rankings and summaries.
+    import statistics
+    dashboard_data['additional_categories'] = db.get_additional_races()
+    for race in dashboard_data['additional_categories']:
+        times = [row['chip_time_seconds'] for row in race['results']]
+        race['median_formatted'] = seconds_to_mmss(statistics.median(times)) if times else None
+        race['fastest_time'] = min(race['results'], key=lambda r: r['chip_time_seconds'])['chip_time_str'] if times else None
+
     analyzer.close()
 
     return dashboard_data
