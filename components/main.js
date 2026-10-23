@@ -16,6 +16,7 @@ import * as CourseDirection from './ui/courseDirection.js';
 import * as WindImpact from './ui/windImpact.js';
 import * as MainChart from './ui/mainChart.js';
 import * as RiderLookup from './ui/riderLookup.js';
+import * as AdditionalCategories from './ui/additionalCategories.js';
 
 // Utils
 import { initPopovers, setText, closeAllPopovers } from './utils/domUtils.js';
@@ -33,6 +34,7 @@ function initializeComponents() {
   const { startYear, endYear } = YearFilters.getSelectedYears();
   PerformanceOutliers.update(startYear, endYear);
   MainChart.render(startYear, endYear);
+  AdditionalCategories.update(startYear, endYear);
 
   // Initialize route-dependent components
   if (getRouteData()) {
@@ -73,6 +75,7 @@ function setupEventListeners() {
       const { startYear, endYear } = YearFilters.getSelectedYears();
       PerformanceOutliers.update(startYear, endYear);
       MainChart.render(startYear, endYear);
+      AdditionalCategories.update(startYear, endYear);
     }
   });
 
@@ -84,6 +87,7 @@ function setupEventListeners() {
         const { startYear, endYear } = YearFilters.getSelectedYears();
         PerformanceOutliers.update(startYear, endYear);
         MainChart.render(startYear, endYear);
+        AdditionalCategories.update(startYear, endYear);
       }
     });
   });

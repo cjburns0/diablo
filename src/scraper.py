@@ -237,7 +237,7 @@ class DiabloScraper:
         """Scrape results for all specified years."""
         if years is None:
             # Default years (2020 likely missing due to COVID)
-            years = [2018, 2019, 2021, 2022, 2023, 2024, 2025]
+            years = [2018, 2019, 2021, 2022, 2023, 2024, 2025, 2026]
 
         all_results = []
 

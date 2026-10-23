@@ -4,6 +4,7 @@ Handles SQLite database operations for race results and weather data.
 """
 
 import sqlite3
+import math
 from datetime import datetime, date
 import logging
 import os
@@ -104,8 +105,89 @@ class DiabloDatabase:
             ON weather_data(year, location)
         ''')
 
+        # Separately ranked categories never enter the main race_results table.
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS additional_races (
+                year INTEGER NOT NULL,
+                category TEXT NOT NULL,
+                label TEXT NOT NULL,
+                race_date TEXT NOT NULL,
+                source_url TEXT NOT NULL,
+                finisher_count INTEGER NOT NULL,
+                untimed_count INTEGER NOT NULL,
+                PRIMARY KEY (year, category)
+            )
+        ''')
+        self.cursor.execute('''
+            CREATE TABLE IF NOT EXISTS additional_race_results (
+                year INTEGER NOT NULL,
+                category TEXT NOT NULL,
+                race_date TEXT NOT NULL,
+                place INTEGER NOT NULL,
+                name TEXT NOT NULL,
+                team TEXT,
+                city_state TEXT,
+                gender TEXT,
+                gender_place TEXT,
+                age INTEGER,
+                age_place TEXT,
+                chip_time_str TEXT NOT NULL,
+                chip_time_seconds REAL NOT NULL,
+                pace TEXT,
+                start_time TEXT,
+                PRIMARY KEY (year, category, place)
+            )
+        ''')
+
         self.conn.commit()
         logger.info("Database tables created successfully")
+
+    def replace_additional_races(self, races):
+        """Replace complete category snapshots atomically, preserving main results."""
+        fields = ('year', 'category', 'race_date', 'place', 'name', 'team',
+                  'city_state', 'gender', 'gender_place', 'age', 'age_place',
+                  'chip_time_str', 'chip_time_seconds', 'pace', 'start_time')
+        for race in races:
+            rows = race['results']
+            if (len(rows) != race['finisher_count']
+                    or len({r['place'] for r in rows}) != len(rows)
+                    or any(r['year'] != race['year'] or r['race_date'] != race['race_date']
+                           or not r['place'] or r['place'] < 1
+                           or r['chip_time_seconds'] is None
+                           or not math.isfinite(r['chip_time_seconds'])
+                           or r['chip_time_seconds'] <= 0 for r in rows)):
+                raise ValueError(f"Invalid category snapshot: {race['label']}")
+
+        with self.conn:
+            for race in races:
+                self.conn.execute('DELETE FROM additional_race_results WHERE year=? AND category=?',
+                                  (race['year'], race['category']))
+                self.conn.execute('''
+                    INSERT OR REPLACE INTO additional_races
+                    (year, category, label, race_date, source_url, finisher_count, untimed_count)
+                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                ''', tuple(race[k] for k in ('year', 'category', 'label', 'race_date',
+                                            'source_url', 'finisher_count', 'untimed_count')))
+                for result in race['results']:
+                    row = dict(result, category=race['category'])
+                    self.conn.execute(
+                        f"INSERT INTO additional_race_results ({', '.join(fields)}) "
+                        f"VALUES ({', '.join('?' for _ in fields)})",
+                        tuple(row.get(k) for k in fields))
+
+    def get_additional_races(self):
+        """Read category snapshots; old databases without these tables remain usable."""
+        if not self.conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='additional_races'").fetchone():
+            return []
+        cursor = self.conn.execute('SELECT * FROM additional_races ORDER BY year, category')
+        races = [dict(zip([c[0] for c in cursor.description], row)) for row in cursor.fetchall()]
+        for race in races:
+            cursor = self.conn.execute('''
+                SELECT * FROM additional_race_results
+                WHERE year=? AND category=? ORDER BY place
+            ''', (race['year'], race['category']))
+            race['results'] = [dict(zip([c[0] for c in cursor.description], row)) for row in cursor.fetchall()]
+        return races
 
     def delete_year_data(self, year):
         """Delete all data for a specific year.
@@ -115,6 +197,9 @@ class DiabloDatabase:
         """
         self.cursor.execute('DELETE FROM race_results WHERE year = ?', (year,))
         self.cursor.execute('DELETE FROM weather_data WHERE year = ?', (year,))
+        if self.conn.execute("SELECT 1 FROM sqlite_master WHERE type='table' AND name='additional_races'").fetchone():
+            self.cursor.execute('DELETE FROM additional_race_results WHERE year = ?', (year,))
+            self.cursor.execute('DELETE FROM additional_races WHERE year = ?', (year,))
         self.conn.commit()
         logger.info(f"Deleted all data for year {year}")
 
@@ -333,10 +418,10 @@ class DiabloDatabase:
         return results
 
     def clear_race_results(self):
-        """Clear all race results from the database."""
+        """Clear the main-race results; separate category snapshots are preserved."""
         self.cursor.execute('DELETE FROM race_results')
         self.conn.commit()
-        logger.info("Cleared all race results")
+        logger.info("Cleared main-race results")
 
     def clear_weather_data(self):
         """Clear all weather data from the database."""

@@ -11,7 +11,8 @@ We scrape the Diablo Challenge race time finish results for all the details poss
 
 This project provides complete data pipeline and analysis for the Mount Diablo Challenge race:
 
-- **Web Scraping**: Automated collection of race results from all available years (2018-2025)
+- **Web Scraping**: Automated collection of main-race results from all available years (2018-2026, excluding 2020)
+- **Separate Categories**: 2026 e-assisted and tandem finishers, with independent rankings and results tables
 - **Weather Integration**: Historical weather data from Open-Meteo API (free, no API key needed)
 - **Database Storage**: SQLite database for efficient data management
 - **Statistical Analysis**: Year-over-year trends, distributions, and correlations
@@ -42,7 +43,7 @@ python3 main.py
 ```
 
 This will:
-- Scrape race results from years 2018, 2019, 2021-2025
+- Scrape race results from years 2018, 2019, 2021-2026
 - Fetch hourly weather data for race dates (7 AM - 11 AM window)
 - Store everything in SQLite database
 - Generate statistical analysis
@@ -57,6 +58,8 @@ python3 dashboard_data.py
 ```
 
 This creates `data/dashboard_data.json` which powers the frontend dashboard.
+
+For annual refreshes including e-assisted and tandem results, run `python3 update_year.py 2026` followed by `python3 dashboard_data.py`. Category IDs are discovered from that year's official results. The historical `main.py` pipeline collects the main race; use the annual updater to refresh separate categories. See [2026 import provenance and validation](docs/2026_RESULTS.md).
 
 ### 4. View Interactive Dashboard
 
@@ -74,6 +77,7 @@ The interactive dashboard features:
 - **Inverted Y-axis** with fastest times at the top
 - **Wind overlay** showing correlation between wind speed and performance
 - **Dynamic filtering** by year range
+- **E-assisted and tandem tables** with every published 2026 finisher's category place and original chip time; excluded from main-race statistics and rider comparisons
 - **Real-time KPI cards** displaying key race statistics
 
 ### 5. Explore Data in Jupyter
