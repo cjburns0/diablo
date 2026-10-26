@@ -3,7 +3,7 @@
 Quick update script for adding a new race year to the database.
 
 This script is designed for annual updates - it will:
-1. Scrape results for the specified year
+1. Scrape main, e-assisted and tandem results for the specified year
 2. Fetch weather data for that year
 3. Replace existing data if the year already exists in the database
 4. Regenerate analysis and charts
@@ -21,6 +21,7 @@ import os
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
 
 from scraper import DiabloScraper
+from category_results import scrape_additional_categories
 from weather import WeatherFetcher
 from database import DiabloDatabase
 from analysis import DiabloAnalyzer
@@ -81,6 +82,9 @@ def update_year(year, replace=True):
 
     logger.info(f"Race date: {race_date}")
 
+    # Validate separate-category results before writing any data for this update.
+    additional_races = scrape_additional_categories(scraper, year)
+
     # Step 2: Fetch weather data
     logger.info(f"\nStep 2: Fetching weather data for {race_date}")
     fetcher = WeatherFetcher()
@@ -101,11 +105,15 @@ def update_year(year, replace=True):
     # Insert with replace_existing=True to update if year exists
     db.insert_race_results(race_results, replace_existing=True)
     db.insert_weather_data(weather_records, replace_existing=True)
+    db.replace_additional_races(additional_races)
 
     counts = db.get_table_counts()
     logger.info(f"Database now contains:")
     logger.info(f"  - Race results: {counts['race_results']}")
     logger.info(f"  - Weather records: {counts['weather_data']}")
+    for race in additional_races:
+        logger.info(f"  - {race['label']}: {race['finisher_count']} finishers, "
+                    f"{race['untimed_count']} untimed entries")
 
     db.close()
 
